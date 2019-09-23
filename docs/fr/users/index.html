@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Utilisateurs · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 1 - Récupérer la liste des utilisateurs"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Utilisateurs · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="## 1 - Récupérer la liste des utilisateurs"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/fr"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/kizeo-forms-documentations/docs/fr/installation" target="_self">Kizeo Connector</a></li><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/fr/restv3" target="_self">Web Service</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/en/users">English</a></li><li><a href="/kizeo-forms-documentations/docs/es-ES/users">Español</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Utilisateurs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Premiers pas<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/restv3">Rest V3</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/curl-install">Aide à l&#x27;activation de cURL (PHP)</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/restv3-sample">Exemple en PHP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/forms">Opérations sur les formulaires</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/forms-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Listes<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/lists">Opération sur les listes</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/lists-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Utilisateurs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/users">Opérations sur les utilisateurs</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/users-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Données<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/data">Opérations sur les données</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/data-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Exports<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/exports">Opérations sur les exports</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/exports-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tips<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/tips">Tips</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/rest-users.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Utilisateurs</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="1-recuperer-la-liste-des-utilisateurs"></a><a href="#1-recuperer-la-liste-des-utilisateurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 - Récupérer la liste des utilisateurs</h2>
+<hr>
+<p>Vous avez aussi à disposition de nombreuses fonctions permettant des opérations sur les utilisateurs. La première d'entre elles permet simplement de récupérer la liste de tous les utilisateurs de votre entreprise.
+Elle consiste en une requête HTTP en <code>GET</code> à envoyer à l'URL suivante : <code>https://www.kizeoforms.com/rest/v3/users</code>.</p>
+<p>Si la requête a fonctionné, vous devriez obtenir un résultat comme suit :</p>
+<pre><code class="hljs css language-json">
+{
+  "status": "ok",
+  "data": {
+    "users": [
+      {
+        "id": "userID1",
+        "login": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "create_time": "date",
+        "email": "mail@mail.com",
+        "phone": "0000000000",
+        "is_user": boolean,
+        "is_admin": boolean,
+        "is_super_admin": boolean,
+        "is_current_user": boolean,
+        "form_user": boolean,
+        "admin": boolean,
+        "leader_group": boolean,
+        "store_validator": boolean,
+        "allow_create_user": boolean,
+        "allow_create_group": boolean,
+        "allow_order": boolean,
+        "user_ref1": null,
+        "user_ref2": null,
+        "user_ref3": null,
+        "user_ref4": null,
+        "user_ref5": null,
+        "user_ref6": null,
+        "user_ref7": null,
+        "user_ref8": null,
+        "user_ref9": null,
+        "user_ref10": null,
+        "user_ref11": null,
+        "user_ref12": null,
+        "user_ref13": null,
+        "user_ref14": null,
+        "user_ref15": null,
+        "user_ref16": null,
+        "user_ref17": null,
+        "user_ref18": null,
+        "user_ref19": null,
+        "user_ref20": null,
+        "main_group_id": null
+      },
+      {
+          "id": "userID2",
+          .
+          .
+          .
+      }
+    ]
+  }
+}
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-ajouter-un-utilisateur"></a><a href="#2-ajouter-un-utilisateur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 - Ajouter un utilisateur</h2>
+<hr>
+<p>Vous avez aussi la possibilité de créer un utilisateur en passant par une requête de type <code>POST</code> à l'URL : <code>https://www.kizeoforms.com/rest/v3/users</code>.
+Vous devrez ajouter dans le corps de la requête les informations sous le format suivant :</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"login"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"phone"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"admin"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"form_user"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_form_menu"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_externallist_menu"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_user_menu"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_application_menu"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_export_menu"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_data_menu"</span>: <span class="hljs-string">"boolean"</span>,
+    <span class="hljs-attr">"allow_account_menu"</span>: <span class="hljs-string">"boolean"</span>
+}
+</code></pre>
+<p>Si la requête que vous avez envoyé a fonctionné, vous obtiendrez la réponse suivante :</p>
+<pre><code class="hljs css language-json">{
+    "status": "ok",
+    "message": "Created",
+    "data": {
+        // Identifiant créé pour l'utilisateur
+        "id": "userID"
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="3-modifier-les-informations-dun-utilisateur"></a><a href="#3-modifier-les-informations-dun-utilisateur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 - Modifier les informations d'un utilisateur</h2>
+<hr>
+<p>En récupérant la liste de tous les utilisateurs, la première donnée que vous obtiendrez pour chacun d'entre eux est son identifiant (userID).
+A partir de cet identifiant, vous pouvez modifier les informations relatives à un utilisateur.</p>
+<p>Pour modifier les données d'un utilisateur, vous devrez envoyer une requête de type <code>PUT</code> à l'URL : <code>https://www.kizeoforms.com/rest/v3/users/{userID}</code>.</p>
+<p>Vous devrez remplir le corps de la requête avec les informations suivantes, dont tous les attributs hors le login sont optionnels, vous n'aurez qu'à préciser les attributs que vous voulez modifier.</p>
+<pre><code class="hljs css language-json">{
+    "login": "string", // Attribut obligatoire
+    "password": "string",
+    "first_name": "string",
+    "last_name": "string",
+    "phone": "string",
+    "email": "string",
+    "admin": "boolean",
+    "form_user": "boolean",
+    "allow_form_menu": "boolean",
+    "allow_externallist_menu": "boolean",
+    "allow_user_menu": "boolean",
+    "allow_application_menu": "boolean",
+    "allow_export_menu": "boolean",
+    "allow_data_menu": "boolean",
+    "allow_account_menu": "boolean"
+}
+</code></pre>
+<p>En cas de succès, vous recevrez une réponse sous le format suivant :</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"ok"</span>,
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Updated"</span>
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/fr/lists-samples"><span class="arrow-prev">← </span><span>Exemples</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/fr/users-samples"><span>Exemples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-recuperer-la-liste-des-utilisateurs">1 - Récupérer la liste des utilisateurs</a></li><li><a href="#2-ajouter-un-utilisateur">2 - Ajouter un utilisateur</a></li><li><a href="#3-modifier-les-informations-dun-utilisateur">3 - Modifier les informations d'un utilisateur</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/fr/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/fr/restv3">API (Web Service REST)</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2019 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configurations · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Afin de configurer le connecteur de base de données, vous devez saisir un fichier *JSON*, ce fichier est potentiellement sensible puisqu’il contient l’ensemble des informations nécessaires à la connexion au back office KizeoForms, mais également à votre base de données. Vous pouvez visualiser des exemples de fichiers de configuration en cliquant sur les liens ci-dessus."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Configurations · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="Afin de configurer le connecteur de base de données, vous devez saisir un fichier *JSON*, ce fichier est potentiellement sensible puisqu’il contient l’ensemble des informations nécessaires à la connexion au back office KizeoForms, mais également à votre base de données. Vous pouvez visualiser des exemples de fichiers de configuration en cliquant sur les liens ci-dessus."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/fr"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/fr/installation" target="_self">Kizeo Connector</a></li><li class=""><a href="/kizeo-forms-documentations/docs/fr/restv3" target="_self">Web Service</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/en/configuration">English</a></li><li><a href="/kizeo-forms-documentations/docs/es-ES/configuration">Español</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Configurations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Premiers pas<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/installation">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Configurations<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/configuration">Configurations</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/mysql">Mysql</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/postgressql">PostgresSql</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/microsoftsql">Microsoft SQL Server</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Assistant de config<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/demo">Démo</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Exemples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/howtouse">Utilisations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/kizeo-connector-config.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Configurations</h1></header><article><div><span><p>Afin de configurer le connecteur de base de données, vous devez saisir un fichier <em>JSON</em>, ce fichier est potentiellement sensible puisqu’il contient l’ensemble des informations nécessaires à la connexion au back office KizeoForms, mais également à votre base de données. Vous pouvez visualiser des exemples de fichiers de configuration en cliquant sur les liens ci-dessus.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="authentification-auth"></a><a href="#authentification-auth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentification <code>auth</code></h2>
+<p>La première partie <code>auth</code> de la configuration concerne les identifiants Kizeo. Une bonne pratique consiste à <strong>attribuer un compte administrateur</strong> spécifiquement au connecteur de base de données. Il s'agit des trois identifiants nécessaires à la connexion sur le back office <code>www.kizeoforms.com</code>.
+Ainsi, la configuration doit ressembler à ceci :</p>
+<pre><code class="hljs css language-javascript">{
+    <span class="hljs-string">"auth"</span> : {
+        <span class="hljs-string">"company"</span>: <span class="hljs-string">"CODE_ENTREPRISE"</span>,
+        <span class="hljs-string">"password"</span>: <span class="hljs-string">"VOTRE_MOT_DE_PASSE"</span>,
+        <span class="hljs-string">"user"</span>: <span class="hljs-string">"VOTRE_IDENTIFIANT"</span>
+    },
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="proprietes"></a><a href="#proprietes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés</h3>
+<ul>
+<li><code>company</code> (<code>string</code>) :
+Code entreprise de votre compte</li>
+<li><code>user</code> (<code>string</code>) :
+Nom d'utilisateur</li>
+<li><code>password</code> (<code>string</code>) :
+Mot de passe correspondant à l'utilisateur renseigné</li>
+</ul>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="proprietes-generales"></a><a href="#proprietes-generales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés générales</h3>
+<p>Ce connecteur possède un ensemble de propriétés générales à renseigner :</p>
+<ul>
+<li><code>autoCreate</code> (true|false) : Le connecteur tentera de créer automatiquement la table de votre base de données en fonction de la configuration de celui-ci.</li>
+<li><code>loop</code> (true|false) : Détermine si une fois l'exécution terminée, le connecteur se relance automatiquement (après 2 minutes de pause).</li>
+</ul>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">//...</span>
+   <span class="hljs-string">"autoCreate"</span> : <span class="hljs-literal">false</span>,
+   <span class="hljs-string">"loop"</span> : <span class="hljs-literal">true</span>,
+   <span class="hljs-string">"protocol"</span>: <span class="hljs-string">"https"</span>,
+   <span class="hljs-string">"server"</span>: <span class="hljs-string">"www.kizeoforms.com"</span>,
+   <span class="hljs-string">"restRoot"</span>: <span class="hljs-string">"rest/v3"</span>,
+   <span class="hljs-comment">//...</span>
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="definition-des-donnees-a-exporter-forms"></a><a href="#definition-des-donnees-a-exporter-forms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Définition des données à exporter <code>forms</code></h2>
+<p>Après avoir défini le compte administrateur utilisé pour l'export des données, il vous faut ensuite indiquer les données que vous souhaitez récupérer.
+Là encore cette information est à configurer dans le fichier JSON, dans la propriété <code>forms</code>. Cette propriété est un <em>tableau</em> de données contenant un élément pour chaqu'un des formulaires que vous souhaitez récupérer avec le connecteur.</p>
+<h3><a class="anchor" aria-hidden="true" id="proprietes-1"></a><a href="#proprietes-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés</h3>
+<h4><a class="anchor" aria-hidden="true" id="database-string"></a><a href="#database-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>database</code> (<code>string</code>) :</h4>
+<p>Chaîne de connction JDBC à la base de données. Dépend du système de bases de données utilisés.</p>
+<ul>
+<li>MySQL : <code>jdbc:mysql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD</code></li>
+<li>PostgreSQL : <code>jdbc:postgresql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD</code></li>
+<li>Microsoft SQL Serveur : <code>jdbc:sqlserver://127.0.0.1;user=USER;password=PASSWORD;databaseName=DB_NAME;</code></li>
+<li>Pas de connexion à la base de données (pour récupérer uniquement les médias/PDFs) : laisser vide.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="driver-string"></a><a href="#driver-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>driver</code> (<code>string</code>) :</h4>
+<p>Type de driver utilisé en fonction du système de gestion des bases de données.</p>
+<ul>
+<li>MySQL : <code>mysql</code></li>
+<li>PostgreSQL : <code>postgresql</code></li>
+<li>Microsoft SQL Serveur : <code>mssql</code></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="fields-liste-de-field"></a><a href="#fields-liste-de-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fields</code> (liste de <code>FIELD</code>) :</h4>
+<p>Liste des champs à exporter (voir <code>FIELD</code> pour plus de détails).</p>
+<h4><a class="anchor" aria-hidden="true" id="form_id-string"></a><a href="#form_id-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>form_id</code> (<code>string</code>) :</h4>
+<p>Identifiant du formulaire, peut être récupéré à partir du <a href="http://www.kizeoforms.com/rest/v3">Web Service REST</a></p>
+<h4><a class="anchor" aria-hidden="true" id="medias_path-string-optionnel"></a><a href="#medias_path-string-optionnel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>medias_path</code> (<code>string</code>) <em>optionnel</em>:</h4>
+<p>Chemin d'accès au répertoire où vous souhaitez sauvegarder les médias récupérés (<em>optionnel</em>).</p>
+<h4><a class="anchor" aria-hidden="true" id="standard_pdf_path-string-optionnel"></a><a href="#standard_pdf_path-string-optionnel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>standard_pdf_path</code> (<code>string</code>) <em>optionnel</em>:</h4>
+<p>Chemin d'accès au répertoire où vous souhaitez sauvegarder les PDF standards (<em>optionnel</em>).</p>
+<h4><a class="anchor" aria-hidden="true" id="custom_pdf_path-string-optionnel"></a><a href="#custom_pdf_path-string-optionnel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>custom_pdf_path</code> (<code>string</code>) <em>optionnel</em>:</h4>
+<p>Chemin d'accès au répertoire où vous souhaitez sauvegarder les PDF personnalisés (<em>optionnel</em>).</p>
+<h4><a class="anchor" aria-hidden="true" id="table-string"></a><a href="#table-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>table</code> (<code>string</code>) :</h4>
+<p>Nom de la table de la base de données où stocker les données du formulaire (hors tableau).</p>
+<h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">//...</span>
+   <span class="hljs-string">"forms"</span> : [
+      <span class="hljs-comment">// One for each form definition</span>
+      <span class="hljs-comment">// Can not deals with the same form multiple times</span>
+      {
+         <span class="hljs-string">"database"</span>: <span class="hljs-string">"jdbc:mysql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD"</span>, <span class="hljs-comment">// MySql</span>
+         <span class="hljs-comment">// "database": "jdbc:postgresql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD", // PG SQl</span>
+         <span class="hljs-comment">// "database": "jdbc:sqlserver://127.0.0.1;user=USER;password=PASSWORD;databaseName=DB_NAME;", // MS SQL Server</span>
+         <span class="hljs-comment">// "database": "", // If you only want to get media/PDFs</span>
+         <span class="hljs-string">"driver"</span>: <span class="hljs-string">"mysql"</span>,
+         <span class="hljs-string">"fields"</span> : [
+            <span class="hljs-comment">// See bellow</span>
+         ],
+         <span class="hljs-string">"form_id"</span>: <span class="hljs-string">"1000"</span>, <span class="hljs-comment">// The form ID can be see in the URL of the page where you modify forms.</span>
+         <span class="hljs-string">"medias_path"</span>: <span class="hljs-string">"D:\\my_media\\"</span>, <span class="hljs-comment">// The folder to store media</span>
+         <span class="hljs-string">"standard_pdf_path"</span>: <span class="hljs-string">"D:\\my_pdf\\"</span>, <span class="hljs-comment">// The folder to store PDFs</span>
+         <span class="hljs-string">"custom_pdf_path"</span>: <span class="hljs-string">"D:\\my_custom_pdf\\"</span>, <span class="hljs-comment">// The folder to store customer PDFs</span>
+         <span class="hljs-string">"table"</span>: <span class="hljs-string">"table_name"</span> <span class="hljs-comment">// The database table</span>
+
+      },
+   ],
+   <span class="hljs-comment">//...</span>
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="champs-field"></a><a href="#champs-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Champs <code>FIELD</code></h2>
+<p>Représente un champ du formulaire à récupérer. Peut également représenter un tableau du formulaire.</p>
+<h3><a class="anchor" aria-hidden="true" id="proprietes-commun"></a><a href="#proprietes-commun" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés (Commun)</h3>
+<h4><a class="anchor" aria-hidden="true" id="source-string"></a><a href="#source-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>source</code> (<code>string</code>) :</h4>
+<p>Il s'agit de l'identifiant de champ Kizeo Forms. Vous pouvez le récupérer depuis la page de création/modification de formulaire dans les propriétés de chaque champs (ou bien dans le menu <em>Informations</em> des options du formulaire).</p>
+<p><strong>Attention :</strong> Afin de récupérer l'identifiant unique d'une donnée, il vous faut saisir dans la source <code>@@id@@</code>. <strong>Ceci est obligatoire</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="proprietes-champ"></a><a href="#proprietes-champ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés (Champ)</h3>
+<h4><a class="anchor" aria-hidden="true" id="target-string"></a><a href="#target-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>target</code> (<code>string</code>) :</h4>
+<p>Il s'agit de la colonne de la table du formulaire dans laquelle vous souhaitez enregistrer la donnée.</p>
+<h4><a class="anchor" aria-hidden="true" id="type-string-int-text"></a><a href="#type-string-int-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>type</code> (<code>string</code> : <code>'int'|'text'</code>) :</h4>
+<p>Il s'agit de la colonne qui va permet de savoir quel type de colonne générée si <code>autoCreate</code> est <code>true</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">// ...</span>
+   <span class="hljs-string">"forms"</span>: [{
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-string">"fields"</span>: [{
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"@@id@@"</span>,
+         <span class="hljs-string">"target"</span>: <span class="hljs-string">"id"</span>,
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"int"</span>
+      }, {
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"case_a_cocher"</span>,
+         <span class="hljs-string">"target"</span>: <span class="hljs-string">"has_accepted"</span>,
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>
+      }]
+      <span class="hljs-comment">// ...</span>
+   }]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="proprietes-tableau"></a><a href="#proprietes-tableau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés (Tableau)</h3>
+<h4><a class="anchor" aria-hidden="true" id="table-string-1"></a><a href="#table-string-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>table</code> (<code>string</code>) :</h4>
+<p>Il s'agit du nom de la table qui stockera les informations issues de ce tableau.</p>
+<h4><a class="anchor" aria-hidden="true" id="parent_target-string"></a><a href="#parent_target-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>parent_target</code> (<code>string</code>) :</h4>
+<p>Il s'agit de la colonne qui fera référence à l'identifiant unique de la donnée. Elle vous permettra d'identifier de quelle donnes saisie provient cette ligne du tableau.</p>
+<h4><a class="anchor" aria-hidden="true" id="fields-liste-de-field-1"></a><a href="#fields-liste-de-field-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fields</code> (Liste de <code>FIELD</code>) :</h4>
+<p>Liste des champs du tableau à exporter.</p>
+<h4><a class="anchor" aria-hidden="true" id="line_target-string-optionnel"></a><a href="#line_target-string-optionnel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>line_target</code> (<code>string</code>) <em>optionnel</em> :</h4>
+<p>Il s'agit de la colonne qui stockera le numéro de ligne saisie.</p>
+<h3><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">// ...</span>
+   <span class="hljs-string">"forms"</span>: [{
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-string">"fields"</span>: [{
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"table1"</span>,
+         <span class="hljs-string">"table"</span>: <span class="hljs-string">"options_choose"</span>,
+         <span class="hljs-string">"parent_target"</span>: <span class="hljs-string">"main_id"</span>,
+         <span class="hljs-string">"fields"</span>: [{
+            <span class="hljs-string">"source"</span>: <span class="hljs-string">"option_list"</span>,
+            <span class="hljs-string">"target"</span>: <span class="hljs-string">"option"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>
+         }]
+      }, {
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"table"</span>,
+         <span class="hljs-string">"table"</span>: <span class="hljs-string">"table_with_line"</span>,
+         <span class="hljs-string">"parent_target"</span>: <span class="hljs-string">"main_id"</span>,
+         <span class="hljs-string">"line_target"</span>: <span class="hljs-string">"line_number"</span>,
+         <span class="hljs-string">"fields"</span>: [{
+            <span class="hljs-string">"source"</span>: <span class="hljs-string">"text_field"</span>,
+            <span class="hljs-string">"target"</span>: <span class="hljs-string">"sample"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>
+         }]
+
+      }],
+      <span class="hljs-comment">// ...</span>
+   }]
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="champs-speciaux"></a><a href="#champs-speciaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Champs spéciaux</h2>
+<p>En plus des champs que vous avez définis dans votre formulaire, vous pouvez également récupérer certains champs spéciaux :</p>
+<ul>
+<li><code>_id</code> : Récupère l'identifiant du formulaire</li>
+<li><code>_record_number</code> : Récupère le numéro d'enregistrement</li>
+<li><code>_user_id</code> : Récupère l'identifiant de l'utilisateur à l'origine de la donnée.</li>
+<li><code>_form_id</code> : Récupère l'identifiant de la définition de formulaire d'où provient la donnée (pratique si vous exporter plusieurs formulaire dans une seule table).</li>
+<li><code>_answer_time</code> : Récupère la date d'enregistrement de la donnée.</li>
+<li><code>_last_name</code> : Récupère le nom de famille de l'utilisateur à l'origine de la donnée.</li>
+<li><code>_first_name</code> : Récupère le prénom de l'utilisateur à l'origine de la donnée.</li>
+<li><code>_email</code> : Récupère l'email de l'utilisateur à l'origine de la donnée.</li>
+<li><code>_phone</code> : Récupère le téléphone de l'utilisateur à l'origine de la donnée.</li>
+<li><code>_login</code> : Récupère le login de l'utilisateur à l'origine de la donnée.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/fr/installation"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/fr/mysql"><span>Mysql</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentification-auth">Authentification <code>auth</code></a><ul class="toc-headings"><li><a href="#proprietes">Propriétés</a></li><li><a href="#proprietes-generales">Propriétés générales</a></li></ul></li><li><a href="#definition-des-donnees-a-exporter-forms">Définition des données à exporter <code>forms</code></a><ul class="toc-headings"><li><a href="#proprietes-1">Propriétés</a></li><li><a href="#exemple">Exemple</a></li></ul></li><li><a href="#champs-field">Champs <code>FIELD</code></a><ul class="toc-headings"><li><a href="#proprietes-commun">Propriétés (Commun)</a></li><li><a href="#proprietes-champ">Propriétés (Champ)</a></li><li><a href="#exemple-1">Exemple</a></li><li><a href="#proprietes-tableau">Propriétés (Tableau)</a></li><li><a href="#exemple-2">Exemple</a></li></ul></li><li><a href="#champs-speciaux">Champs spéciaux</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/fr/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/fr/restv3">API (Web Service REST)</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2019 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

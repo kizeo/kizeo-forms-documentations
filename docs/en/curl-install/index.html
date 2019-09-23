@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How to activate cURL (PHP) · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="If you are not able to run our code samples, and you receive errors like following :"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How to activate cURL (PHP) · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="If you are not able to run our code samples, and you receive errors like following :"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/en"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/kizeo-forms-documentations/docs/en/installation" target="_self">Kizeo Connector</a></li><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/en/restv3" target="_self">Web Service</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/fr/curl-install">Français</a></li><li><a href="/kizeo-forms-documentations/docs/es-ES/curl-install">Español</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/restv3">Rest V3</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/en/curl-install">How to activate cURL (PHP)</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/restv3-sample">PHP Sample</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/forms">Operations on forms</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/forms-samples">Samples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Lists<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/lists">Operations on lists</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/lists-samples">Samples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Users<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/users">Operations on users</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/users-samples">Samples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/data">Operations on data</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/data-samples">Samples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Exports<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/exports">Operations on exports</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/exports-samples">Samples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tips<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/tips">Tips</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/rest-curl-install.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">How to activate cURL (PHP)</h1></header><article><div><span><p>If you are not able to run our code samples, and you receive errors like following :</p>
+<pre><code class="hljs css language-php">Error : Call to undefined <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">curl_init</span><span class="hljs-params">()</span>. // <span class="hljs-title">Or</span> <span class="hljs-title">another</span> <span class="hljs-title">cURL</span> <span class="hljs-title">function</span>
+</span></code></pre>
+<p>Don't worry, first try to make the following operations :</p>
+<p>If you're using WAMP, you will just have to activate cURL extension by clicking on <code>php_curl</code> in <code>PHP-&gt;PHP extensions</code>. If you're not using WAMP, let's read next.</p>
+<h2><a class="anchor" aria-hidden="true" id="first-step-curl-extension-activation"></a><a href="#first-step-curl-extension-activation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First step : cURL extension activation</h2>
+<p>At first, open the file named <code>php.ini</code> and in it, search the following line :</p>
+<pre><code class="hljs css language-php">;extension=php_curl.dll
+</code></pre>
+<p>When you found it, you have to uncomment it. To do this, delete the <code>&quot;;&quot;</code> that is at the beginning of the line, and save the file.</p>
+<h2><a class="anchor" aria-hidden="true" id="second-step-environment-variable-modification"></a><a href="#second-step-environment-variable-modification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Second step : Environment variable modification</h2>
+<p>If it hasn't been done before, you will also have to modify the <code>PATH</code> environment variable to make cURL extension work.</p>
+<h3><a class="anchor" aria-hidden="true" id="if-you-dont-know-how-to-modify-this-variable-here-is-how-to-process-on-windows-10"></a><a href="#if-you-dont-know-how-to-modify-this-variable-here-is-how-to-process-on-windows-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>If you don't know how to modify this variable, here is how to process (on Windows 10) :</h3>
+<ul>
+<li>Open a file browser</li>
+<li>Right click on <strong>My Computer</strong> then left click on <strong>Properties</strong></li>
+<li>Click on <strong>Advanced system settings</strong></li>
+<li>In <strong>Advanced system settings</strong> tab, click on <strong>Environment variables</strong></li>
+<li>Select variable named <strong>Path</strong> then click on <strong>Modify</strong></li>
+<li>Write the <strong>PHP directory full path</strong> then click on <strong>Ok</strong></li>
+<li>Cliquer sur <strong>Apply</strong></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="last-step-re-launching-the-apache-service"></a><a href="#last-step-re-launching-the-apache-service" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Last step : Re-launching the Apache service</h2>
+<p>To save and apply all your modifications you will have to re-launch your Apache service, and then cURL should work.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/en/restv3"><span class="arrow-prev">← </span><span>Rest V3</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/en/restv3-sample"><span>PHP Sample</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#first-step-curl-extension-activation">First step : cURL extension activation</a></li><li><a href="#second-step-environment-variable-modification">Second step : Environment variable modification</a><ul class="toc-headings"><li><a href="#if-you-dont-know-how-to-modify-this-variable-here-is-how-to-process-on-windows-10">If you don't know how to modify this variable, here is how to process (on Windows 10) :</a></li></ul></li><li><a href="#last-step-re-launching-the-apache-service">Last step : Re-launching the Apache service</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/en/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/en/restv3">API (Web Service REST)</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2019 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

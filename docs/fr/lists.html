@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Listes · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Opérations sur les listes"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Listes · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="## Opérations sur les listes"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/fr"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/kizeo-forms-documentations/docs/fr/installation" target="_self">Kizeo Connector</a></li><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/fr/restv3" target="_self">Web Service</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/en/lists">English</a></li><li><a href="/kizeo-forms-documentations/docs/es-ES/lists">Español</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Listes</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Premiers pas<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/restv3">Rest V3</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/curl-install">Aide à l&#x27;activation de cURL (PHP)</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/restv3-sample">Exemple en PHP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/forms">Opérations sur les formulaires</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/forms-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Listes<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/lists">Opération sur les listes</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/lists-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Utilisateurs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/users">Opérations sur les utilisateurs</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/users-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Données<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/data">Opérations sur les données</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/data-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Exports<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/exports">Opérations sur les exports</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/exports-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tips<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/tips">Tips</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/rest-lists.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Listes</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="operations-sur-les-listes"></a><a href="#operations-sur-les-listes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opérations sur les listes</h2>
+<p>Le token d'identification permet aussi de réaliser des opérations sur les listes externes auxquelles vous avez l'accès.</p>
+<h3><a class="anchor" aria-hidden="true" id="1-recuperer-la-liste-des-listes-externes"></a><a href="#1-recuperer-la-liste-des-listes-externes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 - Récupérer la liste des listes externes</h3>
+<hr>
+<p>La première opération consiste à récupérer une liste de toutes les listes externes sur lesquelles vous avez des droits.
+Cette opération consiste à envoyer une requête en <code>GET</code> à l'URL suivante : <code>https://www.kizeoforms.com/rest/v3/lists</code>.</p>
+<p>En cas de réussite de la requête HTTP, vous obtiendrez une réponse sous le format suivant :</p>
+<pre><code class="hljs css language-json">
+{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"ok"</span>,
+  <span class="hljs-attr">"lists"</span>: [
+    // Première liste identifiée par son <span class="hljs-string">"id"</span> et son <span class="hljs-string">"name"</span>
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"listId1"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"listName1"</span>,
+      <span class="hljs-attr">"class"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"update_time"</span>: <span class="hljs-literal">null</span>  // Date de modification à <span class="hljs-literal">null</span> si elle n'a jamais été modifiée après création
+    },
+    // Deuxième liste
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"listId2"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"listName2"</span>,
+      <span class="hljs-attr">"class"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"update_time"</span>: <span class="hljs-string">"date"</span>
+    }
+  ]
+}
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="2-recuperer-les-details-dune-liste-externe"></a><a href="#2-recuperer-les-details-dune-liste-externe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 - Récupérer les détails d'une liste externe</h3>
+<hr>
+<p>La commande précédente vous donnant les <strong>id</strong> de toutes les listes que vous pouvez voir, vous pouvez maintenant demander tous les détails concernant une seule liste.
+Pour faire cette opération, il faut envoyer une requête en <code>GET</code> à l'URL suivante : <code>https://www.kizeoforms.com/rest/v3/lists/{listId}</code> où listId est l'identifiant de la liste dont on veut voir les détails.</p>
+<p>Si la requête a été effectuée correctement, vous devriez recevoir une réponse sous le format suivant :</p>
+<pre><code class="hljs css language-json">
+{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"ok"</span>,
+  <span class="hljs-attr">"list"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"listId"</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"listName1"</span>,
+    <span class="hljs-attr">"class"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"update_time"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"items"</span>: [
+      <span class="hljs-string">"key1:value1"</span>,
+      <span class="hljs-string">"key2:value2"</span>,
+      <span class="hljs-string">"key3:value3"</span>,
+      <span class="hljs-string">"key4:value4"</span>,
+      <span class="hljs-string">"key5:value5"</span>
+    ]
+  }
+}
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="3-mettre-a-jour-une-liste-externe"></a><a href="#3-mettre-a-jour-une-liste-externe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 - Mettre à jour une liste externe</h3>
+<hr>
+<p>Maintenant que vous avez toutes les informations détaillées de votre liste, vous allez pouvoir mettre à jour le tableau &quot;items&quot; de cette liste.
+Cette action est possible par l'envoi d'une requête en <code>PUT</code> à l'URL suivante : <code>https://www.kizeoforms.com/rest/v3/lists/{listId}</code>.</p>
+<p>Cependant attention, cette commande <strong>efface toutes les valeurs</strong> dans le tableau &quot;items&quot; avant d'y insérer les nouvelles valeurs que vous lui donnez.</p>
+<p>Vous devrez ajouter les nouvelles valeurs des items de la liste sous le format suivant dans le corps de la requête :</p>
+<pre><code class="hljs css language-json">
+{
+  <span class="hljs-attr">"items"</span>: [
+    <span class="hljs-string">"string"</span>,
+    <span class="hljs-string">"string"</span>,
+    <span class="hljs-string">"string"</span>,
+    <span class="hljs-string">"string"</span>,
+    <span class="hljs-string">"string"</span>
+  ]
+}
+
+</code></pre>
+<p>Si l'opération a réussi, la réponse que vous obtiendrez sera la suivante :</p>
+<pre><code class="hljs css language-json">
+{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"ok"</span>,
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Updated"</span>
+}
+
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/fr/forms-samples"><span class="arrow-prev">← </span><span>Exemples</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/fr/lists-samples"><span>Exemples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#operations-sur-les-listes">Opérations sur les listes</a><ul class="toc-headings"><li><a href="#1-recuperer-la-liste-des-listes-externes">1 - Récupérer la liste des listes externes</a></li><li><a href="#2-recuperer-les-details-dune-liste-externe">2 - Récupérer les détails d'une liste externe</a></li><li><a href="#3-mettre-a-jour-une-liste-externe">3 - Mettre à jour une liste externe</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/fr/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/fr/restv3">API (Web Service REST)</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2019 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

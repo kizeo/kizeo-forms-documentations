@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Données · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 1 - Récupérer la liste de toutes les données d&#x27;un formulaire"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Données · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="## 1 - Récupérer la liste de toutes les données d&#x27;un formulaire"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/fr"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/kizeo-forms-documentations/docs/fr/installation" target="_self">Kizeo Connector</a></li><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/fr/restv3" target="_self">Web Service</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/en/data">English</a></li><li><a href="/kizeo-forms-documentations/docs/es-ES/data">Español</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Données</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Premiers pas<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/restv3">Rest V3</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/curl-install">Aide à l&#x27;activation de cURL (PHP)</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/restv3-sample">Exemple en PHP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/forms">Opérations sur les formulaires</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/forms-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Listes<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/lists">Opération sur les listes</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/lists-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Utilisateurs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/users">Opérations sur les utilisateurs</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/users-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Données<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/data">Opérations sur les données</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/data-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Exports<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/exports">Opérations sur les exports</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/exports-samples">Exemples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tips<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/tips">Tips</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/rest-data.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Données</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="1-recuperer-la-liste-de-toutes-les-donnees-dun-formulaire"></a><a href="#1-recuperer-la-liste-de-toutes-les-donnees-dun-formulaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 - Récupérer la liste de toutes les données d'un formulaire</h2>
+<hr>
+<p>Il existe deux fonctions permettant de récupérer simplement les données d'un formulaire.
+La première permet de n'afficher que les données non lues du formulaire, et consiste en une requête en <code>GET</code> à l'URL : <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data</code>.<br>
+La deuxième permet en revanche d'afficher toutes les données du formulaire, et consiste en une requête en <code>GET</code> à l'URL : <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data/all</code>.</p>
+<p>Dans ces deux fonctions, si la requête est lancée avec succès, vous recevrez une réponse sous le format suivant :</p>
+<pre><code class="hljs css language-json">
+[
+  {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"dataId1"</span>,
+    <span class="hljs-attr">"form_id"</span>: <span class="hljs-string">"integer"</span>,
+    <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"integer"</span>,
+    <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"date"</span>,
+    <span class="hljs-attr">"answer_time"</span>: <span class="hljs-string">"date"</span>
+  },
+    {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"dataId2"</span>,
+    <span class="hljs-attr">"form_id"</span>: <span class="hljs-string">"integer"</span>,
+    <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"integer"</span>,
+    <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"date"</span>,
+    <span class="hljs-attr">"answer_time"</span>: <span class="hljs-string">"date"</span>
+  },
+  .
+  .
+  .
+]
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-lire-les-nouvelles-donnees-dun-formulaire"></a><a href="#2-lire-les-nouvelles-donnees-dun-formulaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 - Lire les nouvelles données d'un formulaire</h2>
+<hr>
+<p>Vous avez aussi à disposition une fonction permettant de lire le contenu de toutes les données non lues d'un formulaire.<br>
+Il s'agit d'envoyer une requête en <code>GET</code> à l'URL : <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data/readnew</code>.</p>
+<p>Si tout s'est bien passé, vous recevrez une réponse du type :</p>
+<pre><code class="hljs css language-json">
+[
+  {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"dataId"</span>,
+    <span class="hljs-attr">"form_id"</span>: <span class="hljs-string">"integer"</span>,
+    <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"integer"</span>,
+    <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"date"</span>,
+    <span class="hljs-attr">"answer_time"</span>: <span class="hljs-string">"date"</span>
+  }
+]
+
+</code></pre>
+<p>Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme &quot;nouvelles&quot;.
+Pour cela, il faut utiliser une requête en <code>POST</code> à l'URL : <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/markasread</code>.</p>
+<p>Vous devrez cependant ajouter, dans le corps de la requête, les identifiants des données que vous souhaitez marquer comme &quot;lues&quot;, de la façon suivante :</p>
+<pre><code class="hljs css language-json">
+{
+  <span class="hljs-attr">"data_ids"</span>: [
+    <span class="hljs-string">"dataId1"</span>,
+    <span class="hljs-string">"dataId2"</span>,
+    <span class="hljs-string">"dataId3"</span>,
+    <span class="hljs-string">"dataId4"</span>
+  ]
+}
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="3-recherche-avancee-dans-les-donnees-dun-formulaire"></a><a href="#3-recherche-avancee-dans-les-donnees-dun-formulaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 - Recherche avancée dans les données d'un formulaire</h2>
+<hr>
+<p>Pour approfondir les recherches dans les données d'un formulaire, il existe une fonction de recherche avancée.
+Pour utiliser cette dernière, vous devez envoyer une requête en <code>POST</code> à l'URL suivante : <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data/advanced</code>.</p>
+<p>Afin de définir les filtres que vous voulez utiliser pour rechercher précisément vos données, vous disposez des filtres au format suivant en <strong>JSON</strong>.</p>
+<pre><code class="hljs css language-json">
+{
+  "global_filters": "string",   // Une chaîne de caractères à rechercher dans la donnée
+  "format": "basic",            // Optionnel, par défaut `basic`
+  "filters": [
+    {
+        "type": "OR",           // Afin de rajouter un groupe de conditions `Ou inclusif`
+        "components": [         // L'ensemble des conditions du groupe
+            {
+                "field": "string",        // Le champ sur lequel repose la recherche avancée
+                "operator": "string",     // L'opérateur utilisé pour comparer la donnée à la valeur de référence
+                "type": "simple",
+                "val": "string"           // Valeur de référence pour la recherche avancée
+            },
+            // ...
+        ]
+    }
+  ],
+  "order": [
+    {
+      "col": "string",          // Donnée sur laquelle seront classés les résultats
+      "type": "string"          // Type de la donnée de classement
+    }
+  ]
+}
+
+</code></pre>
+<ul>
+<li><code>format</code> : Vous pouvez utiliser le format <code>basic</code> (contient tous les détails) ou <code>simple</code> (plus simple mais moins exhaustif et ne contient pas les tableaux).</li>
+<li><code>operator</code> : Les différents opérateurs sont : <code>=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>!=</code>, <code>like</code>, <code>notlike</code> (attention, sensible à la casse).</li>
+<li><code>field</code> : Correspond à la racine de la balise de chaque champ. Exemple : <code>_update_time</code> (date de mise-à-jour) et <code>_user_id</code> (id de l'utilisateur ayant saisi la donnée). Vous pouvez également rechercher sur des champs du formulaire définis par vous-même (<code>client</code> par exemple, ou bien <code>numero_de_contrat</code>).</li>
+<li><code>type</code> : Les différents types sont : <code>simple</code> (on recherche sur un champ hors d'un tableau), <code>dynamic_date</code> (pas encore documenté), <code>global</code> (on recherche dans l'ensemble de la donnée), <code>AND</code> et <code>OR</code> (permet de faire des conditions multiples dans l'attribut <code>components</code> comme présenté ci-dessus).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="4-enregistrer-une-donnee-sans-enregistrer-le-formulaire-complet"></a><a href="#4-enregistrer-une-donnee-sans-enregistrer-le-formulaire-complet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4 - Enregistrer une donnée sans enregistrer le formulaire complet</h2>
+<hr>
+<p>Vous avez aussi la possibilité d'envoyer des données sans avoir besoin d'enregistrer le formulaire, au cas où vous avez besoin d'ajouter d'autres données plus tard. On appelle cet envoi de donnée un envoi par <strong>&quot;push&quot;</strong>.<br>
+Pour réaliser cette opération, il vous faut envoyer une requête en <code>POST</code> à l'URL suivante : <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/push</code> en remplaçant {formId} par l'identifiant du formulaire.</p>
+<p>Il vous faudra aussi ajouter dans le corps de la requête les données à transmettre de la façon qui suit :</p>
+<pre><code class="hljs css language-json">
+{
+  <span class="hljs-attr">"recipient_user_id"</span>: <span class="hljs-string">"integer"</span>,
+  <span class="hljs-attr">"fields"</span>: {
+    <span class="hljs-attr">"field_id"</span>: {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"string"</span>
+    }
+  }
+}
+
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/fr/users-samples"><span class="arrow-prev">← </span><span>Exemples</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/fr/data-samples"><span>Exemples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-recuperer-la-liste-de-toutes-les-donnees-dun-formulaire">1 - Récupérer la liste de toutes les données d'un formulaire</a></li><li><a href="#2-lire-les-nouvelles-donnees-dun-formulaire">2 - Lire les nouvelles données d'un formulaire</a></li><li><a href="#3-recherche-avancee-dans-les-donnees-dun-formulaire">3 - Recherche avancée dans les données d'un formulaire</a></li><li><a href="#4-enregistrer-une-donnee-sans-enregistrer-le-formulaire-complet">4 - Enregistrer une donnée sans enregistrer le formulaire complet</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/fr/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/fr/restv3">API (Web Service REST)</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2019 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

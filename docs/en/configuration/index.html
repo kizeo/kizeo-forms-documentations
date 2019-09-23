@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuration · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In order to set up the connector, you need to write a *JSON* file. This file contains sensitive information such as the login information to Kizeo Forms and your database. You can show sample settings using the links above."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuration · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="In order to set up the connector, you need to write a *JSON* file. This file contains sensitive information such as the login information to Kizeo Forms and your database. You can show sample settings using the links above."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/en"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/en/installation" target="_self">Kizeo Connector</a></li><li class=""><a href="/kizeo-forms-documentations/docs/en/restv3" target="_self">Web Service</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/fr/configuration">Français</a></li><li><a href="/kizeo-forms-documentations/docs/es-ES/configuration">Español</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Settings</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/installation">Installation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/en/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/mysql">Mysql</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/postgressql">PostgresSql</a></li><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/microsoftsql">Microsoft SQL Server</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Settings wizard<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/demo">Demo</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Samples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/en/howtouse">How to use</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/kizeo-connector-config.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Configuration</h1></header><article><div><span><p>In order to set up the connector, you need to write a <em>JSON</em> file. This file contains sensitive information such as the login information to Kizeo Forms and your database. You can show sample settings using the links above.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="authentication-auth"></a><a href="#authentication-auth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentication <code>auth</code></h2>
+<p>The first part of the set up deals with Kizeo IDs. A good practive is to use a <strong>dedicated admin account</strong> for the connector. The three IDs required are the same as those used in order to log in to your back-office (<code>www.kizeoforms.com</code>).
+The config must look like this :</p>
+<pre><code class="hljs css language-javascript">{
+    <span class="hljs-string">"auth"</span> : {
+        <span class="hljs-string">"company"</span>: <span class="hljs-string">"COMPANY_CODE"</span>,
+        <span class="hljs-string">"password"</span>: <span class="hljs-string">"YOUR_PASSWORD"</span>,
+        <span class="hljs-string">"user"</span>: <span class="hljs-string">"YOUR_LOGIN"</span>
+    },
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h3>
+<ul>
+<li><code>company</code> (<code>string</code>) :
+The company code shared with all your users</li>
+<li><code>user</code> (<code>string</code>) :
+The user's login</li>
+<li><code>password</code> (<code>string</code>) :
+The user's password</li>
+</ul>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="global-properties"></a><a href="#global-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Global properties</h3>
+<p>You need to provide some global settings :</p>
+<ul>
+<li><code>autoCreate</code> (true|false) : If this is set to <code>true</code>, each time a table or a column is missing in the database according to your config, it will attemp to create it.</li>
+<li><code>loop</code> (true|false) : If this is set to  <code>true</code>, the connector will loop after the end of the process (with a 2 minutes break).</li>
+</ul>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">//...s</span>
+   <span class="hljs-string">"autoCreate"</span> : <span class="hljs-literal">false</span>,
+   <span class="hljs-string">"loop"</span> : <span class="hljs-literal">true</span>,
+   <span class="hljs-string">"protocol"</span>: <span class="hljs-string">"https"</span>,
+   <span class="hljs-string">"server"</span>: <span class="hljs-string">"www.kizeoforms.com"</span>,
+   <span class="hljs-string">"restRoot"</span>: <span class="hljs-string">"rest/v3"</span>,
+   <span class="hljs-comment">// Please do not touch the others options if Kizeo did not tell you to do so.</span>
+   <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="forms-export-definition-forms"></a><a href="#forms-export-definition-forms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forms export definition <code>forms</code></h2>
+<p>After defining the admin account used for the export, you need to explain which forms you need to import in your database. This is done using the <code>forms</code> property. This property is an <em>array</em> with an element for each form you need to export.</p>
+<h3><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h3>
+<h4><a class="anchor" aria-hidden="true" id="database-string"></a><a href="#database-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>database</code> (<code>string</code>) :</h4>
+<p>JDBC connection string. Depends on your DBMS.</p>
+<ul>
+<li>MySQL : <code>jdbc:mysql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD</code></li>
+<li>PostgreSQL : <code>jdbc:postgresql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD</code></li>
+<li>Microsoft SQL Server : <code>jdbc:sqlserver://127.0.0.1;user=USER;password=PASSWORD;databaseName=DB_NAME;</code></li>
+<li>No database (in order to export medias and PDFs only) : stay empty.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="driver-string"></a><a href="#driver-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>driver</code> (<code>string</code>) :</h4>
+<p>The driver used depending on your DBMS.</p>
+<ul>
+<li>MySQL : <code>mysql</code></li>
+<li>PostgreSQL : <code>postgresql</code></li>
+<li>Microsoft SQL Server : <code>mssql</code></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="fields-array-of-field"></a><a href="#fields-array-of-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fields</code> (<em>Array</em> of <code>FIELD</code>) :</h4>
+<p>The settings for each fields to export (See <code>FIELD</code> for more details).</p>
+<h4><a class="anchor" aria-hidden="true" id="form_id-string"></a><a href="#form_id-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>form_id</code> (<code>string</code>) :</h4>
+<p>Form ID, can be obtain using the <a href="http://www.kizeoforms.com/rest/v3">Web Service RESTfull</a></p>
+<h4><a class="anchor" aria-hidden="true" id="medias_path-string-optional"></a><a href="#medias_path-string-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>medias_path</code> (<code>string</code>) <em>optional</em>:</h4>
+<p>Path of the directory where you want to save medias (<em>optional</em>).</p>
+<h4><a class="anchor" aria-hidden="true" id="standard_pdf_path-string-optional"></a><a href="#standard_pdf_path-string-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>standard_pdf_path</code> (<code>string</code>) <em>optional</em>:</h4>
+<p>Path of the directory where you want to save standard PDFs (<em>optional</em>).</p>
+<h4><a class="anchor" aria-hidden="true" id="custom_pdf_path-string-optional"></a><a href="#custom_pdf_path-string-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>custom_pdf_path</code> (<code>string</code>) <em>optional</em>:</h4>
+<p>Path of the directory where you want to save custom PDFs (<em>optional</em>).</p>
+<h4><a class="anchor" aria-hidden="true" id="table-string"></a><a href="#table-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>table</code> (<code>string</code>) :</h4>
+<p>Name of the database table where you want to store information from this form (except Kizeo Forms tables).</p>
+<h3><a class="anchor" aria-hidden="true" id="sample"></a><a href="#sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample</h3>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">//...</span>
+   <span class="hljs-string">"forms"</span> : [
+      <span class="hljs-comment">// One for each form definition</span>
+      <span class="hljs-comment">// Can not deals with the same form multiple times</span>
+      {
+         <span class="hljs-string">"database"</span>: <span class="hljs-string">"jdbc:mysql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD"</span>, <span class="hljs-comment">// MySql</span>
+         <span class="hljs-comment">// "database": "jdbc:postgresql://localhost:3306/DB_NAME?user=USER&amp;password=PASSWORD", // PG SQl</span>
+         <span class="hljs-comment">// "database": "jdbc:sqlserver://127.0.0.1;user=USER;password=PASSWORD;databaseName=DB_NAME;", // MS SQL Server</span>
+         <span class="hljs-comment">// "database": "", // If you only want to get media/PDFs</span>
+         <span class="hljs-string">"driver"</span>: <span class="hljs-string">"mysql"</span>,
+         <span class="hljs-string">"fields"</span> : [
+            <span class="hljs-comment">// See bellow</span>
+         ],
+         <span class="hljs-string">"form_id"</span>: <span class="hljs-string">"1000"</span>, <span class="hljs-comment">// The form ID can be see in the URL of the page where you modify forms.</span>
+         <span class="hljs-string">"medias_path"</span>: <span class="hljs-string">"D:\\my_media\\"</span>, <span class="hljs-comment">// The folder to store media</span>
+         <span class="hljs-string">"standard_pdf_path"</span>: <span class="hljs-string">"D:\\my_pdf\\"</span>, <span class="hljs-comment">// The folder to store PDFs</span>
+         <span class="hljs-string">"custom_pdf_path"</span>: <span class="hljs-string">"D:\\my_custom_pdf\\"</span>, <span class="hljs-comment">// The folder to store customer PDFs</span>
+         <span class="hljs-string">"table"</span>: <span class="hljs-string">"table_name"</span> <span class="hljs-comment">// The database table</span>
+
+      },
+   ],
+   <span class="hljs-comment">//...</span>
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="field-field"></a><a href="#field-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Field <code>FIELD</code></h2>
+<p>Represents a field of the form to export. Can also represents a table within the form.</p>
+<h3><a class="anchor" aria-hidden="true" id="properties-common"></a><a href="#properties-common" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties (Common)</h3>
+<h4><a class="anchor" aria-hidden="true" id="source-string"></a><a href="#source-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>source</code> (<code>string</code>) :</h4>
+<p>It is the Kizeo Forms ID of the field. You can get it using the create/modify form page, going to each fields properties (or in the <em>Information</em> menu in your form's options).</p>
+<p><strong>Info :</strong> In order to have the Kizeo Forms's ID of the data, you must put <code>@@id@@</code>. <strong>You must have this field in each of your forms' fields list).</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="properties-field"></a><a href="#properties-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties (Field)</h3>
+<h4><a class="anchor" aria-hidden="true" id="target-string"></a><a href="#target-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>target</code> (<code>string</code>) :</h4>
+<p>This is the database column where you want to store the information about this field.</p>
+<h4><a class="anchor" aria-hidden="true" id="type-string-int-text"></a><a href="#type-string-int-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>type</code> (<code>string</code> : <code>'int'|'text'</code>) :</h4>
+<p>This is only used when <code>autoCreate</code> is <code>true</code>. It allows you to specify which type of column to create.</p>
+<h3><a class="anchor" aria-hidden="true" id="sample-1"></a><a href="#sample-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample</h3>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">// ...</span>
+   <span class="hljs-string">"forms"</span>: [{
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-string">"fields"</span>: [{
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"@@id@@"</span>,
+         <span class="hljs-string">"target"</span>: <span class="hljs-string">"id"</span>,
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"int"</span>
+      }, {
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"case_a_cocher"</span>,
+         <span class="hljs-string">"target"</span>: <span class="hljs-string">"has_accepted"</span>,
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>
+      }]
+      <span class="hljs-comment">// ...</span>
+   }]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="properties-table"></a><a href="#properties-table" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties (Table)</h3>
+<h4><a class="anchor" aria-hidden="true" id="table-string-1"></a><a href="#table-string-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>table</code> (<code>string</code>) :</h4>
+<p>This is the name of the database table storing information about this Kizeo Forms table.</p>
+<h4><a class="anchor" aria-hidden="true" id="parent_target-string"></a><a href="#parent_target-string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>parent_target</code> (<code>string</code>) :</h4>
+<p>This is the column of the database table corresponding to the main data ID. Thanks to this column, you can identify the origin of each line of this table.</p>
+<h4><a class="anchor" aria-hidden="true" id="fields-array-of-field-1"></a><a href="#fields-array-of-field-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fields</code> (Array of <code>FIELD</code>) :</h4>
+<p>List of the table's fields to import</p>
+<h4><a class="anchor" aria-hidden="true" id="line_target-string-optional"></a><a href="#line_target-string-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>line_target</code> (<code>string</code>) <em>optional</em> :</h4>
+<p>This is the column which store the lines' number.</p>
+<h3><a class="anchor" aria-hidden="true" id="sample-2"></a><a href="#sample-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample</h3>
+<pre><code class="hljs css language-javascript">{
+   <span class="hljs-comment">// ...</span>
+   <span class="hljs-string">"forms"</span>: [{
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-string">"fields"</span>: [{
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"table1"</span>,
+         <span class="hljs-string">"table"</span>: <span class="hljs-string">"options_choose"</span>,
+         <span class="hljs-string">"parent_target"</span>: <span class="hljs-string">"main_id"</span>,
+         <span class="hljs-string">"fields"</span>: [{
+            <span class="hljs-string">"source"</span>: <span class="hljs-string">"option_list"</span>,
+            <span class="hljs-string">"target"</span>: <span class="hljs-string">"option"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>
+         }]
+      }, {
+         <span class="hljs-string">"source"</span>: <span class="hljs-string">"table"</span>,
+         <span class="hljs-string">"table"</span>: <span class="hljs-string">"table_with_line"</span>,
+         <span class="hljs-string">"parent_target"</span>: <span class="hljs-string">"main_id"</span>,
+         <span class="hljs-string">"line_target"</span>: <span class="hljs-string">"line_number"</span>,
+         <span class="hljs-string">"fields"</span>: [{
+            <span class="hljs-string">"source"</span>: <span class="hljs-string">"text_field"</span>,
+            <span class="hljs-string">"target"</span>: <span class="hljs-string">"sample"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"text"</span>
+         }]
+
+      }],
+      <span class="hljs-comment">// ...</span>
+   }]
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="special-fields"></a><a href="#special-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Special Fields</h2>
+<p>Adding to your form's fields, you can also specify fields containing meta data about your entry.</p>
+<ul>
+<li><code>_id</code> : ID of the entry.</li>
+<li><code>_record_number</code> : Record number of the form.</li>
+<li><code>_user_id</code> : The ID of the user who created this entry.</li>
+<li><code>_form_id</code> : RID of the form (usefull if you need to export multiple forms in the same table).</li>
+<li><code>_answer_time</code> : The answer time of the entry.</li>
+<li><code>_last_name</code> : The last name of the user who created this entry.</li>
+<li><code>_first_name</code> : The first name of the user who created this entry.</li>
+<li><code>_email</code> : The email of the user who created this entry.</li>
+<li><code>_phone</code> : The phone number of the user who created this entry.</li>
+<li><code>_login</code> : The login of the user who created this entry.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/en/installation"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/en/mysql"><span>Mysql</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication-auth">Authentication <code>auth</code></a><ul class="toc-headings"><li><a href="#properties">Properties</a></li><li><a href="#global-properties">Global properties</a></li></ul></li><li><a href="#forms-export-definition-forms">Forms export definition <code>forms</code></a><ul class="toc-headings"><li><a href="#properties-1">Properties</a></li><li><a href="#sample">Sample</a></li></ul></li><li><a href="#field-field">Field <code>FIELD</code></a><ul class="toc-headings"><li><a href="#properties-common">Properties (Common)</a></li><li><a href="#properties-field">Properties (Field)</a></li><li><a href="#sample-1">Sample</a></li><li><a href="#properties-table">Properties (Table)</a></li><li><a href="#sample-2">Sample</a></li></ul></li><li><a href="#special-fields">Special Fields</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/en/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/en/restv3">API (Web Service REST)</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2019 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
