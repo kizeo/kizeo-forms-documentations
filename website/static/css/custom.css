@@ -1,0 +1,67 @@
+/* your custom css */
+
+.imageAlignSide p {
+    max-width: unset !important;
+}
+
+.leftBlockContent {
+    text-align: justify;
+}
+
+.logos img {
+    max-height: 100px !important;
+    width: auto !important;
+}
+
+.sitemap {
+    justify-content: space-evenly !important;
+}
+
+.sitemap div {
+    flex: none !important;
+}
+
+.postHeaderTitle {
+    border-bottom: 1px solid #a1c639;
+    padding-bottom: 20px !important;
+}
+
+.headerTitleWithLogo {
+    margin-top: 0 !important;
+}
+
+h2 {
+    margin-top: 0.5em !important;
+}
+
+.navGroupSubcategoryTitle {
+    color: #A2A2A2 !important;
+}
+
+.darkBackground {
+    background: #a1c6393d !important;
+    color: black !important;
+}
+
+.darkBackground h2 {
+    color: black !important;
+}
+
+.tabs {
+    border-top: 0;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}

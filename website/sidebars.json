@@ -1,0 +1,84 @@
+{
+  "Kizeo Connector": {
+    "Getting started": [
+      "installation"
+    ],
+    "Settings": [
+      "configuration",
+      {
+        "type": "subcategory",
+        "ids": [
+          "mysql",
+          "postgressql",
+          "microsoftsql"
+        ]
+      }
+    ],
+    "Settings wizard": [
+      "demo"
+    ],
+    "Samples": [
+      "howtouse"
+    ]
+  },
+  "Web Service": {
+    "Getting started": [
+      "restv3",
+      {
+        "type": "subcategory",
+        "ids": [
+          "curl-install",
+          "restv3-sample"
+        ]
+      }
+    ],
+    "Forms": [
+      "forms",
+      {
+        "type": "subcategory",
+        "ids": [
+          "forms-samples"
+        ]
+      }
+    ],
+    "Lists": [
+      "lists",
+      {
+        "type": "subcategory",
+        "ids": [
+          "lists-samples"
+        ]
+      }
+    ],
+    "Users": [
+      "users",
+      {
+        "type": "subcategory",
+        "ids": [
+          "users-samples"
+        ]
+      }
+    ],
+    "Data": [
+      "data",
+      {
+        "type": "subcategory",
+        "ids": [
+          "data-samples"
+        ]
+      }
+    ],
+    "Exports": [
+      "exports",
+      {
+        "type": "subcategory",
+        "ids": [
+          "exports-samples"
+        ]
+      }
+    ],
+    "Tips": [
+      "tips"
+    ]
+  }
+}
