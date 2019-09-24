@@ -12,6 +12,7 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
+const translate = require('../../server/translate.js').translate
 
 class HomeSplash extends React.Component {
   render() {
@@ -37,8 +38,10 @@ class HomeSplash extends React.Component {
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
-        {siteConfig.title}
-        <small>{siteConfig.tagline}</small>
+        <translate>Kizeo Forms Documentations</translate>
+        <small>
+          <translate>Advanced features for developers</translate>
+        </small>
       </h2>
     );
 
@@ -63,8 +66,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl('installation.html')}>Kizeo Connector</Button>
-            <Button href={docUrl('restv3.html')}>Rest V3</Button>
+            <Button href={docUrl('installation.html')}><translate>Kizeo Connector</translate></Button>
+            <Button href={docUrl('restv3.html')}><translate>Rest V3</translate></Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -95,11 +98,14 @@ class Index extends React.Component {
       <Block background="light" className="leftBlockContent">
         {[
           {
-            content:
-              'In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. <br> Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.',
+            content: (
+              <translate>
+                In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.
+              </translate>
+            ),
             image: `${baseUrl}img/kizeo-connector2.svg`,
             imageAlign: 'right',
-            title: 'Kizeo connector (database/media)',
+            title: <translate>Kizeo connector (database/media)</translate>,
           },
         ]}
       </Block>
@@ -109,11 +115,14 @@ class Index extends React.Component {
       <Block background="dark" className="rightBlockContent">
         {[
           {
-            content:
-              'For **larger developments**, with more complex process but providing **wider possibilities**, you have our **Web Service REST**.<br> Already available in its third version, our Web Service allows all of your Kizeo Forms data to be manipulated securely using the TLS protocol.<br> We can give you advice on using our Web Service, depending on the availability and skill of our developers. Currently, our internal skills allow us to provide examples in the following programming languages: PHP, Javascript and Java.<br> But you can, of course, develop in another language from when it is able to make **HTTPS requests**.',
+            content: (
+              <translate>
+                For **larger developments**, with more complex process but providing **wider possibilities**, you have our **Web Service REST**. Already available in its third version, our Web Service allows all of your Kizeo Forms data to be manipulated securely using the **TLS protocol**. We can give you advice on using our Web Service, depending on the availability and skill of our developers. Currently, our internal skills allow us to provide examples in the following programming languages: PHP, Javascript and Java. But you can, of course, develop in another language from when it is able to make **HTTPS requests**.
+              </translate>
+            ),
             image: `${baseUrl}img/kizeo-api2.svg`,
             imageAlign: 'left',
-            title: 'API (Web Service REST)',
+            title: <translate>API (Web Service REST)</translate>,
           },
         ]}
       </Block>
@@ -136,7 +145,8 @@ class Index extends React.Component {
 
       return (
         <div className="productShowcaseSection paddingBottom">
-          <h2 style={{marginTop:"1.5em!important"}}>They trust us</h2>
+          <h2 style={{marginTop:"1.5em!important"}}>
+            <translate>They trust us</translate></h2>
           <div className="logos">{showcase}</div>
         </div>
       );
