@@ -7,13 +7,13 @@
 
 const languages = [{
     enabled: true,
-    name: 'Français',
-    tag: 'fr',
+    name: 'English',
+    tag: 'en',
   },
   {
     enabled: true,
-    name: 'English',
-    tag: 'en',
+    name: 'Français',
+    tag: 'fr',
   },
   {
     enabled: false,
@@ -56,7 +56,7 @@ const languages = [{
     tag: 'el',
   },
   {
-    enabled: true,
+    enabled: false,
     name: 'Español',
     tag: 'es-ES',
   },

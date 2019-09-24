@@ -96,7 +96,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. <br> Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server.You can even automatically **recover** and **insert** the **data** into your **database**.',
+              'In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. <br> Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.',
             image: `${baseUrl}img/kizeo-connector2.svg`,
             imageAlign: 'right',
             title: 'Kizeo connector (database/media)',
