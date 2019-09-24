@@ -92,7 +92,7 @@ const siteConfig = {
     },
     {
       doc: 'restv3',
-      label: 'Web Service'
+      label: 'API Rest V3'
     },
     {
       languages: true
