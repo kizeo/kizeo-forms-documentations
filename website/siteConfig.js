@@ -113,7 +113,7 @@ const siteConfig = {
     secondaryColor: '#617723',
   },
 
-  editUrl: 'https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/',
+  // editUrl: 'https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/',
 
   /* Custom fonts for website */
   /*
