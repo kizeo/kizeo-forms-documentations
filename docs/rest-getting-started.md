@@ -7,7 +7,7 @@ title: Rest V3
 
 What you first keep in mind when using Web services is to understand that this will require development skills in your company. The pros of Web Service (**RESTful**) is that you can easily use it with your preferred language assuming that you can do _HTTPS_ requests to our servers with `json`. Here is a non-exhaustive list of common usable language :
 
--   C# ([ASP.NET : Web Service client](http://www.asp.net/web-api/overview/advanced/calling-a-web-api-from-a-net-client))
+-   C# (<a href="http://www.asp.net/web-api/overview/advanced/calling-a-web-api-from-a-net-client" target="_blank">ASP.NET : Web Service client</a>)
 -   C++
 -   Go
 -   Java
