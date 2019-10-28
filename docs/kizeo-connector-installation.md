@@ -16,7 +16,7 @@ The connector must be able to reach the database, please check that the local ma
 
 ### **Kizeo Forms Servers**
 
-The connector must be able to connect to Kizeo Forms, and especially to our [Web Service RESTful](http://www.kizeoforms.com/rest/v3).
+The connector must be able to connect to Kizeo Forms, and especially to our <a href="https://www.kizeoforms.com/rest/v3/doc/" target="_blank">Web Service RESTful</a>.
 
 ***
 
