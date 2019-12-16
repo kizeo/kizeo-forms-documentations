@@ -1,0 +1,115 @@
+{
+  "localized-strings": {
+    "next": "Suivant",
+    "previous": "Précédent",
+    "tagline": "Fonctionnalités avancées pour developpeurs",
+    "docs": {
+      "microsoftsql": {
+        "title": "Microsoft SQL Server"
+      },
+      "mysql": {
+        "title": "Mysql"
+      },
+      "postgressql": {
+        "title": "PostgresSql"
+      },
+      "demo": {
+        "title": "Assistant de configuration",
+        "sidebar_label": "Démo"
+      },
+      "configuration": {
+        "title": "Configurations",
+        "sidebar_label": "Configurations"
+      },
+      "installation": {
+        "title": "Premier pas",
+        "sidebar_label": "Introduction"
+      },
+      "howtouse": {
+        "title": "Utilisations"
+      }, 
+      "curl-install": {
+        "title": "Aide à l'activation de cURL (PHP)",
+        "sidebar_label": "Aide à l'activation de cURL (PHP)"
+      },
+      "data-samples": {
+        "title": "Exemples de codes",
+        "sidebar_label": "Exemples"
+      },
+      "data": {
+        "title": "Données",
+        "sidebar_label": "Opérations sur les données"
+      },
+      "exports-samples": {
+        "title": "Exemples de codes",
+        "sidebar_label": "Exemples"
+      },
+      "exports": {
+        "title": "Exports",
+        "sidebar_label": "Opérations sur les exports"
+      },
+      "forms-samples": {
+        "title": "Exemples de codes",
+        "sidebar_label": "Exemples"
+      },
+      "forms": {
+        "title": "Formulaires",
+        "sidebar_label": "Opérations sur les formulaires"
+      },
+      "restv3-sample": {
+        "title": "PHP Sample",
+        "sidebar_label": "Exemple en PHP"
+      },
+      "restv3": {
+        "title": "Rest V3"
+      },
+      "lists-samples": {
+        "title": "Exemples de codes",
+        "sidebar_label": "Exemples"
+      },
+      "lists": {
+        "title": "Listes",
+        "sidebar_label": "Opération sur les listes"
+      },
+      "tips": {
+        "title": "Tips",
+        "sidebar_label": "Tips"
+      },
+      "users-samples": {
+        "title": "Exemples de codes",
+        "sidebar_label": "Exemples"
+      },
+      "users": {
+        "title": "Utilisateurs",
+        "sidebar_label": "Opérations sur les utilisateurs"
+      }
+    },
+    "links": {
+      "Kizeo Connector": "Kizeo Connector",
+      "Web Service": "Web Service"
+    },
+    "categories": {
+      "Getting started": "Premiers pas",
+      "Settings": "Configurations",
+      "Settings wizard": "Assistant de config",
+      "Samples": "Exemples",
+      "Forms": "Formulaires",
+      "Lists": "Listes",
+      "Users": "Utilisateurs",
+      "Data": "Données",
+      "Exports": "Exports",
+      "Tips": "Tips"
+    }
+  },
+  "pages-strings": {
+    "Kizeo Forms Documentations|no description given": "Kizeo Forms Documentation",
+    "Advanced features for developers|no description given": "Fonctionnalités avancées pour developpeurs",
+    "Kizeo Connector|no description given": "Connecteur Kizeo",
+    "Rest V3|no description given": "Intégration API",
+    "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.|no description given": "Afin d’offrir à nos clients une **solution intermédiaire**, nous avons développé un **connecteur** en **JAVA**. Une fois ce connecteur configuré et mis-en-place sur un de vos serveurs, dès qu’une nouvelle donnée sera finalisée sur Kizeo Forms, vous pourrez **automatiquement récupérer** les **médias** et les **PDFs** correspondants sur votre serveur. Vous pourrez même automatiquement **récupérer** et **insérer** la donnée dans **votre base de données**.",
+     "Kizeo connector (database/media)|no description given": "Connecteur Kizeo (Base de données/Médias)",
+    "For **larger developments**, with more complex process but providing **wider possibilities**, you have our **Web Service REST**. Already available in its third version, our Web Service allows all of your Kizeo Forms data to be manipulated securely using the **TLS protocol**. We can give you advice on using our Web Service, depending on the availability and skill of our developers. Currently, our internal skills allow us to provide examples in the following programming languages: PHP, Javascript and Java. But you can, of course, develop in another language from when it is able to make **HTTPS requests**.|no description given": "Pour des **développements plus lourds** avec un processus plus complexe, mais offrant des **possibilités** bien **plus larges**, nous avons mis en place un **Web Service REST**. Déjà disponible dans sa troisième version, notre Web Service permet de manipuler l’ensemble de vos données Kizeo Forms ; le tout de manière sécurisée à l’aide du **protocole TLS**. Nous pouvons bien entendu vous donner nos conseils concernant l’usage de notre Web Service, en fonction des disponibilités et des compétences respectives de nos développeurs. Actuellement, nos compétences internes permettent de vous fournir des exemples dans les langages de programmation suivant : PHP, Javascript, Java. Mais, vous pouvez évidemment développer avec un autre langage à partir du moment où celui-ci est capable d’effectuer des **requêtes HTTPS**.",
+    "API (Web Service REST)|no description given": "Intégration API (Web Service REST)",
+    "They trust us|no description given": "Ils nous font confiance au quotidien"
+  }
+}
