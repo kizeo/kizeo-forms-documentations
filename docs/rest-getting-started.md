@@ -32,46 +32,6 @@ Here is what you will need to start the development of your application using th
 
 ## Retrieving the Token
 
-The first Web Service call you will make is the function `POST /login`, this function grants access to all other ones by giving you the _token_ requiered. Before calling this function, you must ensure that you have an admin access on your company's account (you will need the admin details).
-
-Then, you will have to send these details in a `JSON` format through a `POST` request to the following address : `https://www.kizeoforms.com/rest/v3/login`.
-
-```javascript
-{
-  "user": "YOUR_USERNAME",
-  "password": "YOUR_PASSWORD",
-  "company": "YOUR_COMPANY_CODE"
-}
-```
-
-#### Remember: !when using `json` formating, do not forget to put correct headers to your request (see below)
-
-```
-Content-Type: application/json
-```
-
-If you successfully connect, you will receive an answer like this one :
-
-```javascript
-{
-  "status": "ok",
-  "message": "",
-  "data": {
-    "token": "YOUR_TOKEN" // Caution, this grant full access to your account for 3 days. Keep it secret.
-    // Usable for 3 days, need to be renew periodically
-  }
-}
-```
-
-And if you make a mistake, you will receive something like this :
-
-```javascript
-{
-  "status": "error",
-  "message": "An error occurred. Please try again"
-}
-```
-
 Once you retrieve your token, you will need to put it into your _HTTPS_ headers :
 
 ```
