@@ -24,12 +24,16 @@ Tout d'abord, avant d'utiliser notre Web Service, vous devez être conscient que
 Ensuite, voici les différents liens qui vous seront utiles afin de développer votre application avec le Web Service de Kizeo Forms :
 
 + **Documentation Swagger :** [https://www.kizeoforms.com/rest/v3/doc](https://www.kizeoforms.com/rest/v3/doc) (Cette présentation des fonctions permet de tester facilement les fonctionnalités du Web Service)
-+ **Racine du Web Service :** `https://www.kizeoforms.com/rest/v3/` (par exemple, pour appeler la fonction `login`, il faudra faire appel à `https://www.kizeoforms.com/rest/v3/login`)
++ **Racine du Web Service :** `https://www.kizeoforms.com/rest/v3/` (par exemple, pour appeler la fonction `forms`, il faudra faire appel à `https://www.kizeoforms.com/rest/v3/forms`)
 
 ### Récupération du Token
 
 
-Pour accéder à toutes les autres fonctions, vous devez joindre la ligne ci-dessous en en-tête de vos requêtes *HTTPS* :
+Pour accéder à toutes les fonctions, vous devez joindre la ligne ci-dessous en en-tête de vos requêtes *HTTPS* :
 ```
 Authorization: YOUR_TOKEN
 ```
+Pour obtenir le Token, vous devez en faire la demande par mail auprès de notre service support (support@kizeo.com). La demande doit émaner d’un administrateur pour un administrateur ou un chef de groupe (l’adresse mail de l’émetteur doit correspondre à l’adresse mail dans Kizeo Forms). Sur cette demande il doit être spécifié :
++ Le code entreprise ;
++ L’identifiant pour lequel le Token doit être créé ;
+ 
