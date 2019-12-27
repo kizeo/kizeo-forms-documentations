@@ -33,7 +33,7 @@ Pour accéder à toutes les fonctions, vous devez joindre la ligne ci-dessous en
 ```
 Authorization: YOUR_TOKEN
 ```
-Pour obtenir le Token, vous devez en faire la demande par mail auprès de notre service support (support@kizeo.com). La demande doit émaner d’un administrateur pour un administrateur ou un chef de groupe (l’adresse mail de l’émetteur doit correspondre à l’adresse mail dans Kizeo Forms). Sur cette demande il doit être spécifié :
-+ Le code entreprise ;
-+ L’identifiant pour lequel le Token doit être créé ;
+Pour obtenir le Token, vous devez en faire la demande par mail auprès de notre service support (support@kizeo.com). La demande doit émaner d’un administrateur ou d'un chef de groupe (l’adresse mail de l’émetteur doit correspondre à l’adresse mail dans Kizeo Forms). Dans cette demande, il doit être spécifié :
++ Le code entreprise
++ L’identifiant pour lequel le Token doit être créé
  
