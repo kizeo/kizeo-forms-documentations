@@ -1,6 +1,6 @@
 ---
 id: demo
-title: Setting Wizard
+title: Settings Wizard
 sidebar_label: Demo
 ---
 
