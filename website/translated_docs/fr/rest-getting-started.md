@@ -24,44 +24,16 @@ Tout d'abord, avant d'utiliser notre Web Service, vous devez être conscient que
 Ensuite, voici les différents liens qui vous seront utiles afin de développer votre application avec le Web Service de Kizeo Forms :
 
 + **Documentation Swagger :** [https://www.kizeoforms.com/rest/v3/doc](https://www.kizeoforms.com/rest/v3/doc) (Cette présentation des fonctions permet de tester facilement les fonctionnalités du Web Service)
-+ **Racine du Web Service :** `https://www.kizeoforms.com/rest/v3/` (par exemple, pour appeler la fonction `login`, il faudra faire appel à `https://www.kizeoforms.com/rest/v3/login`)
++ **Racine du Web Service :** `https://www.kizeoforms.com/rest/v3/` (par exemple, pour appeler la fonction `forms`, il faudra faire appel à `https://www.kizeoforms.com/rest/v3/forms`)
 
 ### Récupération du Token
-La première fonction du Web Service a utilisé est la fonction `POST /login`, celle-ci permet de récupérer le *token* qui sera nécessaire pour utiliser toutes les autres fonctions. Vous devez au préalable vous munir d'identifiants administrateur Kizeo.
 
-Vous devez ensuite envoyer ces informations sous forme de `JSON` en `POST` à l'adresse suivante `https://www.kizeoforms.com/rest/v3/login`.
 
-```javascript
-{
-  "user": "YOUR_USERNAME",
-  "password": "YOUR_PASSWORD",
-  "company": "YOUR_COMPANY_CODE"
-}
-```
-#### Attention, lorsque vous envoyez des informations en `json`, n'oubliez pas de préciser dans les entêtes de votre requête
-```
-Content-Type: application/json
-```
-En cas de réussite vous recevrez une réponse de cette forme :
-```javascript
-{
-  "status": "ok",
-  "message": "",
-  "data": {
-    "token": "YOUR_TOKEN" // Attention, cela permet d'accéder à votre application pendant 3 jours. Gardez ce token secret
-    // Valable pendant 3 jours, à renouveler régulièrement
-  }
-}
-```
-En cas d'erreur d'identifiants, vous recevrez une réponse de cette forme :
-```javascript
-{
-  "status": "error",
-  "message": "An error occurred. Please try again"
-}
-```
-
-Pour accéder à toutes les autres fonctions, vous devez joindre la ligne ci-dessous en en-tête de vos requêtes *HTTPS* :
+Pour accéder à toutes les fonctions, vous devez joindre la ligne ci-dessous en en-tête de vos requêtes *HTTPS* :
 ```
 Authorization: YOUR_TOKEN
 ```
+Pour obtenir le Token, vous devez en faire la demande par mail auprès de notre service support (support@kizeo.com). La demande doit émaner d’un administrateur pour un administrateur ou un chef de groupe (l’adresse mail de l’émetteur doit correspondre à l’adresse mail dans Kizeo Forms). Sur cette demande il doit être spécifié :
++ Le code entreprise ;
++ L’identifiant pour lequel le Token doit être créé ;
+ 

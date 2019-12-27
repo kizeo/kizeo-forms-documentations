@@ -27,8 +27,7 @@
       {
         "type": "subcategory",
         "ids": [
-          "curl-install",
-          "restv3-sample"
+          "curl-install"
         ]
       }
     ],

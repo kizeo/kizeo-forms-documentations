@@ -56,10 +56,6 @@
         "title": "Forms",
         "sidebar_label": "Operations on forms"
       },
-      "restv3-sample": {
-        "title": "PHP Sample",
-        "sidebar_label": "PHP Sample"
-      },
       "restv3": {
         "title": "Rest V3"
       },
