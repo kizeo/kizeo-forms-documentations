@@ -38,5 +38,5 @@ Once you retrieve your token, you will need to put it into your _HTTPS_ headers 
 Authorization: YOUR_TOKEN
 ```
 To get a token, you need to write an email to our support team (support@kizeo.com). The request must be sent by an administrator or a group leader (the sender's email address has to match the one in Kizeo Forms). You must specify :
--   the company code
--   the user_id for which the token must be created for
+-   The company code
+-   The user_id for which the token must be created for
