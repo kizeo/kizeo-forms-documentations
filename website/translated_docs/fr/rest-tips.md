@@ -6,7 +6,7 @@ sidebar_label: Tips
 
 Ici vous trouverez des exemples concrets d'utilisation en PHP pour établir des fonctions couramment utilisées.
 
-## Premioer exemple : une fonction permettant d'envoyer un e-mail à une liste d'utilisateurs
+## Premier exemple : une fonction permettant d'envoyer un e-mail à une liste d'utilisateurs
 
 Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter au serveur, d'obtenir votre token d'identification à partir de vos identifiants, et d'envoyer un mail à chacun de vos utilisateurs.
 
