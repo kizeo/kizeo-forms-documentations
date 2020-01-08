@@ -18,17 +18,21 @@ For these two functions, if they correctly worked, you will receive a response l
 [
   {
     "id": "dataId1",
+    "record_number": "integer",
     "form_id": "integer",
     "user_id": "integer",
     "create_time": "date",
-    "answer_time": "date"
+    "answer_time": "date",
+    "direction": "data_state"
   },
     {
     "id": "dataId2",
+    "record_number": "integer",
     "form_id": "integer",
     "user_id": "integer",
     "create_time": "date",
-    "answer_time": "date"
+    "answer_time": "date",
+    "direction": "data_state"
   },
   .
   .
@@ -36,6 +40,17 @@ For these two functions, if they correctly worked, you will receive a response l
 ]
 
 ```
+The different value of *data_state* are as follows:
+  + Pushed: Pushed data is awaiting reception on the recipient's mobile (orange plane)
+  + Retrieved: Pushed data has been received on the recipient's mobile (red arrow)
+  + Finished: Data has been saved (green or black check)
+
+####Terms used in different languages
+<details>
+  + Pushed    
+  + Retrieved
+  + Finished
+</details>
 
 ### 2 - Read new data of a form
 ***

@@ -16,17 +16,21 @@ Dans ces deux fonctions, si la requête est lancée avec succès, vous recevrez 
 [
   {
     "id": "dataId1",
+    "record_number": "integer",
     "form_id": "integer",
     "user_id": "integer",
     "create_time": "date",
-    "answer_time": "date"
+    "answer_time": "date",
+    "direction": "data_state"
   },
     {
     "id": "dataId2",
+    "record_number": "integer",
     "form_id": "integer",
     "user_id": "integer",
     "create_time": "date",
-    "answer_time": "date"
+    "answer_time": "date",
+    "direction": "data_state"
   },
   .
   .
@@ -34,6 +38,10 @@ Dans ces deux fonctions, si la requête est lancée avec succès, vous recevrez 
 ]
 
 ```
+Les différentes valeurs de * data_state * sont les suivantes:
+   + Poussé: les données poussées sont en attente de réception sur le mobile du destinataire (avion orange)
+   + Récupéré: les données transmises ont été reçues sur le mobile du destinataire (flèche rouge)
+   + Terminé: les données ont été enregistrées (coche verte ou noire)
 
 ## 2 - Lire les nouvelles données d'un formulaire
 ***

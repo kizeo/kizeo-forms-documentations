@@ -32,6 +32,9 @@
       "curl-install": {
         "title": "How to activate cURL (PHP)"
       },
+      "rest-data-direction": {
+        "title": "rest-data-direction"
+      },
       "data-samples": {
         "title": "Data samples",
         "sidebar_label": "Samples"
