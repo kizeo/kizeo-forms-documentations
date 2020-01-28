@@ -13,7 +13,7 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 `kizeoforms://login` accède à l’écran de login (dans le cas où l’utilsateur n’est pas encore connecté)
 
-`kizeoforms://login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code= doit être remplacé par le code entreprise souhaité
+`kizeoforms://login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code` doit être remplacé par le code entreprise souhaité
 
 `kizeoforms://favorites` accède à la liste des formulaires favoris
 
