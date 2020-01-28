@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Advanced features for developers",
     "docs": {
+      "deep-linking": {
+        "title": "Deep linking"
+      },
       "microsoftsql": {
         "title": "Microsoft SQL Server"
       },
