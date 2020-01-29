@@ -11,7 +11,7 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 `kizeoforms://` ouvre l’application Kizeo Forms
 
-`kizeoforms://login` accède à l’écran de login (dans le cas où l’utilsateur n’est pas encore connecté)
+`kizeoforms://login` accède à l’écran de login
 
 `kizeoforms://login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code` doit être remplacé par le code entreprise souhaité
 
@@ -28,6 +28,12 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 `kizeoforms://data` accède à la liste des données saisies
 
 `kizeoforms://receipts` accède à la boîte de réception
+
+#### Remarques
+
+- Dans le cas où l’utilsateur n’est pas encore connecté, les liens profonds lui permettront d’accèder uniquement à la page de login.
+
+- Dans le cas où l’utilsateur est déjà connecté, les liens profonds ne lui permettront pas d’accèder à l’écran de login. L’utilisateur sera redirigé automatiquement vers l’écran principal.
 
 ## Création d’une donnée
 
