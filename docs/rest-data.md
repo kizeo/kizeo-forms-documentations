@@ -45,12 +45,6 @@ The different value of *data_state* are as follows:
   + Retrieved: Pushed data has been received on the recipient's mobile (red arrow)
   + Finished: Data has been saved (green or black check)
 
-####Terms used in different languages
-<details>
-  + Pushed    
-  + Retrieved
-  + Finished
-</details>
 
 ### 2 - Read new data of a form
 ***
