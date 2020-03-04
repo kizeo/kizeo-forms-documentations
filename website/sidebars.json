@@ -21,6 +21,28 @@
       "howtouse"
     ]
   },
+  "SharePoint Connector": {
+    "Getting started": [
+      "installation"
+    ],
+    "Settings": [
+      "configuration",
+      {
+        "type": "subcategory",
+        "ids": [
+          "mysql",
+          "postgressql",
+          "microsoftsql"
+        ]
+      }
+    ],
+    "Settings wizard": [
+      "demo"
+    ],
+    "Samples": [
+      "howtouse"
+    ]
+  },
   "Web Service": {
     "Getting started": [
       "restv3",
