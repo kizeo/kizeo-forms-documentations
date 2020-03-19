@@ -9,25 +9,25 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 ## Différents points d’accès possibles
 
-`kizeoforms://` ouvre l’application Kizeo Forms
+`kizeoforms://--/` ouvre l’application Kizeo Forms
 
-`kizeoforms://login` accède à l’écran de login
+`kizeoforms://--/login` accède à l’écran de login
 
-`kizeoforms://login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code` doit être remplacé par le code entreprise souhaité
+`kizeoforms://--/login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code` doit être remplacé par le code entreprise souhaité
 
-`kizeoforms://favorites` accède à la liste des formulaires favoris
+`kizeoforms://--/favorites` accède à la liste des formulaires favoris
 
-`kizeoforms://settings` accède aux paramètres de l’application
+`kizeoforms://--/settings` accède aux paramètres de l’application
 
-`kizeoforms://forms` accède à la liste des formulaires
+`kizeoforms://--/forms` accède à la liste des formulaires
 
-`kizeoforms://forms/:formId` entre en saisie de données avec `:formId` remplacé par l’ID de la définition de formulaire.
+`kizeoforms://--/forms/:formId` entre en saisie de données avec `:formId` remplacé par l’ID de la définition de formulaire.
 
-`kizeoforms://stats` accède aux statistiques
+`kizeoforms://--/stats` accède aux statistiques
 
-`kizeoforms://data` accède à la liste des données saisies
+`kizeoforms://--/data` accède à la liste des données saisies
 
-`kizeoforms://receipts` accède à la boîte de réception
+`kizeoforms://--/receipts` accède à la boîte de réception
 
 #### Remarques
 
@@ -37,7 +37,7 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 ## Création d’une donnée
 
-`kizeoforms://forms/:formId?tag1=value1&tag2=value2&tag3=value3`
+`kizeoforms://--/forms/:formId?tag1=value1&tag2=value2&tag3=value3`
 avec `:formId` remplacé par l’ID de la définition de formulaire.
 `tag1`, `tag2`, `tag3`, etc... sont le noms de balise des champs de la définition de formulaire, `value1`, `value2`, `value3`, etc... sont les valeurs correspondantes qui seront saisies.
 
