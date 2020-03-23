@@ -85,7 +85,8 @@
     },
     "links": {
       "Kizeo Connector": "Kizeo Connector",
-      "API Rest V3": "API Rest V3"
+      "API Rest V3": "API Rest V3",
+      "Deep linking": "Deep linking"
     },
     "categories": {
       "Getting started": "Getting started",
@@ -105,6 +106,7 @@
     "Advanced features for developers|no description given": "Advanced features for developers",
     "Kizeo Connector|no description given": "Kizeo Connector",
     "Rest V3|no description given": "Rest V3",
+    "Deep linking|no description given": "Deep linking",
     "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.|no description given": "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.",
     "Kizeo connector (database/media)|no description given": "Kizeo connector (database/media)",
     "For **larger developments**, with more complex process but providing **wider possibilities**, you have our **Web Service REST**. Already available in its third version, our Web Service allows all of your Kizeo Forms data to be manipulated securely using the **TLS protocol**. We can give you advice on using our Web Service, depending on the availability and skill of our developers. Currently, our internal skills allow us to provide examples in the following programming languages: PHP, Javascript and Java. But you can, of course, develop in another language from when it is able to make **HTTPS requests**.|no description given": "For **larger developments**, with more complex process but providing **wider possibilities**, you have our **Web Service REST**. Already available in its third version, our Web Service allows all of your Kizeo Forms data to be manipulated securely using the **TLS protocol**. We can give you advice on using our Web Service, depending on the availability and skill of our developers. Currently, our internal skills allow us to provide examples in the following programming languages: PHP, Javascript and Java. But you can, of course, develop in another language from when it is able to make **HTTPS requests**.",
