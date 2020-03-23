@@ -3,45 +3,45 @@ id: deep-linking
 title: Deep linking
 ---
 
-## Définition
+## Definition
 
-Les liens profonds permettent une façon claire et simple de diriger les utilisateurs vers un contenu spécifique sur l’application mobile Kizeo Forms.
+Deep links provide a clear and simple way to redirect users to specific screen on the Kizeo Forms mobile app.
 
-## Différents points d’accès possibles
+## Different access points enabled
 
-`kizeoforms://--/` ouvre l’application Kizeo Forms
+`kizeoforms://--/` open Kizeo Forms mobile app.
 
-`kizeoforms://--/login` accède à l’écran de login
+`kizeoforms://--/login` redirect to login screen.
 
-`kizeoforms://--/login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code` doit être remplacé par le code entreprise souhaité
+`kizeoforms://--/login/:code` redirect to login screen with a pre-filled company code. `:code` must be replaced by the company code.
 
-`kizeoforms://--/favorites` accède à la liste des formulaires favoris
+`kizeoforms://--/favorites` redirect to favorite forms.
 
-`kizeoforms://--/settings` accède aux paramètres de l’application
+`kizeoforms://--/settings` redirect to application settings.
 
-`kizeoforms://--/forms` accède à la liste des formulaires
+`kizeoforms://--/forms` redirect to form list.
 
-`kizeoforms://--/forms/:formId` entre en saisie de données avec `:formId` remplacé par l’ID de la définition de formulaire.
+`kizeoforms://--/forms/:formId` redirect to data filling, `:formId` must be replaced by the ID of the form definition.
 
-`kizeoforms://--/stats` accède aux statistiques
+`kizeoforms://--/stats` redirect to stats.
 
-`kizeoforms://--/data` accède à la liste des données saisies
+`kizeoforms://--/data` redirect to data list.
 
-`kizeoforms://--/receipts` accède à la boîte de réception
+`kizeoforms://--/receipts` redirect to inbox.
 
-#### Remarques
+#### Notes
 
-- Dans le cas où l’utilsateur n’est pas encore connecté, les liens profonds lui permettront d’accèder uniquement à la page de login.
+- In case the user is not yet logged in, deep links will allow him to access only the login page.
 
-- Dans le cas où l’utilsateur est déjà connecté, les liens profonds ne lui permettront pas d’accèder à l’écran de login. L’utilisateur sera redirigé automatiquement vers l’écran principal.
+- If the user is already logged in, deep links will not allow him to access the login screen. The user will be automatically redirected to the main screen.
 
-## Création d’une donnée
+## Data creation
 
 `kizeoforms://--/forms/:formId?tag1=value1&tag2=value2&tag3=value3`
-avec `:formId` remplacé par l’ID de la définition de formulaire.
-`tag1`, `tag2`, `tag3`, etc... sont le noms de balise des champs de la définition de formulaire, `value1`, `value2`, `value3`, etc... sont les valeurs correspondantes qui seront saisies.
+with `:formId` replaced by ID of the form definition.
+`tag1`, `tag2`, `tag3`, etc... are fields tag names of the form definition, `value1`, `value2`, `value3`, etc... are the are the corresponding values ​​that will be entered.
 
-### Type de champs gérés
+### Type of fields enabled
 
 - choice
 - slider
@@ -52,9 +52,9 @@ avec `:formId` remplacé par l’ID de la définition de formulaire.
   time : hh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
 - textarea : use %5Cn for line-break (ex: My first line%5Cnand my second line
 
-### Balises non gérées
+### Unhandled tags
 
-Les noms de balises ci-dessous sont protégés et ne seront pas traités lors d’une pré-saisie par un lien profond.
+Tag names below are protected and will not be processed when pre-filled by a deep link.
 
 - caption
 - comingFromList
