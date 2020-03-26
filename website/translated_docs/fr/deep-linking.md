@@ -39,7 +39,7 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 `kizeoforms://--/forms/:formId?tag1=value1&tag2=value2&tag3=value3`
 avec `:formId` remplacé par l’ID de la définition de formulaire.
-`tag1`, `tag2`, `tag3`, etc... sont le noms de balise des champs de la définition de formulaire, `value1`, `value2`, `value3`, etc... sont les valeurs correspondantes qui seront saisies.
+`tag1`, `tag2`, `tag3`, etc... sont les noms de balise des champs de la définition de formulaire, `value1`, `value2`, `value3`, etc... sont les valeurs correspondantes qui seront saisies.
 
 ### Type de champs gérés
 
@@ -50,7 +50,7 @@ avec `:formId` remplacé par l’ID de la définition de formulaire.
 - datetime : YYYY-MM-DDThh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
 - date : YYYY-MM-DD or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
   time : hh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
-- textarea : use %5Cn for line-break (ex: My first line%5Cnand my second line
+- textarea : use %5Cn for line-break (ex: My first line%5Cnand my second line)
 
 ### Balises non gérées
 
