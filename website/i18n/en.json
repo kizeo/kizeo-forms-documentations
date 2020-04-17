@@ -78,6 +78,10 @@
       "users": {
         "title": "Users",
         "sidebar_label": "Operations on users"
+      },
+      "sharepoint": {
+        "title": "Getting started",
+        "sidebar_label": "Installation"
       }
     },
     "links": {
