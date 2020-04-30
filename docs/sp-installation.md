@@ -1,6 +1,6 @@
 ---
-id: sharepoint
-title: Getting started
+id: sp-install
+title: Installation
 sidebar_label: Installation
 ---
 

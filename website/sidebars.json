@@ -22,19 +22,11 @@
     ]
   },
   "SharePoint Connector": {
-    "Getting started": [
-      "installation"
+    "Getting Started": [
+      "sharepoint"
     ],
-    "Settings": [
-      "configuration",
-      {
-        "type": "subcategory",
-        "ids": [
-          "mysql",
-          "postgressql",
-          "microsoftsql"
-        ]
-      }
+    "Installation": [
+      "sp-install"
     ],
     "Settings wizard": [
       "demo"

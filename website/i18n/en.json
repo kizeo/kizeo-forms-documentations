@@ -81,6 +81,10 @@
       },
       "sharepoint": {
         "title": "Getting started",
+        "sidebar_label": "Introduce"
+      },
+      "sp-install": {
+        "title": "Installation",
         "sidebar_label": "Installation"
       }
     },
@@ -93,6 +97,8 @@
       "Settings": "Settings",
       "Settings wizard": "Settings wizard",
       "Samples": "Samples",
+      "Getting Started": "Getting Started",
+      "Installation": "Installation",
       "Forms": "Forms",
       "Lists": "Lists",
       "Users": "Users",
