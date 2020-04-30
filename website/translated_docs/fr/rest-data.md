@@ -134,3 +134,20 @@ Il vous faudra aussi ajouter dans le corps de la requête les données à transm
 }
 
 ```
+
+Pour utiliser avec l'option planning :
+
+```json
+
+{
+    "recipient_user_id": "integer",
+    "planningStart": "AAAA-MM-JJ HH:MM",
+    "planningEnd": "AAAA-MM-JJ HH:MM",
+    "fields": {
+        "field_id": {
+            "value": "string"
+        }
+    }
+}
+
+```

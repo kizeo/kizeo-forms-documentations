@@ -106,6 +106,7 @@
     "Kizeo Forms Documentations|no description given": "Kizeo Forms Documentation",
     "Advanced features for developers|no description given": "Fonctionnalités avancées pour developpeurs",
     "Kizeo Connector|no description given": "Connecteur Kizeo",
+    "SharePoint Connector|no description given": "Connecteur SharePoint",
     "Rest V3|no description given": "Intégration API",
     "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.|no description given": "Afin d’offrir à nos clients une **solution intermédiaire**, nous avons développé un **connecteur** en **JAVA**. Une fois ce connecteur configuré et mis-en-place sur un de vos serveurs, dès qu’une nouvelle donnée sera finalisée sur Kizeo Forms, vous pourrez **automatiquement récupérer** les **médias** et les **PDFs** correspondants sur votre serveur. Vous pourrez même automatiquement **récupérer** et **insérer** la donnée dans **votre base de données**.",
     "Kizeo connector (database/media)|no description given": "Connecteur Kizeo (Base de données/Médias)",
