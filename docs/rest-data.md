@@ -134,3 +134,20 @@ Don't forget to add data in the request's body as following:
 }
 
 ```
+
+To use the planning option:
+
+```json
+
+{
+  "recipient_user_id": "integer",
+  "planningStart": "YYYY-MM-DD HH:MM",
+  "planningEnd": "YYYY-MM-DD HH:MM",
+  "fields": {
+    "field_id": {
+      "value": "string"
+    }
+  }
+}
+
+```
