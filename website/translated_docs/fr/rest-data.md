@@ -46,13 +46,47 @@ Si tout s'est bien passé, vous recevrez une réponse du type :
 
 [
   {
-    "id": "dataId",
-    "form_id": "integer",
-    "user_id": "integer",
-    "create_time": "date",
-    "answer_time": "date"
-  }
-]
+      "id": "integer",
+      "record_number": "integer",
+      "form_id": "integer",
+      "user_id": "integer",
+      "create_time": "string",
+      "update_time": "string",
+      "update_user_id": "integer",
+      "update_answer_time": "string",
+      "start_time": "string",
+      "end_time": "string",
+      "direction": "string",
+      "recipient_id": "integer",
+      "history": "string",
+      "form_unique_id": "integer",
+      "origin_answer": "string",
+      "answer_time": "string",
+      "user_name": "string",
+      "last_name": "string",
+      "first_name": "string",
+      "phone": "string",
+      "email": "string",
+      "login": "string",
+      "update_user_name": "string",
+      "recipient_name": "string",
+      "fields": {
+        "field_Id": {
+          "value": "string",
+          "type": "text",
+          "subtype": "text",
+          "hidden": "false",
+          "time": {
+            "string": "string"
+        }
+          },
+        "..."
+        }
+  },
+ .
+ .
+ .
+] 
 
 ```
 
@@ -74,7 +108,83 @@ Vous devrez cependant ajouter, dans le corps de la requête, les identifiants de
 
 ```
 
-## 3 - Recherche avancée dans les données d'un formulaire
+### 3 - Lire les nouvelles données d'un formulaire pour une action
+***
+Vous avez aussi à disposition une fonction permettant de lire le contenu de toutes les données non lues d'un formulaire.  
+Il s'agit d'envoyer une requête en `GET` à l'URL : `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
+
+Si tout s'est bien passé, vous recevrez une réponse du type : 
+
+```json
+
+[
+    {
+        "_id": "string",
+        "_record_number": "string",
+        "_form_id": "string",
+        "_user_id": "string",
+        "_create_time": "string",
+        "_update_time": "string",
+        "_update_user_id": "string",
+        "_update_answer_time": "string",
+        "_start_time": "string",
+        "_end_time": "string",
+        "_direction": "string",
+        "_recipient_id": "string",
+        "_history": "string",
+        "_form_unique_id": "string",
+        "_origin_answer": "string",
+        "_answer_time": "string",
+        "_user_name": "string",
+        "_update_user_name": "string",
+        "_recipient_name": "string",
+        "_transform_status": "string" ou null,
+        "_can_edit": boolean,
+        "_can_delete": boolean,
+        "_contains_file": boolean,
+        "_can_send_mail": boolean,
+        "_pull_time": "string",
+        "_user_ref1": "string",
+        "..."
+        "_user_ref20": "string",
+        "_update_user_ref1": "string" ou null,
+        "_update_user_ref2": "string" ou null,
+        "..."
+        "_update_user_ref20": "string" ou null,
+        "_recipient_user_ref1": "string" ou null,
+        "..."
+        "_recipient_user_ref20": "string" ou null,
+        "field": "string",
+        "..."
+    },
+    "..."
+]
+
+```
+
+ - `:action`: name of action. String type.
+ - `:limit`: maximum number of data read (optional).
+ - `?includeupdated`: Include data marked as read but which has been modified since (optional).
+
+Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme "nouvelles".
+Pour cela, il faut utiliser une requête en `POST` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action `.  
+Vous devrez cependant ajouter, dans le corps de la requête, les identifiants des données que vous souhaitez marquer comme "lues", de la façon suivante :
+
+```json
+
+{
+  "data_ids": [
+    "dataId1",
+    "dataId2",
+    "dataId3",
+    "dataId4"
+  ]
+}
+
+```
+
+
+## 4 - Recherche avancée dans les données d'un formulaire
 ***
 Pour approfondir les recherches dans les données d'un formulaire, il existe une fonction de recherche avancée.
 Pour utiliser cette dernière, vous devez envoyer une requête en `POST` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/advanced`.
@@ -115,7 +225,7 @@ Afin de définir les filtres que vous voulez utiliser pour rechercher précisém
 - `field` : Correspond à la racine de la balise de chaque champ. Exemple : `_update_time` (date de mise-à-jour) et `_user_id` (id de l'utilisateur ayant saisi la donnée). Vous pouvez également rechercher sur des champs du formulaire définis par vous-même (`client` par exemple, ou bien `numero_de_contrat`).
 - `type` : Les différents types sont : `simple` (on recherche sur un champ hors d'un tableau), `dynamic_date` (pas encore documenté), `global` (on recherche dans l'ensemble de la donnée), `AND` et `OR` (permet de faire des conditions multiples dans l'attribut `components` comme présenté ci-dessus).
 
-## 4 - Enregistrer une donnée sans enregistrer le formulaire complet
+## 5 - Enregistrer une donnée sans enregistrer le formulaire complet
 ***
 Vous avez aussi la possibilité d'envoyer des données sans avoir besoin d'enregistrer le formulaire, au cas où vous avez besoin d'ajouter d'autres données plus tard. On appelle cet envoi de donnée un envoi par __"push"__.  
 Pour réaliser cette opération, il vous faut envoyer une requête en `POST` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/push` en remplaçant {formId} par l'identifiant du formulaire.
