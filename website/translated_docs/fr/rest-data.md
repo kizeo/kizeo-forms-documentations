@@ -106,7 +106,7 @@ Vous devrez cependant ajouter, dans le corps de la requête, les identifiants de
 
 ---
 
-Vous avez aussi à disposition une fonction permettant de lire le contenu de toutes les données non lues d'un formulaire.  
+Cette fonction a le même comportement que la fonction *readnew*. La principale différence est que vous pouvez marquer les données lues pour une action donnée. Cela donne donc la possibilité de lire les mêmes données pour plusieurs actions différentes.
 Il s'agit d'envoyer une requête en `GET` à l'URL : `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
 
 Si tout s'est bien passé, vous recevrez une réponse du type :
@@ -158,9 +158,9 @@ Si tout s'est bien passé, vous recevrez une réponse du type :
 
 ```
 
--   `:action`: name of action. String type.
--   `:limit`: maximum number of data read (optional).
--   `?includeupdated`: Include data marked as read but which has been modified since (optional).
+-   `:action`: nom de l'action sous forme de chaîne de caractères (string).
+-   `:limit`: nombre maximum de données lues (optionnel)
+-   `?includeupdated`: inclus des données marquées comme lues mais qui ont été modifiées depuis (optionnel)
 
 Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme "nouvelles".
 Pour cela, il faut utiliser une requête en `POST` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  

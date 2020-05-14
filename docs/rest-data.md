@@ -160,9 +160,8 @@ If it worked, you will have a response like:
 -   `:limit`: maximum number of data read (optional).
 -   `?includeupdated`: Include data marked as read but which has been modified since (optional).
 
-After you read that data, you could want them to disappear from unread data list.
-To do this, you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
-Don't forget to add the id of data you want to mark as read in the request's body, the same way as following:
+After you read that data if you want it to disappear from the unread data list you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
+Don't forget to add the id of the data you want to mark as read in the request's body:
 
 ```json
 {
