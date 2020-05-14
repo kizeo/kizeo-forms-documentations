@@ -32,9 +32,6 @@
       "curl-install": {
         "title": "How to activate cURL (PHP)"
       },
-      "data-direction": {
-        "title": "Data direction"
-      },
       "data-samples": {
         "title": "Data samples",
         "sidebar_label": "Samples"
