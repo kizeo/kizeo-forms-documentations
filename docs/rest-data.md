@@ -32,7 +32,7 @@ For these two functions, if they correctly worked, you will receive a response l
         "create_time": "date",
         "answer_time": "date"
     },
-    "..."
+    ...
 ]
 ```
 
