@@ -17,7 +17,6 @@ The second one gives you all data of a form, even read data, and is a `GET` requ
 For these two functions, if they correctly worked, you will receive a response like following:
 
 ```json
-
 [
   {
     "id": "dataId1",
@@ -39,7 +38,6 @@ For these two functions, if they correctly worked, you will receive a response l
   },
   ...
 ]
-
 ```
 
 The different values of _data_state_ are:
@@ -59,13 +57,45 @@ If it worked, you will have a response like:
 
 ```json
 [
-    {
-        "id": "dataId",
-        "form_id": "integer",
-        "user_id": "integer",
-        "create_time": "date",
-        "answer_time": "date"
-    }
+  {
+      "id": "integer",
+      "record_number": "integer",
+      "form_id": "integer",
+      "user_id": "integer",
+      "create_time": "string",
+      "update_time": "string",
+      "update_user_id": "integer",
+      "update_answer_time": "string",
+      "start_time": "string",
+      "end_time": "string",
+      "direction": "string",
+      "recipient_id": "integer",
+      "history": "string",
+      "form_unique_id": "integer",
+      "origin_answer": "string",
+      "answer_time": "string",
+      "user_name": "string",
+      "last_name": "string",
+      "first_name": "string",
+      "phone": "string",
+      "email": "string",
+      "login": "string",
+      "update_user_name": "string",
+      "recipient_name": "string",
+      "fields": {
+        "field_Id": {
+          "value": "string",
+          "type": "text",
+          "subtype": "text",
+          "hidden": "false",
+          "time": {
+            "string": "string"
+          }
+        },
+        "..."
+      }
+  },
+  ...
 ]
 ```
 
@@ -78,7 +108,72 @@ Don't forget to add the id of data you want to mark as read in the request's bod
 }
 ```
 
-### 3 - Advanced research in form data
+### 3 - Read new data by action of a form
+
+---
+
+This function has the same behavior as the _readnew_ function. The main difference is that you can mark the data read for a given action. Thus giving the possibility of reading the same data for several different actions.
+You have to send a `GET` request to: `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
+
+If it worked, you will have a response like:
+
+```json
+
+[
+    {
+        "_id": "string",
+        "_record_number": "string",
+        "_form_id": "string",
+        "_user_id": "string",
+        "_create_time": "string",
+        "_update_time": "string",
+        "_update_user_id": "string",
+        "_update_answer_time": "string",
+        "_start_time": "string",
+        "_end_time": "string",
+        "_direction": "string",
+        "_recipient_id": "string",
+        "_history": "string",
+        "_form_unique_id": "string",
+        "_origin_answer": "string",
+        "_answer_time": "string",
+        "_user_name": "string",
+        "_update_user_name": "string",
+        "_recipient_name": "string",
+        "_transform_status": "string" or null,
+        "_can_edit": boolean,
+        "_can_delete": boolean,
+        "_contains_file": boolean,
+        "_can_send_mail": boolean,
+        "_pull_time": "string",
+        "_user_ref1": "string",
+        "..."
+        "_user_ref20": "string",
+        "_update_user_ref1": "string" or null,
+        "_update_user_ref2": "string" or null,
+        "..."
+        "_update_user_ref20": "string" or null,
+        "_recipient_user_ref1": "string" or null,
+        "..."
+        "_recipient_user_ref20": "string" or null,
+        "field": "string",
+        "..."
+    },
+    ...
+]
+
+```
+
+-   `:action`: name of action. String type.
+-   `:limit`: maximum number of data read (optional).
+-   `?includeupdated`: Include data marked as read but which has been modified since (optional).
+
+After you read that data if you want it to disappear from the unread data list you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
+Don't forget to add the id of the data you want to mark as read in the request's body:
+
+```json
+
+### 4 - Advanced research in form data
 
 ---
 
@@ -119,7 +214,7 @@ To define precisely your research, you have to add in your request's body the fo
 -   `field` : The root of each field's markers. Sample: `_update_time` (update time of your entry) or `_user_id` (the ID of the user sending the entry). You can also search over a specific field in the form (`customer` for instance, or `contract_number`) using the identifier of the field (from the help menu of each form on the form edition page).
 -   `type` : The components/filters' types are: `simple` (searching on a field outside of a table), `dynamic_date` (not yet documented), `global` (searching over the whole entry), `AND` and `OR` (for complex conditions use the attributes `components` as shown above).
 
-### 4 - Push a data
+### 5 - Push a data
 
 ---
 
@@ -138,17 +233,18 @@ Don't forget to add data in the request's body as following:
     }
 }
 ```
+
 To use the planning option:
 
 ```json
 {
-  "recipient_user_id": "integer",
-  "planningStart": "YYYY-MM-DD HH:MM",
-  "planningEnd": "YYYY-MM-DD HH:MM",
-  "fields": {
-    "field_id": {
-      "value": "string"
+    "recipient_user_id": "integer",
+    "planningStart": "YYYY-MM-DD HH:MM",
+    "planningEnd": "YYYY-MM-DD HH:MM",
+    "fields": {
+        "field_id": {
+            "value": "string"
+        }
     }
-  }
 }
 ```
