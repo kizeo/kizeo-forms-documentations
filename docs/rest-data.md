@@ -172,6 +172,10 @@ After you read that data if you want it to disappear from the unread data list y
 Don't forget to add the id of the data you want to mark as read in the request's body:
 
 ```json
+{
+    "data_ids": ["dataId1", "dataId2", "dataId3", "dataId4"]
+}
+```
 
 ### 4 - Advanced research in form data
 
