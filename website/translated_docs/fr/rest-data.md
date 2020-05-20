@@ -19,22 +19,32 @@ Dans ces deux fonctions, si la requête est lancée avec succès, vous recevrez 
 [
   {
     "id": "dataId1",
+    "record_number": "integer",
     "form_id": "integer",
     "user_id": "integer",
     "create_time": "date",
-    "answer_time": "date"
+    "answer_time": "date",
+    "direction": "data_state"
   },
     {
     "id": "dataId2",
+    "record_number": "integer",
     "form_id": "integer",
     "user_id": "integer",
     "create_time": "date",
-    "answer_time": "date"
+    "answer_time": "date",
+    "direction": "data_state"
   },
   ...
 ]
 
 ```
+
+Les différentes valeurs de _data_state_ sont les suivantes:
+
+-   Poussée: les données poussées sont en attente de réception sur le mobile du destinataire (avion orange)
+-   Récupérée: les données transmises ont été reçues sur le mobile du destinataire (flèche rouge)
+-   Terminée: les données ont été enregistrées (coche verte ou noire)
 
 ## 2 - Lire les nouvelles données d'un formulaire
 
@@ -46,7 +56,6 @@ Il s'agit d'envoyer une requête en `GET` à l'URL : `https://www.kizeoforms.com
 Si tout s'est bien passé, vous recevrez une réponse du type :
 
 ```json
-
 [
   {
       "id": "integer",
@@ -88,7 +97,6 @@ Si tout s'est bien passé, vous recevrez une réponse du type :
   },
  ...
 ]
-
 ```
 
 Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme "nouvelles".
@@ -234,13 +242,11 @@ Il vous faudra aussi ajouter dans le corps de la requête les données à transm
 }
 ```
 
-Pour utiliser avec l'option planning :
+Il vous faudra aussi ajouter dans le corps de la requête les données à transmettre de la façon qui suit :
 
 ```json
 {
     "recipient_user_id": "integer",
-    "planningStart": "AAAA-MM-JJ HH:MM",
-    "planningEnd": "AAAA-MM-JJ HH:MM",
     "fields": {
         "field_id": {
             "value": "string"

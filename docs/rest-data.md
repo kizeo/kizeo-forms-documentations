@@ -18,23 +18,33 @@ For these two functions, if they correctly worked, you will receive a response l
 
 ```json
 [
+  {
+    "id": "dataId1",
+    "record_number": "integer",
+    "form_id": "integer",
+    "user_id": "integer",
+    "create_time": "date",
+    "answer_time": "date",
+    "direction": "data_state"
+  },
     {
-        "id": "dataId1",
-        "form_id": "integer",
-        "user_id": "integer",
-        "create_time": "date",
-        "answer_time": "date"
-    },
-    {
-        "id": "dataId2",
-        "form_id": "integer",
-        "user_id": "integer",
-        "create_time": "date",
-        "answer_time": "date"
-    },
-    ...
+    "id": "dataId2",
+    "record_number": "integer",
+    "form_id": "integer",
+    "user_id": "integer",
+    "create_time": "date",
+    "answer_time": "date",
+    "direction": "data_state"
+  },
+  ...
 ]
 ```
+
+The different values of _data_state_ are:
+
+-   Pushed: pushed data is awaiting reception on the recipient's mobile (orange plane)
+-   Retrieved: pushed data has been received on the recipient's mobile (red arrow)
+-   Finished: data has been saved (green or black check)
 
 ### 2 - Read new data of a form
 
@@ -46,7 +56,6 @@ You have to send a `GET` request to: `https://www.kizeoforms.com/rest/v3/forms/{
 If it worked, you will have a response like:
 
 ```json
-
 [
   {
       "id": "integer",
@@ -88,7 +97,6 @@ If it worked, you will have a response like:
   },
   ...
 ]
-
 ```
 
 After you read that data, you could want them to disappear from unread data list. To do this, you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasread`.  
@@ -164,10 +172,6 @@ After you read that data if you want it to disappear from the unread data list y
 Don't forget to add the id of the data you want to mark as read in the request's body:
 
 ```json
-{
-    "data_ids": ["dataId1", "dataId2", "dataId3", "dataId4"]
-}
-```
 
 ### 4 - Advanced research in form data
 
@@ -230,7 +234,8 @@ Don't forget to add data in the request's body as following:
 }
 ```
 
-To use the planning option:
+
+Don't forget to add data in the request's body as following:
 
 ```json
 {
