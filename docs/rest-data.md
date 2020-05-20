@@ -234,8 +234,7 @@ Don't forget to add data in the request's body as following:
 }
 ```
 
-
-Don't forget to add data in the request's body as following:
+To use the planning option:
 
 ```json
 {
