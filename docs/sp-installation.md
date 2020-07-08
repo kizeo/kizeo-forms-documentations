@@ -22,7 +22,7 @@ sidebar_label: Installation
 |:-------------:|:-------------:|
 |![Warning][installen-07]|![Warning][installen-08]|
 
-| 9. Click on *more info*|
+| 9. Finish |
 |:-------------:|
 |![Warning][installen-09]|
 

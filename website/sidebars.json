@@ -28,11 +28,11 @@
     "Installation": [
       "sp-install"
     ],
-    "Settings wizard": [
-      "demo"
+    "Token SharePoint": [
+      "sp-token"
     ],
     "Samples": [
-      "howtouse"
+      "suite"
     ]
   },
   "Web Service": {

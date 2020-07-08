@@ -86,10 +86,15 @@
       "sp-install": {
         "title": "Installation",
         "sidebar_label": "Installation"
+      },
+      "sp-token": {
+        "title": "SharePoint Token",
+        "sidebar_label": "SharePoint Token"
       }
     },
     "links": {
       "Kizeo Connector": "Kizeo Connector",
+      "SharePoint": "SharePoint",
       "API Rest V3": "API Rest V3"
     },
     "categories": {
@@ -99,6 +104,7 @@
       "Samples": "Samples",
       "Getting Started": "Getting Started",
       "Installation": "Installation",
+      "Token SharePoint": "Token SharePoint",
       "Forms": "Forms",
       "Lists": "Lists",
       "Users": "Users",

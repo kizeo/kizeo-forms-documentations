@@ -91,6 +91,10 @@ const siteConfig = {
       label: 'Kizeo Connector'
     },
     {
+      doc: 'sharepoint',
+      label: 'SharePoint'
+    },
+    {
       doc: 'restv3',
       label: 'API Rest V3'
     },
