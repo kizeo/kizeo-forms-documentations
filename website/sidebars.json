@@ -31,8 +31,14 @@
     "Token SharePoint": [
       "sp-token"
     ],
-    "Samples": [
-      "suite"
+    "Connection": [
+      "sp-connection"
+    ],
+    "Update a sharepoint list": [
+      "sp-update-list"
+    ],
+    "Test": [
+      "sp-testconnection"
     ]
   },
   "Web Service": {

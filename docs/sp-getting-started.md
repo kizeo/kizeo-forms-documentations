@@ -8,7 +8,7 @@ sidebar_label: Introduce
 
 The SharePoint connector is a console application that allows you to synchronize data between Kizeo
 Forms and SharePoint on 4 levels:
-- Kizeo Forms data to a SharePoint list,
+- [Kizeo Forms data to a SharePoint list](sp-update-list.md),
 - Kizeo Forms data to the SharePoint library,
 - SharePoint lists to External lists,
 - Kizeo Forms data to the SharePoint library (Periodic exports).
