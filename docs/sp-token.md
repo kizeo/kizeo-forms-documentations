@@ -41,11 +41,12 @@ So far, you've had:
 - the client id
 - the secret id
 - the SharePoint URL.
-The tenant id is on this page : <span style="color:#ABD33D">https://<span></span>your_sharepoint_domain/Sites/your_site/_layouts/15/appprincipals.aspx</span>
+<!-- The tenant id is on this page : <span style="color:#ABD33D">https://<span></span>your_sharepoint_domain/Sites/your_site/_layouts/15/appprincipals.aspx</span> -->
 
-![Warning][token-03]
-It is after the "@".
-You are now in possession of all the identifiers requested in the Wizard of the SharePoint Connector. 
+<!-- ![Warning][token-03] -->
+<!-- It is after the "@". -->
+You are now in possession of all the identifiers requested in the Wizard of the SharePoint Connector.
+
 ![Warning][token-04]
 
 ### Step 2: Grant approvals to the SP Connector 

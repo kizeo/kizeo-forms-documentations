@@ -26,7 +26,23 @@ sidebar_label: SharePoint List
     . You can retrieve the list ID from the address bar after "listedit.aspx?List=".
     ![SharePoint List ID][list-04]  
 
-    
+3. Click on combo box
+    The list in the combo box, are the names of the columns of the SharePoint list.
+    ![SharePoint List combo][list-06]  
+    ![SharePoint List column][list-05]  
+
+4. Enter the name of the KizeoForms field tag you want to put in the SharePoint column.
+
+5. Data type
+    ![SharePoint List type][list-07] 
+    Unique must be used on a SharePoint column that is of type unique item.
+    ![Unique Type][list-08] 
+    Allows you to update an entry in the list, rather than adding a new line.
+
+6. Adds a new link Column / Tag
+7. Modifies the selected line with the new parameters entered.
+8. Delete the selected row
+9. Validate settings
 
 <!-- ************************** -->
 <!-- ***** Pictures List ****** --> 
@@ -36,3 +52,7 @@ sidebar_label: SharePoint List
 [list-02]: /kizeo-forms-documentations/img/sp/en/list-update-02.png
 [list-03]: /kizeo-forms-documentations/img/sp/en/list-update-03.png
 [list-04]: /kizeo-forms-documentations/img/sp/en/list-update-04.png
+[list-05]: /kizeo-forms-documentations/img/sp/en/list-update-05.png
+[list-06]: /kizeo-forms-documentations/img/sp/en/list-update-06.png
+[list-07]: /kizeo-forms-documentations/img/sp/en/list-update-07.png
+[list-08]: /kizeo-forms-documentations/img/sp/en/list-update-08.png
