@@ -37,8 +37,14 @@
     "Update a sharepoint list": [
       "sp-update-list"
     ],
-    "Test": [
-      "sp-testconnection"
+    "Document library": [
+      "sp-upload-files"
+    ],
+    "External list": [
+      "sp-update-kf-list"
+    ],
+    "Sheduled": [
+      "sp-scheduled"
     ]
   },
   "Web Service": {

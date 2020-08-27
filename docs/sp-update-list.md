@@ -17,7 +17,7 @@ sidebar_label: SharePoint List
 ### Add new transfer rule
 
 ![Add new transfer rule][list-02]
-1. Enter the numeric identifier number of the form. (<a href="https://www.kizeo-forms.com" target="_blank">How to get a form id</a>). 
+1. Enter the numeric identifier number of the form. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">How to get a form id</a>). 
 2. Retrieving the ID of SharePoint list
 
     . To find the identifier of the SharePoint list, you have to go to SharePoint -> Site content. Click on to bring up the drop-down menu, then select "Settings". 
@@ -43,6 +43,10 @@ sidebar_label: SharePoint List
 7. Modifies the selected line with the new parameters entered.
 8. Delete the selected row
 9. Validate settings
+    
+    >Note :
+    >If you want to retrieve items from a KizeoForms table in a SharePoint list, you need to put a calculation field with a "Uniq Number" and set a column to "Unique" status in  > the SharePoint list. 
+    >This avoids creating a lot of duplicates when modifying data.
 
 <!-- ************************** -->
 <!-- ***** Pictures List ****** --> 
