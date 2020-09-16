@@ -6,7 +6,7 @@
         <description>The best place to stay up-to-date with the latest Kizeo Forms Documentations news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-        <generator>Feed for Node.js</generator>
+        <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Kizeo Forms Documentations Blog</title>
             <url>https://kizeo.github.io/kizeo-forms-documentations/img/kizeo-white.png</url>
