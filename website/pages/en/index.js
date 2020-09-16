@@ -69,6 +69,7 @@ class HomeSplash extends React.Component {
             <Button href={docUrl('installation.html')}><translate>Kizeo Connector</translate></Button>
             <Button href={docUrl('sharepoint.html')}><translate>SharePoint Connector</translate></Button>
             <Button href={docUrl('restv3.html')}><translate>Rest V3</translate></Button>
+            <Button href={docUrl('deep-linking.html')}><translate>Deep linking</translate></Button>
           </PromoSection>
         </div>
       </SplashContainer>

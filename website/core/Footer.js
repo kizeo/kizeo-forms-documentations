@@ -7,6 +7,8 @@
 
 const React = require('react');
 
+const translate = require('docusaurus/lib/server/translate.js').translate
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
@@ -36,10 +38,13 @@ class Footer extends React.Component {
           <div>
             <h5>Docs</h5>
             <a href={this.docUrl('installation.html', this.props.language)}>
-              Kizeo Connector
+              <translate>Kizeo Connector</translate>
             </a>
             <a href={this.docUrl('restv3', this.props.language)}>
-              API (Web Service REST)
+              <translate>API (Web Service REST)</translate>
+            </a>
+            <a href={this.docUrl('deep-linking', this.props.language)}>
+              <translate>Deep linking</translate>
             </a>
           </div>
           <div>

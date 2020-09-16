@@ -27,7 +27,7 @@
       },
       "howtouse": {
         "title": "Utilisations"
-      }, 
+      },
       "curl-install": {
         "title": "Aide à l'activation de cURL (PHP)",
         "sidebar_label": "Aide à l'activation de cURL (PHP)"
@@ -86,7 +86,8 @@
     },
     "links": {
       "Kizeo Connector": "Kizeo Connector",
-      "Web Service": "Web Service"
+      "API Rest V3": "API Rest V3",
+      "Deep linking": "Deep linking"
     },
     "categories": {
       "Getting started": "Premiers pas",
@@ -111,6 +112,10 @@
     "Kizeo connector (database/media)|no description given": "Connecteur Kizeo (Base de données/Médias)",
     "For **larger developments**, with more complex process but providing **wider possibilities**, you have our **Web Service REST**. Already available in its third version, our Web Service allows all of your Kizeo Forms data to be manipulated securely using the **TLS protocol**. We can give you advice on using our Web Service, depending on the availability and skill of our developers. Currently, our internal skills allow us to provide examples in the following programming languages: PHP, Javascript and Java. But you can, of course, develop in another language from when it is able to make **HTTPS requests**.|no description given": "Pour des **développements plus lourds** avec un processus plus complexe, mais offrant des **possibilités** bien **plus larges**, nous avons mis en place un **Web Service REST**. Déjà disponible dans sa troisième version, notre Web Service permet de manipuler l’ensemble de vos données Kizeo Forms ; le tout de manière sécurisée à l’aide du **protocole TLS**. Nous pouvons bien entendu vous donner nos conseils concernant l’usage de notre Web Service, en fonction des disponibilités et des compétences respectives de nos développeurs. Actuellement, nos compétences internes permettent de vous fournir des exemples dans les langages de programmation suivant : PHP, Javascript, Java. Mais, vous pouvez évidemment développer avec un autre langage à partir du moment où celui-ci est capable d’effectuer des **requêtes HTTPS**.",
     "API (Web Service REST)|no description given": "Intégration API (Web Service REST)",
-    "They trust us|no description given": "Ils nous font confiance au quotidien"
+    "Deep linking|no description given": "Deep linking",
+    "They trust us|no description given": "Ils nous font confiance au quotidien",
+    "Help Translate|recruit community translators for your project": "Aider à traduire",
+    "Edit this Doc|recruitment message asking to edit the doc source": "Éditer",
+    "Translate this Doc|recruitment message asking to translate the docs": "Traduire"
   }
 }

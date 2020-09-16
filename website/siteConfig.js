@@ -16,7 +16,7 @@ const users = [{
   image: '/kizeo-forms-documentations/img/logo_sncf.png',
   // infoLink: 'https://www.sncf.com',
   pinned: true,
-}, 
+},
 {
   caption: 'Engie Ineo',
   // You will need to prepend the image path with your baseUrl
@@ -24,49 +24,49 @@ const users = [{
   image: '/kizeo-forms-documentations/img/logo_engie.png',
   // infoLink: 'https://www.engie-ineo.fr',
   pinned: true,
-}, 
+},
 {
   caption: 'ESG Ecoles de commerce',
   // You will need to prepend the image path with your baseUrl
   // if it is not '/', like: '/test-site/img/image.jpg'.
   image: '/kizeo-forms-documentations/img/logo_esg.jpg',
   pinned: true,
-}, 
+},
 {
   caption: 'Mulhouse',
   // You will need to prepend the image path with your baseUrl
   // if it is not '/', like: '/test-site/img/image.jpg'.
   image: '/kizeo-forms-documentations/img/logo_mulhouse.jpg',
   pinned: true,
-}, 
+},
 {
   caption: 'Nexity',
   // You will need to prepend the image path with your baseUrl
   // if it is not '/', like: '/test-site/img/image.jpg'.
   image: '/kizeo-forms-documentations/img/logo_nexity.png',
   pinned: true,
-}, 
+},
 {
   caption: 'SUEZ',
   // You will need to prepend the image path with your baseUrl
   // if it is not '/', like: '/test-site/img/image.jpg'.
   image: '/kizeo-forms-documentations/img/logo_suez.png',
   pinned: true,
-}, 
+},
 {
   caption: 'Vinci Energies',
   // You will need to prepend the image path with your baseUrl
   // if it is not '/', like: '/test-site/img/image.jpg'.
   image: '/kizeo-forms-documentations/img/logo_vinci.png',
   pinned: true,
-}, 
+},
 {
   caption: 'Ayme Groupe',
   // You will need to prepend the image path with your baseUrl
   // if it is not '/', like: '/test-site/img/image.jpg'.
   image: '/kizeo-forms-documentations/img/logo_ayme.png',
   pinned: true,
-} 
+}
 ];
 
 const siteConfig = {
@@ -97,6 +97,10 @@ const siteConfig = {
     {
       doc: 'restv3',
       label: 'API Rest V3'
+    },
+    {
+      doc: 'deep-linking',
+      label: 'Deep linking'
     },
     {
       languages: true
