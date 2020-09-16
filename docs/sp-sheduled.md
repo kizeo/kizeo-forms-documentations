@@ -20,6 +20,8 @@ sidebar_label: Scheduled upload from Kizeo Forms to SharePoint
 8. Select the periodicity of exports.
 9. Enter the destination folder. It is possible to use the Kizeoforms tags.
 
+## Finally, now launch the SharePoint Connector.
+
 <!-- ************************** -->
 <!-- ***** Pictures List ****** --> 
 <!-- ************************** -->

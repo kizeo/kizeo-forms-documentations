@@ -4,6 +4,8 @@ title: Connection
 sidebar_label: Connection
 ---
 
+First launch the SharePoint connector Wizard.
+
 ## Step 1: main connection setting
 
 ![Screen Connection][connection-01]

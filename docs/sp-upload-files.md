@@ -17,16 +17,16 @@ sidebar_label: Upload files to document library
 2. Retrieving the ID of SharePoint document library (<a href="http://localhost:3000/kizeo-forms-documentations/docs/en/sp-update-list" target="_blank">use the same method as for retrieving ID of SharePoint List)
 
 ### standard exports
-3, 4, 5, 6, 7 : You can use KizeoForms tags to define the paths of files to be stored. Then you need to select the "Active" checkbox.
+3. 4, 5, 6, 7 : You can use KizeoForms tags to define the paths of files to be stored. Then you need to select the "Active" checkbox.
 
 ### Custom Exports
 8. You can retrieve export ids in KizeoForms from the history. Click on the "Action" button and position the mouse on the desired export. The link to the ExportId appears at the bottom left of the browser.
 
 ![ExportId][upfiles-03] 
 
-9, 10 : You can use KizeoForms tags to define the paths of files to be stored. Then you need to select the "Active" checkbox.
-11. 
+9. 10 : You can use KizeoForms tags to define the paths of files to be stored. Then you need to select the "Active" checkbox.
 
+11 "SharePoint metadata setting" allows you to set the metadata you want to include in the files uploaded in SharePoint. For example the name of the companies, the categories of interventions, ... 
 
 
 <!-- ************************** -->
