@@ -18,7 +18,7 @@ First launch the SharePoint connector Wizard.
     . your_domain: Your Sharepoint account domain  
     . name_site: Your SharePoint site name
 4. You need to enter all the elements you obtained in the [previous step](sp-token.md)
-5. Click on "Check connection setting" to check the correctness of the connection elements. ([List of possible answers](sp-testconnection.md)).
+5. Click on "Check connection setting" to check the correctness of the connection elements.
 6. When the connection elements are checked and validated, you can proceed to the next step.
 
 

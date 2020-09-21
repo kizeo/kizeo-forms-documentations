@@ -14,11 +14,11 @@ sidebar_label: Installation
 |:-------------:|:-------------:|
 |![Warning][installen-03]|![Warning][installen-04]|
 
-| 5. Click on *more info*|6. Click on *Run anyway*|
+| 5. Click on *Next*|6. Click on *Next*|
 |:-------------:|:-------------:|
 |![Warning][installen-05]|![Warning][installen-06]|
 
-| 7. Click on *more info*|8. Click on *Run anyway*|
+| 7. Click on *Next*|8. Click on *Close*|
 |:-------------:|:-------------:|
 |![Warning][installen-07]|![Warning][installen-08]|
 
