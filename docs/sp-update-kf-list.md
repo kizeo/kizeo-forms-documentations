@@ -12,7 +12,7 @@ sidebar_label: Update external list kizoForms
 
 ## Add or update
 ![Config][upkflist-02] 
-4. Retrieving the ID of SharePoint document library (<a href="http://kizeo.github.io/kizeo-forms-documentations/docs/en/sp-update-list" target="_blank">use the same method as for retrieving ID of SharePoint List)
+4. Retrieving the ID of SharePoint document library (<a href="http://kizeo.github.io/kizeo-forms-documentations/docs/en/sp-update-list" target="_blank">use the same method as for retrieving ID of SharePoint List</a>)
 5. Enter the numeric identifier number of the form. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">How to get a form id</a>). 
 6. After entering the ID of your SharePoint list, the names of its columns will appear.
 

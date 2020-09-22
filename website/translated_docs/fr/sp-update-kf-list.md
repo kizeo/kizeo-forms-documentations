@@ -12,7 +12,7 @@ sidebar_label: Update external list kizoForms
 
 ## Ajouter ou mettre à jour
 ![Config][upkflist-02] 
-4. Récupération de l'identifiant de la bibliothèque de documents SharePoint (<a href="http://localhost:3000/kizeo-forms-documentations/docs/en/sp-update-list" target="_blank">utiliser la même méthode que pour récupérer l'ID de la liste SharePoint)
+4. Récupération de l'identifiant de la bibliothèque de documents SharePoint (<a href="http://localhost:3000/kizeo-forms-documentations/docs/fr/sp-update-list" target="_blank">utiliser la même méthode que pour récupérer l'ID de la liste SharePoint</a>)
 5. Saisissez le numéro d'identification numérique du formulaire. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">Comment obtenir un identifiant de formulaire</a>). 
 6. Après avoir saisi l'ID de votre liste SharePoint, les noms de ses colonnes apparaîtront.
 

@@ -16,7 +16,7 @@ sidebar_label: Scheduled upload from Kizeo Forms to SharePoint
 ![Ajouter ou mettre à jour][scheduled-02] 
 
 6. Saisissez le numéro d'identification numérique du formulaire. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">Comment obtenir un identifiant de formulaire</a>). 
-7. Récupération de l'identification des formulaires (<a href="http://localhost:3000/kizeo-forms-documentations/docs/en/sp-update-list" target="_blank">utiliser la même méthode que pour récupérer l'ID de la liste SharePoint</a>).
+7. Récupération de l'identification des formulaires (<a href="http://localhost:3000/kizeo-forms-documentations/docs/fr/sp-update-list" target="_blank">utiliser la même méthode que pour récupérer l'ID de la liste SharePoint</a>).
 8. Sélectionnez la périodicité des exportations.
 9. Entrez le dossier de destination. Il est possible d'utiliser les balises Kizeoforms.
 
