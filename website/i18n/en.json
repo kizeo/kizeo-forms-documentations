@@ -104,7 +104,7 @@
       },
       "sp-update-kf-list": {
         "title": "Update an external kizeoforms list",
-        "sidebar_label": "Update external list kizoForms"
+        "sidebar_label": "Update external list kizeoForms"
       },
       "sp-update-list": {
         "title": "Transfer kizeoForms data to a SharePoint list",
