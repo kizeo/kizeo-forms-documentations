@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Token SharePoint · Kizeo Forms Documentations</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Obtenir un jeton SharePoint"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Token SharePoint · Kizeo Forms Documentations"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kizeo.github.io/kizeo-forms-documentations/"/><meta property="og:description" content="## Obtenir un jeton SharePoint"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/kizeo-forms-documentations/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/kizeo-forms-documentations/js/scrollSpy.js"></script><link rel="stylesheet" href="/kizeo-forms-documentations/css/main.css"/><script src="/kizeo-forms-documentations/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kizeo-forms-documentations/fr"><img class="logo" src="/kizeo-forms-documentations/img/kizeo-white.png" alt="Kizeo Forms Documentations"/><h2 class="headerTitleWithLogo">Kizeo Forms Documentations</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/kizeo-forms-documentations/docs/fr/installation" target="_self">Kizeo Connector</a></li><li class="siteNavGroupActive"><a href="/kizeo-forms-documentations/docs/fr/sharepoint" target="_self">SharePoint</a></li><li class=""><a href="/kizeo-forms-documentations/docs/fr/restv3" target="_self">API Rest V3</a></li><li class=""><a href="/kizeo-forms-documentations/docs/fr/deep-linking" target="_self">Deep linking</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/kizeo-forms-documentations/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/kizeo-forms-documentations/docs/en/sp-token">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Token SharePoint</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Premiers pas<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sharepoint">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-install">Installation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Token SharePoint<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-token">Token SharePoint</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Connexion<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-connection">Connexion</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Mettre à jour une liste SharePoint<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-update-list">Listes SharePoint</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Bibliothèque de documents<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-upload-files">Dépôt de fichiers dans la bibliothèque de documents</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Listes externes<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-update-kf-list">Mettre à jour une liste Externe kizeoforms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Exports périodiques<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/kizeo-forms-documentations/docs/fr/sp-scheduled">Téléchargement périodique de Kizeo Forms vers SharePoint</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Token SharePoint</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="obtenir-un-jeton-sharepoint"></a><a href="#obtenir-un-jeton-sharepoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Obtenir un jeton SharePoint</h2>
+<p>Dans la première étape de la configuration du connecteur SharePoint, il vous sera demandé de fournir des informations de connexion.
+Celles-ci peuvent être un peu difficiles à trouver. Ce guide vous aidera à les obtenir.
+Veillez à conserver toutes les informations que vous serez invité à créer.</p>
+<h3><a class="anchor" aria-hidden="true" id="étape-1--enregistrer-lapplication-dans-sharepoint"></a><a href="#étape-1--enregistrer-lapplication-dans-sharepoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Étape 1 : Enregistrer l'application dans SharePoint</h3>
+<p>Vérifiez que vous êtes déjà connecté à SharePoint, puis allez sur :
+<span style="color:#ABD33D"><a href="https://your">https://your</a>_sharepoint_domain/sites/your_site/_layouts/15/appregnew.aspx</span> en remplaçant <em>your_sharepoint_domain</em> avec le domaine de votre compte SharePoint et <em>your_site</em> avec le nom de votre site).</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-01.png" alt="appregnew.aspx"></p>
+<ol>
+<li>Cliquez sur &quot;Générer&quot; pour le champ &quot;Id Client&quot;.</li>
+<li>Cliquez sur &quot;Générer&quot; pour le champ &quot;Clé secrète client&quot;..</li>
+<li>Saisissez le nom de l'application à ajouter : &quot;Kizeo&quot; par exemple.</li>
+<li>Saisissez &quot;kizeoforms.com&quot;</li>
+<li>Remplissez <a href="https://www.kizeoforms.com/">https://www.kizeoforms.com/</a></li>
+<li>Cliquez sur &quot;Créer&quot; et assurez-vous que vous avez bien copié le numéro d'identification et la clé secrète du client (la clé secrète du client ne vous sera plus jamais communiquée).</li>
+</ol>
+<p>Ensuite, allez sur <span style="color:#ABD33D"><a href="https://your">https://your</a>_sharepoint_domain/sites/your_site/_layouts/15/appinv.aspx</span></p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-02.png" alt="Warning"></p>
+<ol start="7">
+<li>Remplissez le numéro de client dans le champ &quot;ID de la demande&quot; et cliquez sur le bouton &quot;Recherche&quot;.</li>
+<li>Dans le champ &quot;Code XML de la demande d'autorisation&quot;, copiez le code suivant :</li>
+</ol>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">AppPermissionRequests</span> <span class="hljs-attr">AllowAppOnlyPolicy</span>=<span class="hljs-string">"true"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">AppPermissionRequest</span> <span class="hljs-attr">Scope</span>=<span class="hljs-string">"http://sharepoint/content/sitecollection/web"</span> <span class="hljs-attr">Right</span>=<span class="hljs-string">"FullControl"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">AppPermissionRequests</span>&gt;</span>
+</code></pre>
+<ol start="9">
+<li>Cliquez ensuite sur &quot;Créer&quot; et faites confiance.</li>
+</ol>
+<p>Jusqu'à présent, vous avez eu :</p>
+<ul>
+<li>l'Id client</li>
+<li>La clé secrète</li>
+<li>l'URL de votre site SharePoint</li>
+</ul>
+<p>Vous êtes maintenant en possession de tous les identifiants demandés dans l'assistant du connecteur SharePoint.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/en/token-sp-04.png" alt="Warning"></p>
+<h3><a class="anchor" aria-hidden="true" id="étape-2--accorder-les-autorisations-au-connecteur-sp"></a><a href="#étape-2--accorder-les-autorisations-au-connecteur-sp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Étape 2 : Accorder les autorisations au connecteur SP</h3>
+<h4><a class="anchor" aria-hidden="true" id="1-gestion-des-autorisations-du-site"></a><a href="#1-gestion-des-autorisations-du-site" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) Gestion des autorisations du site</h4>
+<p>Allez à la page du site auquel le connecteur SharePoint doit avoir accès.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-05.png" alt="SharePoint Group Homepage"></p>
+<p>À droite, cliquez sur le logo de l'engrenage pour sélectionner les paramètres de ce site.
+Dans le menu qui apparaît, sélectionnez &quot;Autorisations du site&quot;.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/en/token-sp-23.png" alt="Permission management"></p>
+<p>Veuillez modifier les autorisations afin que les membres et les propriétaires du site puissent avoir
+un contrôle total.</p>
+<h4><a class="anchor" aria-hidden="true" id="2-créer-un-groupe-dautorisation-spécifique-au-connecteur"></a><a href="#2-créer-un-groupe-dautorisation-spécifique-au-connecteur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) Créer un groupe d'autorisation spécifique au connecteur</h4>
+<p>Le connecteur SharePoint fourni, nécessite certaines autorisations pour communiquer avec votre site SharePoint. Ainsi, vous devez créer un groupe spécifique avec les paramètres qui permettent au connecteur de récupérer vos données.
+Pour ce faire, toujours dans la même fenêtre que précédemment, sélectionnez &quot;Advanced permissions settings&quot;.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-08.png" alt="Advanced permissions setting"></p>
+<p>Vous arriverez alors sur une page avec plusieurs groupes SharePoint. Repérez ceux qui sont réservés aux
+Membres et propriétaires. Ceux-ci doivent se distinguer par leur nom.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-09.png" alt="Permissions"></p>
+<p>Cliquez sur &quot;Niveaux d'autorisation&quot; pour accéder à la liste des configurations d'autorisation.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-10.png" alt="Authorization Levels"></p>
+<p>Sur cette page, sélectionnez &quot;Ajouter un niveau d'autorisation&quot;.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-11.png" alt="Add a permission Level"></p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-12.png" alt="Add a permission Level input"></p>
+<ol>
+<li>Choisissez un nom simple, tel que &quot;KF connector&quot;.</li>
+<li>Entrez la description (facultatif)</li>
+</ol>
+<p>Dans la sous-section &quot;Autorisations de site&quot;...</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-13.png" alt="Site Permissions"></p>
+<p>...vous verrez une case à cocher :</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-14.png" alt="check box"></p>
+<ol>
+<li>&quot;Utiliser les interfaces distantes - Accéder au site web à l'aide l'interface SOAP, Web DAV, SharePoint Designer ou du module objet client - Veuillez cocher cette case.</li>
+<li>&quot;Ouvrir - Autoriser les utilisateurs à ouvrir un site Web, une liste ou un dossier pour accéder aux éléments contenus dans ce conteneur&quot; sera coché automatiquement.</li>
+</ol>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-15.png" alt="Create"></p>
+<p>Enregistrez les modifications en cliquant sur &quot;Créer&quot; et revenez ensuite à la page contenant la liste des groupes.</p>
+<h4><a class="anchor" aria-hidden="true" id="3-accorder-les-autorisations-créées"></a><a href="#3-accorder-les-autorisations-créées" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3) Accorder les autorisations créées</h4>
+<p>Une fois ces autorisations créées, elles doivent maintenant être attribuées à un groupe. Pour ce faire, veuillez cliquer sur le bouton à gauche.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-16.png" alt="Grant Permissions"></p>
+<p>Dans le premier champ de texte, entrez les premières lettres du nom de votre groupe de membres. Dans notre exemple, je tape &quot;pat&quot; pour &quot;Patrick&quot;. Vous verrez alors apparaître le groupe de membres ; sélectionnez-le.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-17.png" alt="Members"></p>
+<p>Entrez également &quot;owner&quot; et sélectionnez le groupe de propriétaires.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-18.png" alt="Owners"></p>
+<p>Vous verrez une étiquette &quot;Afficher les options&quot; sous les deux champs de texte, cliquez dessus.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-19.png" alt="Show Options"></p>
+<p>Décochez la case (qui devrait déjà être cochée par défaut) correspondant à l'envoi d'une invitation électronique.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-20.png" alt="Send a mail invitation"></p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-21.png" alt="alt"></p>
+<ol>
+<li>Choisissez ensuite le niveau d'autorisation que nous avons créé à l'étape 2 dans la liste déroulante.</li>
+<li>cliquez sur le bouton &quot;Partager</li>
+</ol>
+<p>Rafraîchissez la page de la liste de votre groupe.</p>
+<p><img src="/kizeo-forms-documentations/img/sp/fr/tokenfr-sp-22.png" alt="alt"></p>
+<p>Les nouvelles règles que nous avons définies sont maintenant présentes dans les niveaux d'autorisation.</p>
+<!-- ************************** -->
+<!-- ***** Pictures List ****** --> 
+<!-- ************************** -->
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/fr/sp-install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/fr/sp-connection"><span>Connexion</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#obtenir-un-jeton-sharepoint">Obtenir un jeton SharePoint</a><ul class="toc-headings"><li><a href="#étape-1--enregistrer-lapplication-dans-sharepoint">Étape 1 : Enregistrer l'application dans SharePoint</a></li><li><a href="#étape-2--accorder-les-autorisations-au-connecteur-sp">Étape 2 : Accorder les autorisations au connecteur SP</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/fr/installation.html">Connecteur Kizeo</a><a href="/kizeo-forms-documentations/docs/fr/restv3">Intégration API (Web Service REST)</a><a href="/kizeo-forms-documentations/docs/fr/deep-linking">Deep linking</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2020 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
