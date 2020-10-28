@@ -8,7 +8,7 @@ sidebar_label: Token SharePoint
 
 Dans la première étape de la configuration du connecteur SharePoint, il vous sera demandé de fournir des informations de connexion.
 Celles-ci peuvent être un peu difficiles à trouver. Ce guide vous aidera à les obtenir.
-Veillez à conserver toutes les informations que vous serez invité à créer. 
+Veillez à conserver toutes les informations que vous serez invité à créer.
 
 ### Étape 1 : Enregistrer l'application dans SharePoint
 
@@ -19,11 +19,11 @@ Vérifiez que vous êtes déjà connecté à SharePoint, puis allez sur :
 ![appregnew.aspx][token-01]
 
 1. Cliquez sur "Générer" pour le champ "Id Client".
-2. Cliquez sur "Générer" pour le champ "Clé secrète client".. 
+2. Cliquez sur "Générer" pour le champ "Clé secrète client"..
 3. Saisissez le nom de l'application à ajouter : "Kizeo" par exemple.
 4. Saisissez "kizeoforms.com"
 5. Remplissez https://www.kizeoforms.com/
-6. Cliquez sur "Créer" et assurez-vous que vous avez bien copié le numéro d'identification et la clé secrète du client (la clé secrète du client ne vous sera plus jamais communiquée). 
+6. Cliquez sur "Créer" et assurez-vous que vous avez bien copié le numéro d'identification et la clé secrète du client (la clé secrète du client ne vous sera plus jamais communiquée).
 
 Ensuite, allez sur <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appinv.aspx</span>
 
@@ -45,10 +45,7 @@ Jusqu'à présent, vous avez eu :
 - l'Id client
 - La clé secrète
 - l'URL de votre site SharePoint
-<!-- The tenant id is on this page : <span style="color:#ABD33D">https://<span></span>your_sharepoint_domain/Sites/your_site/_layouts/15/appprincipals.aspx</span> -->
 
-<!-- ![Warning][token-03] -->
-<!-- It is after the "@". -->
 Vous êtes maintenant en possession de tous les identifiants demandés dans l'assistant du connecteur SharePoint.
 
 ![Warning][token-04]
@@ -67,7 +64,7 @@ Dans le menu qui apparaît, sélectionnez "Autorisations du site".
 ![Permission management][token-23]
 
 Veuillez modifier les autorisations afin que les membres et les propriétaires du site puissent avoir
-un contrôle total. 
+un contrôle total.
 
 #### 2) Créer un groupe d'autorisation spécifique au connecteur
 

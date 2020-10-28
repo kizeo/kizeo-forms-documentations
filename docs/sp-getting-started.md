@@ -20,4 +20,3 @@ This input file "conf.json" is initially empty and stored in the user directory,
 This help explains how to use the wizard to configure this input file.
 
 You can download the setup [HERE](https://s3.eu-west-3.amazonaws.com/dw.kizeo.net/download/sharepoint/sharepoint_setup.msi).
-
