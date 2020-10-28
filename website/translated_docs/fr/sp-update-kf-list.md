@@ -1,7 +1,7 @@
 ---
 id: sp-update-kf-list
 title: Update an external kizeoforms list
-sidebar_label: Update external list kizoForms
+sidebar_label: Update external list kizeoForms
 ---
 
 ##  Mise à jour des listes Externes Kizeo Forms à partir des listes SharePoint

@@ -4,9 +4,9 @@ title: Connexion
 sidebar_label: Connexion
 ---
 
-First launch the SharePoint connector Wizard.
+Lancez d'abord l'assistant de connexion SharePoint.
 
-## Step 1: main connection setting
+## Étape 1 : Paramétrage de la connexion principale
 
 ![Ecran de connexion][connection-01]
 
