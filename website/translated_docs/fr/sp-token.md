@@ -5,39 +5,43 @@ sidebar_label: Token SharePoint
 ---
 
 ## Obtenir un jeton SharePoint
+
 Dans la première étape de la configuration du connecteur SharePoint, il vous sera demandé de fournir des informations de connexion.
 Celles-ci peuvent être un peu difficiles à trouver. Ce guide vous aidera à les obtenir.
 Veillez à conserver toutes les informations que vous serez invité à créer. 
 
 ### Étape 1 : Enregistrer l'application dans SharePoint
 
-Vérifiez que vous êtes déjà connecté à SharePoint, puis allez à :
-<span style="color:#ABD33D">https://<span></span>your_sharepoint_domain/sites/your_site/_layouts/15/appregnew.aspx</span>  
-(remplacez your_sharepoint_domain avec le domaine de votre compte SharePoint et your_site avec le nom de votre site).
+Vérifiez que vous êtes déjà connecté à SharePoint, puis allez sur :
+<span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appregnew.aspx</span> en remplaçant *your_sharepoint_domain* avec le domaine de votre compte SharePoint et *your_site* avec le nom de votre site).
 
 
 ![appregnew.aspx][token-01]
+
 1. Cliquez sur "Générer" pour le champ "Id Client".
 2. Cliquez sur "Générer" pour le champ "Clé secrète client".. 
-3. Saisissez le nom de l'application à ajoutée : "Kizeo" par exemple.
-4. Saisissez "kizeoforms.com" 
+3. Saisissez le nom de l'application à ajouter : "Kizeo" par exemple.
+4. Saisissez "kizeoforms.com"
 5. Remplissez https://www.kizeoforms.com/
 6. Cliquez sur "Créer" et assurez-vous que vous avez bien copié le numéro d'identification et la clé secrète du client (la clé secrète du client ne vous sera plus jamais communiquée). 
 
-Ensuite, allez à <span style="color:#ABD33D">https://<span></span>your_sharepoint_domain/sites/your_site/_layouts/15/appinv.aspx</span>
+Ensuite, allez sur <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appinv.aspx</span>
 
 ![Warning][token-02]
 
 7. Remplissez le numéro de client dans le champ "ID de la demande" et cliquez sur le bouton "Recherche".
 8. Dans le champ "Code XML de la demande d'autorisation", copiez le code suivant :
+
 ```
 <AppPermissionRequests AllowAppOnlyPolicy="true">
 <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="FullControl"/>
-</AppPermissionRequests> 
+</AppPermissionRequests>
 ```
+
 9. Cliquez ensuite sur "Créer" et faites confiance.
 
 Jusqu'à présent, vous avez eu :
+
 - l'Id client
 - La clé secrète
 - l'URL de votre site SharePoint
@@ -49,77 +53,94 @@ Vous êtes maintenant en possession de tous les identifiants demandés dans l'as
 
 ![Warning][token-04]
 
-### Étape 2 : Accorder les autorisations au connecteur SP 
+### Étape 2 : Accorder les autorisations au connecteur SP
 
 #### 1) Gestion des autorisations du site
-Allez à la page du site auquel le connecteur SharePoint doit avoir accès. 
+
+Allez à la page du site auquel le connecteur SharePoint doit avoir accès.
 
 ![SharePoint Group Homepage][token-05]
 
 À droite, cliquez sur le logo de l'engrenage pour sélectionner les paramètres de ce site.
-Dans le menu qui apparaît, sélectionnez "Autorisations du site". 
+Dans le menu qui apparaît, sélectionnez "Autorisations du site".
 
 ![Permission management][token-23]
+
 Veuillez modifier les autorisations afin que les membres et les propriétaires du site puissent avoir
 un contrôle total. 
 
-#### 2) Créer un groupe d'autorisation spécifique au connecteur 
+#### 2) Créer un groupe d'autorisation spécifique au connecteur
+
 Le connecteur SharePoint fourni, nécessite certaines autorisations pour communiquer avec votre site SharePoint. Ainsi, vous devez créer un groupe spécifique avec les paramètres qui permettent au connecteur de récupérer vos données.
-Pour ce faire, toujours dans la même fenêtre que précédemment, sélectionnez "Advanced permissions settings". 
+Pour ce faire, toujours dans la même fenêtre que précédemment, sélectionnez "Advanced permissions settings".
 
 ![Advanced permissions setting][token-08]
 
 Vous arriverez alors sur une page avec plusieurs groupes SharePoint. Repérez ceux qui sont réservés aux
-Membres et propriétaires. Ceux-ci doivent se distinguer par leur nom. 
+Membres et propriétaires. Ceux-ci doivent se distinguer par leur nom.
+
 ![Permissions][token-09]
 
-Cliquez sur "Niveaux d'autorisation" pour accéder à la liste des configurations d'autorisation. 
+Cliquez sur "Niveaux d'autorisation" pour accéder à la liste des configurations d'autorisation.
+
 ![Authorization Levels][token-10]
 
-Sur cette page, sélectionnez "Ajouter un niveau d'autorisation". 
+Sur cette page, sélectionnez "Ajouter un niveau d'autorisation".
+
 ![Add a permission Level][token-11]
 
 ![Add a permission Level input][token-12]
 
-1. Choisissez un nom simple, tel que "KF connector". 
+1. Choisissez un nom simple, tel que "KF connector".
 2. Entrez la description (facultatif)
 
-Dans la sous-section "Autorisations de site", ... 
+Dans la sous-section "Autorisations de site"...
+
 ![Site Permissions][token-13]
 
 ...vous verrez une case à cocher :
+
 ![check box][token-14]
 
-1. "Utiliser les interfaces distantes - Accéder au site web à l'aide l'interface SOAP, Web DAV, SharePoint Designer ou du module objet client - Veuillez cocher cette case. 
-2. "Ouvrir - Autoriser les utilisateurs à ouvrir un site Web, une liste ou un dossier pour accéder aux éléments contenus dans ce conteneur" sera coché automatiquement. 
+1. "Utiliser les interfaces distantes - Accéder au site web à l'aide l'interface SOAP, Web DAV, SharePoint Designer ou du module objet client - Veuillez cocher cette case.
+2. "Ouvrir - Autoriser les utilisateurs à ouvrir un site Web, une liste ou un dossier pour accéder aux éléments contenus dans ce conteneur" sera coché automatiquement.
 
 ![Create][token-15]
+
 Enregistrez les modifications en cliquant sur "Créer" et revenez ensuite à la page contenant la liste des groupes. 
 
-#### 3) Accorder les autorisations créées 
-Une fois ces autorisations créées, elles doivent maintenant être attribuées à un groupe. Pour ce faire, veuillez cliquer sur le bouton à gauche. 
+#### 3) Accorder les autorisations créées
+
+Une fois ces autorisations créées, elles doivent maintenant être attribuées à un groupe. Pour ce faire, veuillez cliquer sur le bouton à gauche.
+
 ![Grant Permissions][token-16]
 
-Dans le premier champ de texte, entrez les premières lettres du nom de votre groupe de membres. Dans notre exemple, je tape "pat" pour "Patrick". Vous verrez alors apparaître le groupe de membres ; sélectionnez-le. 
+Dans le premier champ de texte, entrez les premières lettres du nom de votre groupe de membres. Dans notre exemple, je tape "pat" pour "Patrick". Vous verrez alors apparaître le groupe de membres ; sélectionnez-le.
+
 ![Members][token-17]
 
-Entrez également "owner" et sélectionnez le groupe de propriétaires. 
+Entrez également "owner" et sélectionnez le groupe de propriétaires.
+
 ![Owners][token-18]
 
-Vous verrez une étiquette "Afficher les options" sous les deux champs de texte ; cliquez dessus. 
+Vous verrez une étiquette "Afficher les options" sous les deux champs de texte, cliquez dessus.
+
 ![Show Options][token-19]
 
-Décochez la case (qui devrait déjà être cochée par défaut) correspondant à l'envoi d'une invitation électronique. 
+Décochez la case (qui devrait déjà être cochée par défaut) correspondant à l'envoi d'une invitation électronique.
+
 ![Send a mail invitation][token-20]
 
 ![alt][token-21]
+
 1. Choisissez ensuite le niveau d'autorisation que nous avons créé à l'étape 2 dans la liste déroulante.
 2. cliquez sur le bouton "Partager
 
 Rafraîchissez la page de la liste de votre groupe.
+
 ![alt][token-22]
 
-Les nouvelles règles que nous avons définies sont maintenant présentes dans les niveaux d'autorisation. 
+Les nouvelles règles que nous avons définies sont maintenant présentes dans les niveaux d'autorisation.
 
 
 <!-- ************************** -->
