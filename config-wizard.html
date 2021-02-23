@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+	<meta charset="UTF-8">
+	<title>DB Connector settings wizard</title>
+	<!-- Latest compiled and minified CSS -->
+
+	<link rel="stylesheet" href="https://cdn-documentation.s3.eu-west-3.amazonaws.com/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+	<link rel="stylesheet" href="https://cdn-documentation.s3.eu-west-3.amazonaws.com/select2-bootstrap.css">
+	<style>
+		.select2-results__options {
+			max-height: 350px !important;
+		}
+	</style>
+</head>
+
+<body lang="en">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<span class="navbar-brand">
+								Steps :
+							</span>
+						</div>
+						<button type="button" data-toggle="tab" id="bd_wizard_ids_activator" data-target="#bd_wizard_ids" class="btn btn-default navbar-btn">Login</button>
+						<button type="button" data-toggle="tab" id="db_wizard_forms_activator" data-target="#db_wizard_forms" class="btn btn-default navbar-btn" disabled>Forms</button>
+						<button type="button" data-toggle="tab" id="db_wizard_data_activator" data-target="#db_wizard_data" class="btn btn-default navbar-btn" disabled>Data</button>
+						<button type="button" data-toggle="tab" id="db_wizard_generate_activator" data-target="#db_wizard_generate" class="btn btn-primary navbar-btn" disabled>Finish</button>
+					</div>
+				</nav>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="bd_wizard_ids">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Login</h3>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="admin_user" class="col-sm-3 control-label">Admin account login</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="admin_user" placeholder="Admin account">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="admin_password" class="col-sm-3 control-label">Password</label>
+										<div class="col-sm-9">
+											<input type="password" class="form-control" id="admin_password" placeholder="Password">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="admin_company" class="col-sm-3 control-label">Company Code</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="admin_company" placeholder="Company Code">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button type="button" id="step_1_validator" class="btn btn-primary" disabled>Check</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="db_wizard_forms">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Choose forms</h3>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="forms_to_connect" class="col-sm-3 control-label">Forms to import</label>
+										<div class="col-sm-9">
+											<select class="form-control" id="forms_to_connect" placeholder="Forms to import" multiple style="width: 100%"></select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button type="button" id="step_2_validator" class="btn btn-primary" disabled>Confirm</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="db_wizard_data">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Choose fields</h3>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button type="button" id="step_3_validator" class="btn btn-primary" disabled>Confirm</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="db_wizard_generate">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Finish</h3>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="db_type" class="col-sm-3 control-label">Database type</label>
+										<div class="col-sm-9">
+											<select class="form-control" id="db_type" placeholder="Database type">
+												<option value="mysql" selected>Mysql</option>
+												<option value="pgsql">PostgreSQL</option>
+												<option value="sqlserver">Microsoft SQL Server</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" id="autocreatetables"> Automatically create tables ?
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<button type="button" id="step_final_validator" class="btn btn-lg btn-block btn-primary">Generate</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">JSON&nbsp;<button type="button" id="download-config" class="btn btn-xs btn-default"><i class="fa fa-download"></i></button></h3>
+							</div>
+							<div class="panel-body">
+								<pre class="json-export" contenteditable="true"></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal-wizard">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Loading</h4>
+				</div>
+				<div class="modal-body">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script type="text/javascript" language="javascript" src="https://cdn-documentation.s3.eu-west-3.amazonaws.com/boostrap.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn-documentation.s3.eu-west-3.amazonaws.com/bootbox.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn-documentation.s3.eu-west-3.amazonaws.com/select2.full.min.js"></script>
+	<script src="https://cdn-documentation.s3.eu-west-3.amazonaws.com/dbconnector_wizard.js"></script>
+</body>
+
+</html>
