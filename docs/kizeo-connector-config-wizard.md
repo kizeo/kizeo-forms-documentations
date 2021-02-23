@@ -10,5 +10,5 @@ sidebar_label: Demo
 <iframe id="wizard"  frameborder="0" style="width: 100%; height: 2000px"></iframe>
 <script>
     let origin=window.location.origin
-    document.getElementById('wizard').setAttribute('src',origin+'/kizeo-forms-documentations/demo')
+    document.getElementById('wizard').setAttribute('src',origin+'/kizeo-forms-documentations/config-wizard')
 </script>
