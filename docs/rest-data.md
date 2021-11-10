@@ -165,8 +165,14 @@ If it worked, you will have a response like:
 ```
 
 -   `:action`: name of action. String type.
--   `:limit`: maximum number of data read (optional).
+-   `:limit`: maximum number of data read.
 -   `?includeupdated`: Include data marked as read but which has been modified since (optional).
+
+This function has a format option. Either ***simple*** or ***basic.*** With ***simple*** the query returns only the first level of the data (the tables are not returned). With ***basic***, the data is returned in full (the tables are included).
+To retrieve the whole data, you have to build the query as follows:
+```php
+/rest/v3/forms/{{formId}}/data/unread/:action/100?includeupdated&format=basic
+```
 
 After you read that data if you want it to disappear from the unread data list you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
 Don't forget to add the id of the data you want to mark as read in the request's body:
