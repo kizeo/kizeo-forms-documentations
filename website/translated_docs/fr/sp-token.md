@@ -4,9 +4,9 @@ title: Token SharePoint
 sidebar_label: Token SharePoint
 ---
 
-## Obtenir un jeton SharePoint
+## Obtenir une autorisation SharePoint
 
-Dans la première étape de la configuration du connecteur SharePoint, il vous sera demandé de fournir des informations de connexion.
+La toute première étape de la configuration est de se connecter au compte Kizeo Forms et au compte SharePoint. Pour cela il vous sera demandé de fournir des informations de connexion.
 Celles-ci peuvent être un peu difficiles à trouver. Ce guide vous aidera à les obtenir.
 Veillez à conserver toutes les informations que vous serez invité à créer.
 
