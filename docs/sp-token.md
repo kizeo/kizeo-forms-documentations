@@ -1,7 +1,7 @@
 ---
 id: sp-token
-title: SharePoint Token
-sidebar_label: SharePoint Token
+title: App registration in Azure
+sidebar_label: App registration in Azure
 ---
 
 ## Get SharePoint Token

@@ -84,8 +84,8 @@
         "sidebar_label": "Opérations sur les utilisateurs"
       },
       "sp-connection": {
-        "title": "Connexion",
-        "sidebar_label": "Connexion"
+        "title": "Connexions",
+        "sidebar_label": "Connexions à Kizeo Forms et SharePoint"
       },
       "sharepoint": {
         "title": "Premier pas",
@@ -100,8 +100,8 @@
         "sidebar_label": "Téléchargement périodique de Kizeo Forms vers SharePoint"
       },
       "sp-token": {
-        "title": "Token SharePoint",
-        "sidebar_label": "Token SharePoint"
+        "title": "Enregistrement de l'application dans Azure",
+        "sidebar_label": "Enregistrement de l'application dans Azure"
       },
       "sp-update-kf-list": {
         "title": "Mettre à jour une liste Externe kizeoforms",
@@ -109,7 +109,7 @@
       },
       "sp-update-list": {
         "title": "Transférer les données de kizeoForms vers une liste SharePoint",
-        "sidebar_label": "Listes SharePoint"
+        "sidebar_label": "Alimenter une Listes SharePoint"
       },
       "sp-upload-files": {
         "title": "Télécharger des fichiers dans la bibliothèque de documents SharePoint à partir de Kizeo Forms",
@@ -129,10 +129,10 @@
       "Samples": "Exemples",
       "Getting Started": "Premiers pas",
       "Installation": "Installation",
-      "Token SharePoint": "Token SharePoint",
-      "Connection": "Connexion",
+      "Registration in Azure": "Déclaration dans Azure",
+      "Connection": "Connexions",
       "Update a sharepoint list": "Mettre à jour une liste SharePoint",
-      "Document library": "Bibliothèque de documents",
+      "Document library": "Dépôt de fichiers",
       "External list": "Listes externes",
       "Sheduled": "Exports périodiques",
       "Forms": "Formulaires",
