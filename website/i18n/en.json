@@ -99,7 +99,7 @@
         "sidebar_label": "Scheduled upload from Kizeo Forms to SharePoint"
       },
       "sp-token": {
-        "title": "Registration in Azure",
+        "title": "App registration in Azure",
         "sidebar_label": "App registration in Azure"
       },
       "sp-update-kf-list": {
@@ -128,7 +128,7 @@
       "Samples": "Samples",
       "Getting Started": "Getting Started",
       "Installation": "Installation",
-      "App registration in Azure": "App registration in Azure",
+      "Registration in Azure": "Registration in Azure",
       "Connection": "Connection",
       "Update a sharepoint list": "Update a sharepoint list",
       "Document library": "Document library",
