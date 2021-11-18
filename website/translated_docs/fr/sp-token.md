@@ -21,7 +21,7 @@ Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#bl
 4. cliquez sur ***S'inscrire***,
 5. sur la page qui s'ouvre sélectionnez ***API autorisées***,
 6. ***Ajouter une autorisation***,
-7. dans la liste qui apparait, sélectionner ***SharePoint***,
+7. dans la liste qui apparaît, sélectionnez ***SharePoint***,
 
 <img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-02.jpg" alt="SharePoint" width="300"/>
 
@@ -53,3 +53,12 @@ Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#bl
 
 ### Etape 3 : Charger le certificat.
 
+1. Dans le menu Azure de gauche, cliquez sur <img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-08.jpg" alt="SharePoint" width="150"/>,
+
+<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-09.jpg" alt="SharePoint" width="500"/>
+
+2. sélectionnez ***Certificates***,
+3. puis ***Téléchargement***,
+4. dans la fenêtre qui s'ouvre sur la droite de l'écran allez chercher le fichier ***.cer*** créé lors de l'installation. Il se trouve dans le dossier de décompression (voir le point 5.2 de [l'installation](sp-installation.md)) et ajouter-le.
+
+Nous avons terminé la déclaration de notre connecteur dans Azure.
