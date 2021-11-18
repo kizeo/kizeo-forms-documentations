@@ -4,26 +4,38 @@ title: Connexion
 sidebar_label: Connexion
 ---
 
-Lancez d'abord l'assistant de connexion SharePoint.
+Dans votre navigateur préféré, saisissez l'URL suivante  <a href="https://localhost:2303" target="_blank">https://localhost:2303</a> (attention, si vous avez modifiez le numéro de port pas défaut comme indiqué à l'étape 6 de [l'installation](sp-installation.md), vous devez le saisir à la place de ***2303***) 
 
-## Étape 1 : Paramétrage de la connexion principale
+## Étape 1 : Saisie des identifiants de connexion 
 
-![Ecran de connexion][connection-01]
+<img src="/kizeo-forms-documentations/img/sp2/fr/Connexion.jpg" alt="Ecran de connexion" width="300"/>
 
-**Open file**: Permet d'ouvrir un fichier de configuration déjà existant.  
-**Version**: Indique la version du connecteur.
-1. URL du serveur Kizeo Forms. Entrez <span style="color:#ABD33D">https://www.kizeoforms.com</span>  
-2. Collez ici le Token Sharepoint fourni par Kizeo.
-3. URL pour accéder à vos sites SharePoint.
-    . your_domain: Le domaine de votre compte SharePoint
-    . name_site: Le nom de votre site SharePoint
-4. Vous devez saisir tous les éléments que vous avez obtenus lors de [l'étape précédente](sp-token.md).
-5. Cliquez sur "Vérifier les paramètres de connexion" pour vérifier l'exactitude des éléments de connexion.
-6. Lorsque les éléments de connexion sont vérifiés et validés, vous pouvez passer à l'étape suivante.
+Lors de la première utilisation du connecteur, vous devez saisir les identifiants suivant :
+- Username : ***ConnectorUser***
+- Password : ***Connector.User52***
 
+Validez ensuite en cliquant sur ***Login***.
+
+<img src="/kizeo-forms-documentations/img/sp2/fr/Connexion 02.jpg" alt="Se connecter" />
+
+![][separator]
+
+Vous arrivez sur la page d'accueil. En haut à gauche est présent le bouton pour afficher le menu. 
+
+![][separator]
+
+<img src="/kizeo-forms-documentations/img/sp2/fr/Connexion 03.jpg" alt="Configuration" width="500" />
+
+## Étape 2 : Paramétrage de la connexion à Kizeo Forms
+
+<img src="/kizeo-forms-documentations/img/sp2/fr/Connexion 04.jpg" alt="Ecran de configuration"/>
+
+
+
+## Étape 3 : Paramétrage de la connexion à SharePoint
 
 <!-- ************************** -->
 <!-- ***** Pictures List ****** --> 
 <!-- ************************** -->
 
-[connection-01]: /kizeo-forms-documentations/img/sp/en/connect-01.png
+[separator]: /kizeo-forms-documentations/img/sp2/separateur.png
