@@ -10,17 +10,17 @@ sidebar_label: SharePoint List
 
 ***CREATE*** pour créer une nouvelle tâche.
 
-<img src="/kizeo-forms-documentations/img/sp2/fr/Listsp-02.jpg" alt="Fenêtre de création" />
+<img src="/kizeo-forms-documentations/img/sp2/fr/Listsp-04.jpg" alt="Fenêtre de création" />
 
-1. Saisissez le nom de la tâche,
-2. sélectionnez le nom du formulaire,
-3. sélectionnez votre liste SharePoint,
-4. saisissez la balise de la valeur du champ à récupérer (il est possible d'y mettre les options),
-5. à cocher si vous liez cette balise à une colonne à élément unique dans SharePoint,
-6. sélectionnez la colonne dans laquelle déposer la valeur de la balise,
-7. cliquer sur ***+ADD*** pour ajouter le lien,
-8. dans cette zone, vous sélectionnez la fréquence de l'exécution de la tâche,
-9. cliquez sur ***SAVE*** pour enregistrer la tâche.
+- ***Name*** : Saisissez le nom de la tâche,
+- ***Kizeoforms*** : Sélectionnez le nom du formulaire,
+- ***Sharepoint list*** : Sélectionnez votre liste SharePoint,
+- ***Lizeo markup tag*** : Saisissez la balise de la valeur du champ à récupérer (il est possible d'y mettre les options),
+- ***Unique*** : A cocher si vous liez cette balise à une colonne à élément unique dans SharePoint,
+- ***Sharepoint field*** : Sélectionnez la colonne dans laquelle déposer la valeur de la balise,
+- ***+ADD*** : Ajouter le lien,
+- ***(1)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche
+- ***SAVE*** : Enregistrer la tâche.
 
 <img src="/kizeo-forms-documentations/img/sp2/fr/Listsp-03.jpg" alt="Liste des Jobs" />
 
