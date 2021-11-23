@@ -4,30 +4,20 @@ title: Scheduled upload from Kizeo Forms to SharePoint
 sidebar_label: Scheduled upload from Kizeo Forms to SharePoint
 ---
 
-## Mise à jour des listes Kizeo Forms à partir des listes SharePoint
+## Planifier le dépot des exports périodiques
 
-![Etape 5][scheduled-01]
+<img src="/kizeo-forms-documentations/img/sp2/fr/MassExport-01.jpg" alt="Création" />
 
-1. Ajouter une connexion et mettre à jour les paramètres d'un horaire.
-2. Sélectionnez la règle que vous souhaitez modifier et cliquez sur "Edit".
-3. Sélectionnez la règle que vous souhaitez supprimer et cliquez sur "Delete".
-4. Permet de créer une copie du fichier de configuration
-5. Enregistrez le fichier de configuration et fermez l'assistant.
+***CREATE*** pour créer une nouvelle planification.
 
-## Ajouter ou mettre à jour
+<img src="/kizeo-forms-documentations/img/sp2/fr/MassExport-02.jpg" alt="Paramètre" />
 
-![Ajouter ou mettre à jour][scheduled-02]
+- ***Name*** : Saisissez le nom de la tâche,
+- ***Kizeoforms*** : Sélectionnez le nom du formulaire,
+- ***Sharepoint lybrary*** : Sélectionnez votre librairie SharePoint,
+- ***(1)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche
+- ***Select file type*** : Choisir le type de fichier à récupérer (Excel, Custom Excel, Csv, Custom Csv),
+- ***Sharepoint folder*** : Sélectionnez le dossier dans lequel doit être déposé le fichier (il n'est pas possible d'utiliser les balises Kizeo Forms),
+- ***+ADD*** : Ajouter la plannification,
+- ***SAVE*** : Enregistrer la plannification.
 
-6. Saisissez le numéro d'identification numérique du formulaire. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">Comment obtenir un identifiant de formulaire</a>).
-7. Récupération de l'identification des formulaires (<a href="http://localhost:3000/kizeo-forms-documentations/docs/fr/sp-update-list" target="_blank">utiliser la même méthode que pour récupérer l'ID de la liste SharePoint</a>).
-8. Sélectionnez la périodicité des exportations.
-9. Entrez le dossier de destination. Il est possible d'utiliser les balises Kizeoforms.
-
-## Enfin, lancez maintenant le connecteur SharePoint.
-
-<!-- ************************** -->
-<!-- ***** Pictures List ****** --> 
-<!-- ************************** -->
-
-[scheduled-01]: /kizeo-forms-documentations/img/sp/en/scheduled-01.png
-[scheduled-02]: /kizeo-forms-documentations/img/sp/en/scheduled-02.png
