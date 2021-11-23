@@ -15,7 +15,7 @@ sidebar_label: SharePoint List
 - ***Name*** : Saisissez le nom de la tâche,
 - ***Kizeoforms*** : Sélectionnez le nom du formulaire,
 - ***Sharepoint list*** : Sélectionnez votre liste SharePoint,
-- ***Lizeo markup tag*** : Saisissez la balise de la valeur du champ à récupérer (il est possible d'y mettre les options),
+- ***Kizeo markup tag*** : Saisissez la balise de la valeur du champ à récupérer (il est possible d'y mettre les options),
 - ***Unique*** : A cocher si vous liez cette balise à une colonne à élément unique dans SharePoint,
 - ***Sharepoint field*** : Sélectionnez la colonne dans laquelle déposer la valeur de la balise,
 - ***+ADD*** : Ajouter le lien,
