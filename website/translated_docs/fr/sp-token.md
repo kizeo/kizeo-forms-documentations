@@ -3,7 +3,7 @@ id: sp-token
 title: App registration in Azure
 sidebar_label: App registration in Azure
 ---
-Pour réaliser la déclaration de l'application dans Azure, vous aurez besoin des privilèges ***administrateur***.
+Pour réaliser la déclaration de l'application dans Azure, vous aurez besoin des privilèges ***administrateurs***.
 Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade" target="_blank">portail d'Azure Active Directory</a>.
 
 ## Sur le portail Azure Active Directory
@@ -59,6 +59,6 @@ Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#bl
 
 2. sélectionnez ***Certificates***,
 3. puis ***Téléchargement***,
-4. dans la fenêtre qui s'ouvre sur la droite de l'écran allez chercher le fichier ***.cer*** créé lors de l'installation. Il se trouve dans le dossier de décompression (voir le point 5.2 de [l'installation](sp-installation.md)) et ajouter-le.
+4. dans la fenêtre qui s'ouvre sur la droite de l'écran, allez chercher le fichier ***.cer*** créé lors de l'installation. Il se trouve dans le dossier de décompression (voir le point 5.2 de [l'installation](sp-installation.md)) et ajoutez-le.
 
 Nous avons terminé la déclaration de notre connecteur dans Azure.

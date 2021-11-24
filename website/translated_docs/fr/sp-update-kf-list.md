@@ -20,7 +20,7 @@ sidebar_label: Update external list kizeoForms
 - ***ADD LEVEL*** : Ajoute l'antislash **(\\)** comme séparateur des hiérarchies.
 - ***ADD REFERENCE*** : Ajoute le pipe **(|)** comme séparateur des références.
 - ***(1)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche.
-- ***SAVE*** : Enregistre la tâche.
+- ***SAVE*** : Enregistrer la tâche.
 
 <img src="/kizeo-forms-documentations/img/sp2/fr/Listex-03.jpg" alt="Fenêtre de création" />
 

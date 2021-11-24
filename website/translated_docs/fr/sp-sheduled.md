@@ -18,6 +18,7 @@ sidebar_label: Scheduled upload from Kizeo Forms to SharePoint
 - ***(1)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche
 - ***Select file type*** : Choisir le type de fichier à récupérer (Excel, Custom Excel, Csv, Custom Csv),
 - ***Sharepoint folder*** : Sélectionnez le dossier dans lequel doit être déposé le fichier (il n'est pas possible d'utiliser les balises Kizeo Forms),
-- ***+ADD*** : Ajouter la plannification,
-- ***SAVE*** : Enregistrer la plannification.
+- ***+ADD*** : Ajouter la tâche,
+- ***SAVE*** : Enregistrer la tâche.
 
+La tâche que vous venez de paramétrer apparaît dans la liste. Sur la gauche, vous pouvez sélectionner chacune des tâches pour les activer ***ENABLE*** ou les désactiver ***DISABLE***. Sur la droite, le crayon vous permet d'éditer et de modifier les paramétrages. La poubelle supprime la tâche, la flamme l'exécute.

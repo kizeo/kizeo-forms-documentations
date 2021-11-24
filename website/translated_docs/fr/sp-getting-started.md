@@ -13,9 +13,9 @@ Forms et SharePoint sur 4 niveaux :
 - [Listes SharePoint vers des listes Externes](sp-update-kf-list.md),
 - [Données kizeo Forms vers la Bibliothèque SharePoint (Exports périodiques)](sp-sheduled.md).
 
-**L'installation du connecteur « SharePoint » nécessite de très bonnes connaissances en informatique. Elle est réservé aux informaticiens.**
+**L'installation du connecteur « SharePoint » nécessite de très bonnes connaissances en informatique. Elle est réservée aux informaticiens.**
 
-Son paramétrage et son utilisation est accessible à toutes personnes sachant utiliser SharePoint.
+Son paramétrage et son utilisation sont accessibles à toutes les personnes sachant utiliser SharePoint.
 
 
 Vous pouvez télécharger le bundle d'installation [ICI](https://github.com/kizeo/sharepoint-connector/archive/refs/heads/main.zip).
