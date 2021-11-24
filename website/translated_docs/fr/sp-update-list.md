@@ -53,7 +53,7 @@ sidebar_label: SharePoint List
 9. Valider les paramètres
     
     >Note :
-    >Si vous souhaitez récupérer des éléments dun tableau KizeoForms dans une liste SharePoint, vous devez mettre un champ de calcul avec un "Numéro Unique" et définir une colonne au statut "Unique" dans la liste SharePoint. 
+    >Si vous souhaitez récupérer des éléments d'un tableau KizeoForms dans une liste SharePoint, vous devez mettre un champ de calcul avec un "Numéro Unique" et définir une colonne au statut "Unique" dans la liste SharePoint. 
     >Cela évite de créer un grand nombre de doublons lors de la modification des données.
 
 <!-- ************************** -->
