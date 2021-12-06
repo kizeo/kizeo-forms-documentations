@@ -20,7 +20,7 @@ Validez ensuite en cliquant sur ***Login***.
 
 ![][separator]
 
-Vous arrivez sur la page d'accueil. En haut à gauche est présent le bouton pour afficher le menu. 
+Vous arrivez sur la page d'accueil. En haut à gauche se trouve le bouton pour afficher le menu. 
 
 ![][separator]
 
@@ -31,19 +31,19 @@ Vous arrivez sur la page d'accueil. En haut à gauche est présent le bouton pou
 ## Étape 2 : Paramétrage de la connexion à Kizeo Forms
 
 1. Saisissez l'URL de Kizeo Forms : https://www.kizeoforms.com
-2. Pour obtenir le Token, veuillez en faire la demande à support@kizeo.com. Le mail de demande doit émaner d'un administrateur. Veuillez indiquer sur l'email, votre ***code entreprise***, ***l'identifiant*** et ***l'application*** pour lequel vous souhaitez le Token.
+2. Pour obtenir le Token, veuillez en faire la demande à support@kizeo.com. Le mail de demande doit émaner d'un administrateur. Veuillez indiquer sur l'email, votre ***code entreprise***, ***l'identifiant*** et ***l'application*** pour lesquels vous souhaitez le Token.
 3. Appuyez sur ***SAVE*** pour vérifier et enregistrer les informations.
 Si vous rencontrez un souci de connexion alors que vous êtes sûr des éléments saisis, veuillez vous rapprocher de votre SI. Il y a certainement un pare-feu qui n'autorise pas le connecteur à accéder à internet.
 
 ## Étape 3 : Paramétrage de la connexion à SharePoint
 
-4. L'URL de votre site SharePoint. Elle est du type https://yourdomain/sites/le_nom_de_votre_site.
+4. L'URL de votre site SharePoint. Est du type https://yourdomain/sites/le_nom_de_votre_site.
 
 <img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-10.jpg" alt="ID" width="500" />
 
-5. Copier ici l'ID d'application (client),
-6. Copier ici l'ID de l'annuaire (locataire)
-7. Copier ici le nom du certificat. Vous le trouvez dans la fenêtre ***Certificats & secrets***.
+5. Copiez ici l'ID d'application (client),
+6. Copiez ici l'ID de l'annuaire (locataire)
+7. Copiez ici le nom du certificat. Vous le trouverez dans la fenêtre ***Certificats & secrets***.
 
 <img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-11.jpg" alt="Empreinte numérique" width="500" />
 
