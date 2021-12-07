@@ -37,7 +37,7 @@ Si vous rencontrez un souci de connexion alors que vous êtes sûr des élément
 
 ## Étape 3 : Paramétrage de la connexion à SharePoint
 
-4. L'URL de votre site SharePoint. Est du type https://yourdomain/sites/le_nom_de_votre_site.
+4. Entrez l'URL de votre site SharePoint qui est du type https://yourdomain/sites/le_nom_de_votre_site.
 
 <img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-10.jpg" alt="ID" width="500" />
 
