@@ -19,11 +19,11 @@ sidebar_label: Upload files to document library
 - ***Select file type*** : Type de document. PDF ou format original (.xlsx ou .docx),
 - ***Sharepoint folder*** : Dossier de la bibliothèque où déposer l'export,
 - ***(1)*** : Sous-dossier. Ce champ prend en compte les balises Kizeo Forms (hors balises dans les tableaux),
-- ***+ADD*** : Ajouter le dépôt,
+- ***+ADD*** : Ajoutez le dépôt,
 - ***(2)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche
 - ***Metadata*** :
     - ***Kizeo markup tag*** : Saisissez la balise de la valeur du champ à récupérer (il est possible d'y mettre les options) pour ajouter un tag à l'export,
     - ***Sharepoint field*** : Sélectionnez la colonne du tag,
-- ***SAVE*** : Enregistrer la tâche.
+- ***SAVE*** : Enregistrez la tâche.
 
-La tâche que vous venez de paramétrer apparaît dans la liste. Sur la gauche, vous pouvez sélectionner chacune des tâches pour les activer ***ENABLE*** ou les désactiver ***DISABLE***. Sur la droite, le crayon vous permet d'éditer et de modifier les paramétrages. La poubelle supprime la tâche, la flamme l'exécute.
+La tâche que vous venez de paramétrer apparaît dans la liste. Sur la gauche, vous pouvez sélectionner chacune des tâches pour les activer ***ENABLE*** ou les désactiver ***DISABLE***. Sur la droite, le crayon vous permet d'éditer et de modifier les paramètres. La poubelle supprime la tâche, alors que la flamme l'exécute.
