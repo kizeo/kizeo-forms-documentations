@@ -4,30 +4,24 @@ title: Update an external kizeoforms list
 sidebar_label: Update external list kizeoForms
 ---
 
-## Update Kizeo Forms lists from SharePoint lists
+## Update Kizeo Forms external lists from SharePoint lists (Sharepoint list to external list)
 
-![Upsate KF List][upkflist-01]
+<img src="/kizeo-forms-documentations/img/sp2/fr/Listex-01.jpg" alt="Accueil liste externe" />
 
-1. Add connection and update settings to a External list.
-2. Select the rule you wish to change and click on "Edit".
-3. Select the rule you wish to delete and click on "Delete".
+***CREATE*** to create a new task.
 
-## Add or update
+<img src="/kizeo-forms-documentations/img/sp2/fr/Listex-02.jpg" alt="Fenêtre de création" />
 
-![Config][upkflist-02]
+- ***Name***: Enter the name of the task.
+- ***Sharepoint list***: Select the name of your Sharepoint list.
+- ***Kizeo external list***: Select the name of your Kizeo Forms external list.
+- ***Sharepoint field***: Select the name of the column in your SharePoint list.
+- ***+ADD***: Adds the tag of the column in the editor ***(2)***.
+- ***ADD LEVEL***: Adds the backslash **(\\)** as a separator for the hierarchies.
+- ***ADD REFERENCE***: Adds the pipe **(|)** as separator for references
+- ***(1)***: In this field you select the frequency of the task execution.
+- ***SAVE***: Save the task.
 
-4. Retrieving the ID of SharePoint document library (<a href="http://kizeo.github.io/kizeo-forms-documentations/docs/en/sp-update-list" target="_blank">use the same method as for retrieving ID of SharePoint List</a>)
-5. Enter the numeric identifier number of the form. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">How to get a form id</a>).
-6. After entering the ID of your SharePoint list, the names of its columns will appear.
+<img src="/kizeo-forms-documentations/img/sp2/fr/Listex-03.jpg" alt="Fenêtre de création" />
 
-![external list structure][upkflist-03]
-
-To build the structure of the elements of your external list, use the names of the columns by selecting them from the list, separated by the characters "\\" and "|" for hierarchies and references.
-
-<!-- ************************** -->
-<!-- ***** Pictures List ****** -->
-<!-- ************************** -->
-
-[upkflist-01]: /kizeo-forms-documentations/img/sp/en/update-kf-list-01.png
-[upkflist-02]: /kizeo-forms-documentations/img/sp/en/update-kf-list-02.png
-[upkflist-03]: /kizeo-forms-documentations/img/sp/en/update-kf-list-03.png
+The task you have just set up appears in the list. On the left, you can select each task to ***ENABLE*** or ***DISABLE***. On the right, the pencil icon allows you to edit and modify the settings. The trash can deletes the task, the flame executes it.
