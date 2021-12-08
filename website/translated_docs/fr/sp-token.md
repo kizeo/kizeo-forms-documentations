@@ -16,10 +16,10 @@ Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#bl
 ### Etape 2 : Autoriser les API.
 
 1. Saisissez le nom de votre nouvelle application (par exemple : kizeo),
-2. Assurez-vous que ***Comptes dans cet annuaire d'organisation uniquement (KIZEO uniquement - Locataire unique)*** est sélectionné,
+2. Assurez-vous que ***Comptes dans cet annuaire d'organisation uniquement (xxx uniquement - Locataire unique)*** est sélectionné,
 3. Laissez l'URL de redirection vide,
 4. Cliquez sur ***S'inscrire***,
-5. Sélectionnez ***API autorisées*** sur la nouvelle page,
+5. Sélectionnez ***API autorisées*** sur la nouvelle page, dans le menu de droite,
 6. ***Ajoutez une autorisation***,
 7. Sélectionnez ***SharePoint*** dans la liste qui s'affiche,
 
@@ -34,18 +34,18 @@ Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#bl
 11. De nouveau ***Ajouter une autorisation***,
 12. Sélectionnez ***Microsoft Graph***.
 
-<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-04.jpg" alt="SharePoint" width="600"/>
+<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-04.jpg" alt="Microsoft Graph" width="600"/>
 
 13. ***Autorisations de l'application***
 14. Saisissez ***Sites.FullControl.All*** dans la recherche,
 15. Sélectionnez le et cliquez sur ***Ajouter des autorisations***,
-16. ***Accordez un consentement d'administrateur pour ....***
+16. ***Accordez un consentement d'administrateur pour ...***
 
-<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-05.jpg" alt="SharePoint" />
+<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-05.jpg" alt="Autorisations configurées" />
 
 17. Confirmez l'accord de consentement en répondant ***Oui***
 
-<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-06.jpg" alt="SharePoint" width="400"/>
+<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-06.jpg" alt="Consentement administrateur" width="400"/>
 
 18. Les droits sont accordés au connecteur.
 
