@@ -15,6 +15,8 @@ Il faut vous rendre sur le <a href="https://portal.azure.com/?quickstart=True#bl
 
 ### Etape 2 : Autoriser les API.
 
+<img src="/kizeo-forms-documentations/img/sp2/fr/Azurefr-01b.jpg" alt="Autorisations application"/>
+
 1. Saisissez le nom de votre nouvelle application (par exemple : kizeo),
 2. Assurez-vous que ***Comptes dans cet annuaire d'organisation uniquement (xxx uniquement - Locataire unique)*** est sélectionné,
 3. Laissez l'URL de redirection vide,
