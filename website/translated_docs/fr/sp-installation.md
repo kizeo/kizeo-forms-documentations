@@ -3,7 +3,7 @@ id: sp-install
 title: Installation
 sidebar_label: Installation
 ---
-# Cette partie est exclusivement réservée aux informaticiens
+# Cette partie est exclusivement réservée aux S.I.
 ## Installation
 1. Tout d'abord, [téléchargez le bundle d'installation du connecteur SharePoint](https://github.com/kizeo/sharepoint-connector/archive/refs/heads/main.zip),
 2. Décompressez-le dans le dossier de votre choix ***(attention, le dossier de décompression sera le dossier d'exécution du connecteur)***,
