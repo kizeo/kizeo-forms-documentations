@@ -226,7 +226,7 @@ Afin de définir les filtres que vous voulez utiliser pour rechercher précisém
 -   `format` : Vous pouvez utiliser le format `basic` (contient tous les détails) ou `simple` (plus simple mais moins exhaustif et ne contient pas les tableaux).
 -   `operator` : Les différents opérateurs sont : `=`, `>`, `>=`, `<`, `<=`, `!=`, `like`, `notlike` (attention, sensible à la casse).
 -   `field` : Correspond à la racine de la balise de chaque champ. Exemple : `_update_time` (date de mise-à-jour) et `_user_id` (id de l'utilisateur ayant saisi la donnée). Vous pouvez également rechercher sur des champs du formulaire définis par vous-même (`client` par exemple, ou bien `numero_de_contrat`).
--   `type` : Les différents types sont : `simple` (on recherche sur un champ hors d'un tableau), `dynamic_date` (pas encore documenté), `global` (on recherche dans l'ensemble de la donnée), `AND` et `OR` (permet de faire des conditions multiples dans l'attribut `components` comme présenté ci-dessus).
+-   `type` : Les différents types sont : `simple` (on recherche sur un champ hors d'un tableau), `global` (on recherche dans l'ensemble de la donnée), `AND` et `OR` (permet de faire des conditions multiples dans l'attribut `components` comme présenté ci-dessus).
 
 ## 5 - Enregistrer une donnée sans enregistrer le formulaire complet
 
