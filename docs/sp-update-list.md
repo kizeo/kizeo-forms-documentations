@@ -29,3 +29,6 @@ The job you have just set up appears in the list. On the left, you can select ea
 -   >Note:
     >If you want to retrieve items from a Kizeo Forms table in a SharePoint list, you need to put a calculation field with a "Unique Number" and set a column to "Unique" status in the SharePoint list.
     >This avoids creating a large number of duplicates when editing data.
+
+    >Important :
+    >To retrieve decimal numeric data from Kizeo Forms, in your SharePoint list, it is imperative to set the SharePoint column to "Numeric" format otherwise, when updating an external list, values in "Date" format might be returned.
