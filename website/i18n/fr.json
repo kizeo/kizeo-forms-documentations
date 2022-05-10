@@ -104,11 +104,11 @@
         "sidebar_label": "Enregistrement de l'application dans Azure"
       },
       "sp-update-kf-list": {
-        "title": "Mettre à jour une liste Externe kizeoforms",
-        "sidebar_label": "Mettre à jour une liste Externe kizeoforms"
+        "title": "Mettre à jour une liste Externe Kizeo Forms",
+        "sidebar_label": "Mettre à jour une liste Externe Kizeo Forms"
       },
       "sp-update-list": {
-        "title": "Transférer les données de kizeoForms vers une liste SharePoint",
+        "title": "Transférer les données de Kizeo Forms vers une liste SharePoint",
         "sidebar_label": "Alimenter une Listes SharePoint"
       },
       "sp-upload-files": {

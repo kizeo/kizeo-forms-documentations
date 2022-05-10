@@ -6,12 +6,12 @@ sidebar_label: Introduction
 
 ## Le connecteur SharePoint
 
-Le connecteur SharePoint est une application qui tourne dans les navigateurs Chrome et Firefox. Elle permet de synchroniser les données entre kizeo
+Le connecteur SharePoint est une application qui tourne dans les navigateurs Chrome et Firefox. Elle permet de synchroniser les données entre Kizeo
 Forms et SharePoint sur 4 niveaux :
-- [Données kizeo Forms vers une liste SharePoint](sp-update-list.md),
-- [Données kizeo Forms vers la Bibliothèque SharePoint](sp-upload-files.md),
+- [Données Kizeo Forms vers une liste SharePoint](sp-update-list.md),
+- [Données Kizeo Forms vers la Bibliothèque SharePoint](sp-upload-files.md),
 - [Listes SharePoint vers des listes Externes](sp-update-kf-list.md),
-- [Données kizeo Forms vers la Bibliothèque SharePoint (Exports périodiques)](sp-sheduled.md).
+- [Données Kizeo Forms vers la Bibliothèque SharePoint (Exports périodiques)](sp-sheduled.md).
 
 **L'installation du connecteur « SharePoint » nécessite de très bonnes connaissances en informatique. Elle est réservée aux informaticiens.**
 

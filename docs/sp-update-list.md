@@ -1,6 +1,6 @@
 ---
 id: sp-update-list
-title: Transfer kizeoForms data to a SharePoint list
+title: Transfer Kizeo Forms data to a SharePoint list
 sidebar_label: SharePoint List
 ---
 
@@ -27,5 +27,5 @@ sidebar_label: SharePoint List
 The job you have just set up appears in the list. On the left, you can select each job to ***ENABLE*** or ***DISABLE***. On the right, the pencil icon allows you to edit and modify the settings. The trash can deletes the task, the flame executes it.
 
 -   >Note:
-    >If you want to retrieve items from a KizeoForms table in a SharePoint list, you need to put a calculation field with a "Unique Number" and set a column to "Unique" status in the SharePoint list.
+    >If you want to retrieve items from a Kizeo Forms table in a SharePoint list, you need to put a calculation field with a "Unique Number" and set a column to "Unique" status in the SharePoint list.
     >This avoids creating a large number of duplicates when editing data.

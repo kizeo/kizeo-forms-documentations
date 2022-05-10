@@ -28,5 +28,8 @@ La tâche que vous venez de paramétrer apparaît dans la liste. Sur la gauche, 
     
 - 
     >Note :
-    >Si vous souhaitez récupérer les éléments d'un tableau KizeoForms dans une liste SharePoint, vous devez mettre un champ calcul avec un "Numéro Unique" et définir une colonne au statut "Unique" dans la liste SharePoint. 
+    >Si vous souhaitez récupérer les éléments d'un tableau Kizeo Forms dans une liste SharePoint, vous devez mettre un champ calcul avec un "Numéro Unique" et définir une colonne au statut "Unique" dans la liste SharePoint. 
     >Cela évite de créer un grand nombre de doublons lors de la modification des données.
+
+    >Important :
+    >Pour récupérer des données numériques décimales de Kizeo Forms dans votre liste SharePoint, il est impératif de mettre la colonne SharePoint au format "Numérique" sinon, lors de la mise à jour d'une liste externe, des valeurs au format "Date" pourraient être retournées.

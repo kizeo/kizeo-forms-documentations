@@ -22,6 +22,10 @@ sidebar_label: Update external list kizeoForms
 - ***(1)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche.
 - ***SAVE*** : Enregistre la tâche.
 
+- 
+    >Important :
+    >Il est impératif que les colonnes SharePoint contenant des valeurs numériques soient de type "Numérique", sinon lors de l'importation de ces valeurs dans la liste externe, elles seraient susceptibles d'être transformées au format "Date".
+
 <img src="/kizeo-forms-documentations/img/sp2/fr/Listex-03.jpg" alt="Fenêtre de création" />
 
 La tâche que vous venez de paramétrer apparaît dans la liste. Sur la gauche, vous pouvez sélectionner chacune des tâches pour les activer ***ENABLE*** ou les désactiver ***DISABLE***. Sur la droite, le crayon vous permet d'éditer et de modifier les paramètres. La poubelle supprime la tâche, alors que la flamme l'exécute.
