@@ -5,7 +5,7 @@ sidebar_label: Installation
 ---
 # This part is exclusively reserved for IT specialists
 ## Installation
-1.	First, [download the SharePoint connector installation bundle.](https://github.com/kizeo/sharepoint-connector/archive/refs/heads/main.zip)
+1.	First, [download the SharePoint connector installation bundle.](https://s3.eu-west-3.amazonaws.com/dw.kizeo.net/download/sharepoint/latest/sharepoint-connector-latest.zip)
 2.	unzip it in the folder of your choice ***(Warning, the unzipped folder will be the connector execution folder)***
 3.	run PowerShell as administrator
 4.	go to the unzip folder ***(you should see the following files)***

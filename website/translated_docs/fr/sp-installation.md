@@ -5,7 +5,7 @@ sidebar_label: Installation
 ---
 # Cette partie est exclusivement réservée aux S.I.
 ## Installation
-1. Tout d'abord, [téléchargez le bundle d'installation du connecteur SharePoint](https://github.com/kizeo/sharepoint-connector/archive/refs/heads/main.zip),
+1. Tout d'abord, [téléchargez le bundle d'installation du connecteur SharePoint](https://s3.eu-west-3.amazonaws.com/dw.kizeo.net/download/sharepoint/latest/sharepoint-connector-latest.zip),
 2. Décompressez-le dans le dossier de votre choix ***(attention, le dossier de décompression sera le dossier d'exécution du connecteur)***,
 3. Exécutez PowerShell en tant qu'administrateur,
 4. Positionnez-vous dans le dossier de décompression ***(vous devriez voir les fichiers suivants)***,
