@@ -16,4 +16,4 @@ The SharePoint Connector is an application that runs in the Chrome and Firefox b
 
 Its configuration and use are accessible to all people who know how to use SharePoint.
 
-You can download the setup [HERE](https://github.com/kizeo/sharepoint-connector/archive/refs/heads/main.zip).
+You can download the setup [HERE](https://s3.eu-west-3.amazonaws.com/dw.kizeo.net/download/sharepoint/latest/sharepoint-connector-latest.zip).

@@ -18,5 +18,5 @@ Forms et SharePoint sur 4 niveaux :
 Son paramétrage et son utilisation sont accessibles à toutes les personnes sachant utiliser SharePoint.
 
 
-Vous pouvez télécharger le bundle d'installation [ICI](https://github.com/kizeo/sharepoint-connector/archive/refs/heads/main.zip).
+Vous pouvez télécharger le bundle d'installation [ICI](https://s3.eu-west-3.amazonaws.com/dw.kizeo.net/download/sharepoint/latest/sharepoint-connector-latest.zip).
 
