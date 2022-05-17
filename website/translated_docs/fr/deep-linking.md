@@ -13,7 +13,7 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 `kizeoforms://--/login` accède à l’écran de login.
 
-`kizeoforms://--/login/:code` accède à l’écran de login avec un code entreprise pré-rempli. `:code` doit être remplacé par le code entreprise souhaité.
+`kizeoforms://--/login/{code}` accède à l’écran de login avec un code entreprise pré-rempli. `{code}` doit être remplacé par le code entreprise souhaité.
 
 `kizeoforms://--/favorites` accède à la liste des formulaires favoris.
 
@@ -21,7 +21,7 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 `kizeoforms://--/forms` accède à la liste des formulaires.
 
-`kizeoforms://--/forms/:formId` entre en saisie de données avec `:formId` remplacé par l’ID de la définition de formulaire.
+`kizeoforms://--/forms/{formId}` entre en saisie de données avec `{formId}` remplacé par l’ID de la définition de formulaire.
 
 `kizeoforms://--/stats` accède aux statistiques.
 
@@ -37,8 +37,8 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 ## Création d’une donnée
 
-`kizeoforms://--/forms/:formId?tag1=value1&tag2=value2&tag3=value3`
-avec `:formId` remplacé par l’ID de la définition de formulaire.
+`kizeoforms://--/forms/{formId}?tag1=value1&tag2=value2&tag3=value3`
+avec `{formId}` remplacé par l’ID de la définition de formulaire.
 `tag1`, `tag2`, `tag3`, etc... sont les noms de balise des champs de la définition de formulaire, `value1`, `value2`, `value3`, etc... sont les valeurs correspondantes qui seront saisies.
 
 ### Type de champs gérés
@@ -47,10 +47,10 @@ avec `:formId` remplacé par l’ID de la définition de formulaire.
 - slider
 - text
 - checkbox : 1, '1', true, 'true'. anything else is false
-- datetime : YYYY-MM-DDThh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
-- date : YYYY-MM-DD or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
-  time : hh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
-- textarea : use %5Cn for line-break (ex: My first line%5Cnand my second line)
+- datetime : YYYY-MM-DDThh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
+- date : YYYY-MM-DD ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
+  time : hh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
+- textarea : utiliser %5Cn pour le saut de ligne (ex : Ma première ligne%5Cnet ma deuxième ligne)
 
 ### Balises non gérées
 

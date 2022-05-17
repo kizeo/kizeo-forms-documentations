@@ -167,8 +167,14 @@ Si tout s'est bien passé, vous recevrez une réponse du type :
 ```
 
 -   `:action`: nom de l'action sous forme de chaîne de caractères (string).
--   `:limit`: nombre maximum de données lues (optionnel)
+-   `:limit`: nombre maximum de données lues.
 -   `?includeupdated`: inclus des données marquées comme lues mais qui ont été modifiées depuis (optionnel)
+
+Cette fonction a une option de format. Soit ***simple*** soit ***basic.*** Avec ***simple*** la requête ne retourne que le premier niveau de la donnée. Avec ***basic***, la donnée retourne complète.
+Pour récupérer l'intégralité de la donnée, il faut donc construire la requête comme suit :
+```php
+/rest/v3/forms/{{formId}}/data/unread/:action/100?includeupdated&format=basic
+```
 
 Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme "nouvelles".
 Pour cela, il faut utiliser une requête en `POST` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
@@ -220,7 +226,7 @@ Afin de définir les filtres que vous voulez utiliser pour rechercher précisém
 -   `format` : Vous pouvez utiliser le format `basic` (contient tous les détails) ou `simple` (plus simple mais moins exhaustif et ne contient pas les tableaux).
 -   `operator` : Les différents opérateurs sont : `=`, `>`, `>=`, `<`, `<=`, `!=`, `like`, `notlike` (attention, sensible à la casse).
 -   `field` : Correspond à la racine de la balise de chaque champ. Exemple : `_update_time` (date de mise-à-jour) et `_user_id` (id de l'utilisateur ayant saisi la donnée). Vous pouvez également rechercher sur des champs du formulaire définis par vous-même (`client` par exemple, ou bien `numero_de_contrat`).
--   `type` : Les différents types sont : `simple` (on recherche sur un champ hors d'un tableau), `dynamic_date` (pas encore documenté), `global` (on recherche dans l'ensemble de la donnée), `AND` et `OR` (permet de faire des conditions multiples dans l'attribut `components` comme présenté ci-dessus).
+-   `type` : Les différents types sont : `simple` (on recherche sur un champ hors d'un tableau), `global` (on recherche dans l'ensemble de la donnée), `AND` et `OR` (permet de faire des conditions multiples dans l'attribut `components` comme présenté ci-dessus).
 
 ## 5 - Enregistrer une donnée sans enregistrer le formulaire complet
 

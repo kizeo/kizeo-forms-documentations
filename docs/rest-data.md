@@ -165,8 +165,14 @@ If it worked, you will have a response like:
 ```
 
 -   `:action`: name of action. String type.
--   `:limit`: maximum number of data read (optional).
+-   `:limit`: maximum number of data read.
 -   `?includeupdated`: Include data marked as read but which has been modified since (optional).
+
+This function has a format option. Either ***simple*** or ***basic.*** With ***simple*** the query returns only the first level of the data (the tables are not returned). With ***basic***, the data is returned in full (the tables are included).
+To retrieve the whole data, you have to build the query as follows:
+```php
+/rest/v3/forms/{{formId}}/data/unread/:action/100?includeupdated&format=basic
+```
 
 After you read that data if you want it to disappear from the unread data list you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
 Don't forget to add the id of the data you want to mark as read in the request's body:
@@ -216,7 +222,7 @@ To define precisely your research, you have to add in your request's body the fo
 -   `format` : You can either use the format `basic` (with all the details about each entry) or `simple` (less exhaustive, but much more time efficient if you want to retrieve IDs only).
 -   `operator` : The different operators available are: `=`, `>`, `>=`, `<`, `<=`, `!=`, `like`, `notlike` (caution, it is case sensitive).
 -   `field` : The root of each field's markers. Sample: `_update_time` (update time of your entry) or `_user_id` (the ID of the user sending the entry). You can also search over a specific field in the form (`customer` for instance, or `contract_number`) using the identifier of the field (from the help menu of each form on the form edition page).
--   `type` : The components/filters' types are: `simple` (searching on a field outside of a table), `dynamic_date` (not yet documented), `global` (searching over the whole entry), `AND` and `OR` (for complex conditions use the attributes `components` as shown above).
+-   `type` : The components/filters' types are: `simple` (searching on a field outside of a table), `global` (searching over the whole entry), `AND` and `OR` (for complex conditions use the attributes `components` as shown above).
 
 ### 5 - Push a data
 

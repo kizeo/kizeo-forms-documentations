@@ -13,7 +13,7 @@ Deep links provide a clear and simple way to redirect users to specific screen o
 
 `kizeoforms://--/login` redirects to the login screen.
 
-`kizeoforms://--/login/:code` redirects to the login screen with a pre-filled company code. `:code` must be replaced by the company code.
+`kizeoforms://--/login/{code}` redirects to the login screen with a pre-filled company code. `{code}` must be replaced by the company code.
 
 `kizeoforms://--/favorites` redirects to the favorite forms.
 
@@ -21,7 +21,7 @@ Deep links provide a clear and simple way to redirect users to specific screen o
 
 `kizeoforms://--/forms` redirects to the form list.
 
-`kizeoforms://--/forms/:formId` redirects to data filling, `:formId` must be replaced by the ID of the form definition.
+`kizeoforms://--/forms/{formId}` redirects to data filling, `{formId}` must be replaced by the ID of the form definition.
 
 `kizeoforms://--/stats` redirects to the stats.
 
@@ -37,8 +37,8 @@ Deep links provide a clear and simple way to redirect users to specific screen o
 
 ## Data creation
 
-`kizeoforms://--/forms/:formId?tag1=value1&tag2=value2&tag3=value3`
-with `:formId` replaced by the ID of the form definition.
+`kizeoforms://--/forms/{formId}?tag1=value1&tag2=value2&tag3=value3`
+with `{formId}` replaced by the ID of the form definition.
 `tag1`, `tag2`, `tag3`, etc... are the fields tag names of the form definition, `value1`, `value2`, `value3`, etc... are the corresponding values ​​that will be entered.
 
 ### Type of fields enabled
