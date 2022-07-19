@@ -23,8 +23,6 @@ Deep links provide a clear and simple way to redirect users to specific screen o
 
 `kizeoforms://--/forms/{formId}` redirects to data filling, `{formId}` must be replaced by the ID of the form definition.
 
-`kizeoforms://--/stats` redirects to the stats.
-
 `kizeoforms://--/data` redirects to the data list.
 
 `kizeoforms://--/receipts` redirects to the inbox.
@@ -49,7 +47,7 @@ with `{formId}` replaced by the ID of the form definition.
 - checkbox : 1, '1', true, 'true'. anything else is false
 - datetime : YYYY-MM-DDThh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
 - date : YYYY-MM-DD or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
-  time : hh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
+- time : hh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
 - textarea : use %5Cn for line-break (ex: My first line%5Cnand my second line)
 
 ### Unhandled tags
