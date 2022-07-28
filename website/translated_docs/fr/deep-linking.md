@@ -23,8 +23,6 @@ Les liens profonds permettent une façon claire et simple de diriger les utilisa
 
 `kizeoforms://--/forms/{formId}` entre en saisie de données avec `{formId}` remplacé par l’ID de la définition de formulaire.
 
-`kizeoforms://--/stats` accède aux statistiques.
-
 `kizeoforms://--/data` accède à la liste des données saisies.
 
 `kizeoforms://--/receipts` accède à la boîte de réception.
@@ -49,7 +47,7 @@ avec `{formId}` remplacé par l’ID de la définition de formulaire.
 - checkbox : 1, '1', true, 'true'. anything else is false
 - datetime : YYYY-MM-DDThh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
 - date : YYYY-MM-DD ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
-  time : hh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
+- time : hh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
 - textarea : utiliser %5Cn pour le saut de ligne (ex : Ma première ligne%5Cnet ma deuxième ligne)
 
 ### Balises non gérées
