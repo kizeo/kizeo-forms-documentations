@@ -41,6 +41,7 @@ avec `{formId}` remplacé par l’ID de la définition de formulaire.
 
 ### Type de champs gérés
 
+- list
 - choice
 - slider
 - text

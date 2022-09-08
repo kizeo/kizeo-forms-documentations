@@ -41,6 +41,7 @@ with `{formId}` replaced by the ID of the form definition.
 
 ### Type of fields enabled
 
+- list
 - choice
 - slider
 - text
