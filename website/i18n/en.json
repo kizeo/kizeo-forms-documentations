@@ -99,15 +99,15 @@
         "sidebar_label": "Scheduled upload from Kizeo Forms to SharePoint"
       },
       "sp-token": {
-        "title": "SharePoint Token",
-        "sidebar_label": "SharePoint Token"
+        "title": "App registration in Azure",
+        "sidebar_label": "App registration in Azure"
       },
       "sp-update-kf-list": {
-        "title": "Update an external kizeoforms list",
-        "sidebar_label": "Update external list kizeoForms"
+        "title": "Update an external Kizeo Forms list",
+        "sidebar_label": "Update external list Kizeo Forms"
       },
       "sp-update-list": {
-        "title": "Transfer kizeoForms data to a SharePoint list",
+        "title": "Transfer Kizeo Forms data to a SharePoint list",
         "sidebar_label": "SharePoint List"
       },
       "sp-upload-files": {

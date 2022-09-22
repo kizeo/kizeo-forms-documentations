@@ -4,39 +4,26 @@ title: Upload files to SharePoint document library from Kizeo Forms
 sidebar_label: Upload files to document library
 ---
 
-## Écran de configuration des données Kizeo pour la bibliothèque SharePoint
+## Créer ou modifier un dépôt d'export unitaire dans SharePoint
 
-![Upload files screen][upfiles-01]
+<img src="/kizeo-forms-documentations/img/sp2/fr/single-export-01.jpg" alt="SharePoint" />
 
-1. Ajouter la connexion et mettre à jour les paramètres d'une liste de documents SharePoint.
-2. Sélectionnez les règles de transfert que vous souhaitez modifier et cliquez sur "Modifier".
-3. Sélectionnez les règles de transfert que vous souhaitez supprimer et cliquez sur "Supprimer".
+***CREATE*** pour créer une nouvelle tâche.
 
-## Ajouter ou mettre à jour
+<img src="/kizeo-forms-documentations/img/sp2/fr/single-export-02.jpg" alt="SharePoint" />
 
-![Add or update][upfiles-02]
+- ***Name*** : Saisissez le nom de la tâche,
+- ***Kizeoforms*** : Sélectionnez le nom du formulaire,
+- ***Sharepoint library*** : Sélectionnez votre librairie SharePoint,
+- ***Template*** : Nom de l'export à déposer,
+- ***Select file type*** : Type de document. PDF ou format original (.xlsx ou .docx),
+- ***Sharepoint folder*** : Dossier de la bibliothèque où déposer l'export,
+- ***(1)*** : Sous-dossier. Ce champ prend en compte les balises Kizeo Forms (hors balises dans les tableaux),
+- ***+ADD*** : Ajoutez le dépôt,
+- ***(2)*** : Dans cette zone vous sélectionnez la fréquence de l'exécution de la tâche
+- ***Metadata*** :
+    - ***Kizeo markup tag*** : Saisissez la balise de la valeur du champ à récupérer (il est possible d'y mettre les options) pour ajouter un tag à l'export,
+    - ***Sharepoint field*** : Sélectionnez la colonne du tag,
+- ***SAVE*** : Enregistrez la tâche.
 
-1. Saisissez le numéro d'identification numérique du formulaire. (<a href="https://www.kizeo-forms.com/fr/obtenir-id-formulaire/" target="_blank">Comment obtenir un identifiant de formulaire</a>).
-2. Récupération de l'identifiant de la bibliothèque de documents SharePoint (<a href="https://kizeo.github.io/kizeo-forms-documentations/docs/fr/sp-update-list" target="_blank">utilisez la même méthode que pour récupérer l'ID de la liste SharePoint)
-
-### Export standard
-3. 4, 5, 6, 7 : Vous pouvez utiliser les balises KizeoForms pour définir les chemins des fichiers à stocker. Vous devez ensuite cocher la case "Actif".
-
-### Exports personnalisés
-
-8. Vous pouvez récupérer les identifiants d'exportation dans KizeoForms à partir de l'historique. Cliquez sur le bouton "Action" et positionnez la souris sur l'exportation souhaitée. Le lien vers l'ExportId apparaît en bas à gauche du navigateur.
-
-![ExportId][upfiles-03]
-
-9. 10 : Vous pouvez utiliser les balises KizeoForms pour définir les chemins des fichiers à stocker. Vous devez ensuite cocher la case "Actif".
-
-11 "SharePoint metadata setting" vous permet de définir les métadonnées que vous souhaitez inclure dans les fichiers téléchargés dans SharePoint. Par exemple le nom des entreprises, les catégories d'interventions, ...
-
-<!-- ************************** -->
-<!-- ***** Pictures List ****** -->
-<!-- ************************** -->
-
-[upfiles-01]: /kizeo-forms-documentations/img/sp/en/upload-files-01.png
-[upfiles-02]: /kizeo-forms-documentations/img/sp/en/upload-files-02.png
-[upfiles-03]: /kizeo-forms-documentations/img/sp/en/upload-files-03.png
-[upfiles-04]: /kizeo-forms-documentations/img/sp/en/upload-files-04.png
+La tâche que vous venez de paramétrer apparaît dans la liste. Sur la gauche, vous pouvez sélectionner chacune des tâches pour les activer ***ENABLE*** ou les désactiver ***DISABLE***. Sur la droite, le crayon vous permet d'éditer et de modifier les paramètres. La poubelle supprime la tâche, alors que la flamme l'exécute.
