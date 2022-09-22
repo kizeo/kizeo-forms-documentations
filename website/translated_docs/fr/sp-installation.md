@@ -6,23 +6,21 @@ sidebar_label: Installation
 
 ## Installation
 
-1. Tout d'abord, [téléchargez le fichier d'installation du connecteur SharePoint](https://dw.kizeo.net/download/sharepoint/sharepoint_setup.msi).
-2. Lancez **sharepoint_setup.msi**
+1. Lancez **sharepoint_setup.msi**
 
-
-| 3. Cliquez sur *informations complémentaires*|4. Cliquez sur *Exécuter quand même*|
+| 2. Cliquez sur *informations complémentaires*|3. Cliquez sur *Exécuter quand même*|
 |:-------------:|:-------------:|
 |![Protection][installen-03]|![Continuer][installen-04]|
 
-| 5. Cliquez sur *Suivant*|6. Cliquez sur *Suivant*|
+| 4. Cliquez sur *Suivant*|5. Cliquez sur *Suivant*|
 |:-------------:|:-------------:|
 |![Welcome][installen-05]|![Selection du dossier de destination][installen-06]|
 
-| 7. Cliquez sur *Suivant*|8. Cliquez sur *Fermer*|
+| 6. Cliquez sur *Suivant*|7. Cliquez sur *Fermer*|
 |:-------------:|:-------------:|
 |![Confirmation][installen-07]|![Finalisation][installen-08]|
 
-| 9. Pour terminer |
+| 8. Pour terminer |
 |:-------------:|
 |![Pour Terminer][installen-09]|
 

@@ -19,6 +19,3 @@ pour la synchronisation entre Kizeo Forms et SharePoint, ce fichier peut être m
 plus de rapidité il existe un assistant de configuration.
 Ce fichier d'entrée "conf.json" est initialement vide et stocké dans le répertoire de l'utilisateur, par défaut dans le dossier "Kizeo".
 Cette aide explique comment utiliser l'assistant pour configurer ce fichier d'entrée.
-
-Vous pouvez télécharger le fichier d'installation [ICI](https://s3.eu-west-3.amazonaws.com/dw.kizeo.net/download/sharepoint/sharepoint_setup.msi).
-

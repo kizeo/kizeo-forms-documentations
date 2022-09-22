@@ -6,22 +6,21 @@ sidebar_label: Installation
 
 ## Installation
 
-1. Firstly, [download connector setup](https://dw.kizeo.net/download/sharepoint/sharepoint_setup.msi).
-2. Start **sharepoint_setup.msi**
+1. Start **sharepoint_setup.msi**
 
-| 3. Click on *more info*|4. Click on *Run anyway*|
+| 2. Click on *more info*|3. Click on *Run anyway*|
 |:-------------:|:-------------:|
 |![Warning][installen-03]|![Warning][installen-04]|
 
-| 5. Click on *Next*|6. Click on *Next*|
+| 4. Click on *Next*|5. Click on *Next*|
 |:-------------:|:-------------:|
 |![Warning][installen-05]|![Warning][installen-06]|
 
-| 7. Click on *Next*|8. Click on *Close*|
+| 6. Click on *Next*|7. Click on *Close*|
 |:-------------:|:-------------:|
 |![Warning][installen-07]|![Warning][installen-08]|
 
-| 9. Finish |
+| 8. Finish |
 |:-------------:|
 |![Warning][installen-09]|
 
