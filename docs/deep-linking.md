@@ -41,6 +41,7 @@ with `{formId}` replaced by the ID of the form definition.
 
 ### Type of fields enabled
 
+- list : code_list
 - choice
 - slider
 - text
@@ -49,6 +50,9 @@ with `{formId}` replaced by the ID of the form definition.
 - date : YYYY-MM-DD or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
 - time : hh:mm:ss or epoch Unix (number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT))
 - textarea : use %5Cn for line-break (ex: My first line%5Cnand my second line)
+- geolocation : latitude,longitude,altitude
+- barcode
+- nfc tag
 
 ### Unhandled tags
 

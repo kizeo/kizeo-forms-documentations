@@ -41,6 +41,7 @@ avec `{formId}` remplacé par l’ID de la définition de formulaire.
 
 ### Type de champs gérés
 
+- list : code_list
 - choice
 - slider
 - text
@@ -49,6 +50,9 @@ avec `{formId}` remplacé par l’ID de la définition de formulaire.
 - date : YYYY-MM-DD ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
 - time : hh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))
 - textarea : utiliser %5Cn pour le saut de ligne (ex : Ma première ligne%5Cnet ma deuxième ligne)
+- geolocation : latitude,longitude,altitude
+- barcode
+- nfc tag
 
 ### Balises non gérées
 
