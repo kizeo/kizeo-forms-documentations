@@ -33,6 +33,7 @@ avec <code>{formId}</code> remplacé par l’ID de la définition de formulaire.
 <code>tag1</code>, <code>tag2</code>, <code>tag3</code>, etc... sont les noms de balise des champs de la définition de formulaire, <code>value1</code>, <code>value2</code>, <code>value3</code>, etc... sont les valeurs correspondantes qui seront saisies.</p>
 <h3><a class="anchor" aria-hidden="true" id="type-de-champs-gérés"></a><a href="#type-de-champs-gérés" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type de champs gérés</h3>
 <ul>
+<li>list : code_list</li>
 <li>choice</li>
 <li>slider</li>
 <li>text</li>
@@ -41,6 +42,9 @@ avec <code>{formId}</code> remplacé par l’ID de la définition de formulaire.
 <li>date : YYYY-MM-DD ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))</li>
 <li>time : hh:mm:ss ou epoch Unix (nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC/GMT))</li>
 <li>textarea : utiliser %5Cn pour le saut de ligne (ex : Ma première ligne%5Cnet ma deuxième ligne)</li>
+<li>geolocation : latitude,longitude,altitude</li>
+<li>barcode</li>
+<li>nfc tag</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="balises-non-gérées"></a><a href="#balises-non-gérées" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Balises non gérées</h3>
 <p>Les noms de balises ci-dessous sont protégés et ne seront pas traités lors d’une pré-saisie par un lien profond.</p>
