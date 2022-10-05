@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 id: sharepoint
 title: Premiers pas

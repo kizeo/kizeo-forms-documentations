@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 id: sp-token
 title: SharePoint Token

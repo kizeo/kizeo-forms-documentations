@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 id: sp-scheduled
 title: Scheduled upload from Kizeo Forms to SharePoint

@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 id: sp-upload-files
 title: Upload files to SharePoint document library from Kizeo Forms

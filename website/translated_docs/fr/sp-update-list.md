@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 id: sp-update-list
 title: Transfer kizeoForms data to a SharePoint list

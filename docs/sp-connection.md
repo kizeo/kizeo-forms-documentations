@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 id: sp-connection
 title: Connection
