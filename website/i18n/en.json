@@ -83,32 +83,41 @@
         "sidebar_label": "Operations on users"
       },
       "sp-connection": {
-        "title": "sp-connection"
+        "title": "Connection",
+        "sidebar_label": "Connection"
       },
-      "sp-getting-started": {
-        "title": "sp-getting-started"
+      "sharepoint": {
+        "title": "Getting started",
+        "sidebar_label": "Introduce"
       },
-      "sp-installation": {
-        "title": "sp-installation"
+      "sp-install": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
       },
-      "sp-sheduled": {
-        "title": "sp-sheduled"
+      "sp-scheduled": {
+        "title": "Scheduled upload from Kizeo Forms to SharePoint",
+        "sidebar_label": "Scheduled upload from Kizeo Forms to SharePoint"
       },
       "sp-token": {
-        "title": "sp-token"
+        "title": "SharePoint Token",
+        "sidebar_label": "SharePoint Token"
       },
       "sp-update-kf-list": {
-        "title": "sp-update-kf-list"
+        "title": "Update an external kizeoforms list",
+        "sidebar_label": "Update external list kizeoForms"
       },
       "sp-update-list": {
-        "title": "sp-update-list"
+        "title": "Transfer kizeoForms data to a SharePoint list",
+        "sidebar_label": "SharePoint List"
       },
       "sp-upload-files": {
-        "title": "sp-upload-files"
+        "title": "Upload files to SharePoint document library from Kizeo Forms",
+        "sidebar_label": "Upload files to document library"
       }
     },
     "links": {
       "Kizeo Connector": "Kizeo Connector",
+      "SharePoint": "SharePoint",
       "API Rest V3": "API Rest V3",
       "Deep linking": "Deep linking"
     },
@@ -137,6 +146,7 @@
     "Kizeo Forms Documentations|no description given": "Kizeo Forms Documentations",
     "Advanced features for developers|no description given": "Advanced features for developers",
     "Kizeo Connector|no description given": "Kizeo Connector",
+    "SharePoint Connector|no description given": "SharePoint Connector",
     "Rest V3|no description given": "Rest V3",
     "Deep linking|no description given": "Deep linking",
     "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.|no description given": "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.",
