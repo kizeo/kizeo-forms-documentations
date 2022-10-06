@@ -24,18 +24,18 @@ sidebar_label: SharePoint List
 
     . To find the identifier of the SharePoint list, you have to go to SharePoint -> Site content. Click on to bring up the drop-down menu, then select "Settings".
 
-    ![Retrieving the ID of SharePoint list][list-03]
+    ![Retrieving the ID of SharePoint list][list-03]  
 
     . You can retrieve the list ID from the address bar after "listedit.aspx?List=".
 
-    ![SharePoint List ID][list-04]
+    ![SharePoint List ID][list-04]  
 
 3. Click on combo box
-   The list in the combo box, are the names of the columns of the SharePoint list.
+    The list in the combo box, are the names of the columns of the SharePoint list.
 
     ![SharePoint List combo][list-06]
 
-    ![SharePoint List column][list-05]
+    ![SharePoint List column][list-05]  
 
 4. Enter the name of the KizeoForms field tag you want to put in the SharePoint column.
 
@@ -53,10 +53,10 @@ sidebar_label: SharePoint List
 7. Modifies the selected line with the new parameters entered.
 8. Delete the selected row
 9. Validate settings
-
-    > Note :
-    > If you want to retrieve items from a KizeoForms table in a SharePoint list, you need to put a calculation field with a "Uniq Number" and set a column to "Unique" status in > the SharePoint list.
-    > This avoids creating a lot of duplicates when modifying data.
+    
+    >Note :
+    >If you want to retrieve items from a KizeoForms table in a SharePoint list, you need to put a calculation field with a "Uniq Number" and set a column to "Unique" status in  > the SharePoint list.
+    >This avoids creating a lot of duplicates when modifying data.
 
 <!-- ************************** -->
 <!-- ***** Pictures List ****** -->

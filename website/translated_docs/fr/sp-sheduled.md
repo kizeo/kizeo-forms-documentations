@@ -29,7 +29,7 @@ sidebar_label: Scheduled upload from Kizeo Forms to SharePoint
 ## Enfin, lancez maintenant le connecteur SharePoint.
 
 <!-- ************************** -->
-<!-- ***** Pictures List ****** -->
+<!-- ***** Pictures List ****** --> 
 <!-- ************************** -->
 
 [scheduled-01]: /kizeo-forms-documentations/img/sp/en/scheduled-01.png

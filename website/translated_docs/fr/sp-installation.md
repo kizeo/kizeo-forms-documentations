@@ -11,24 +11,25 @@ sidebar_label: Installation
 
 1. Lancez **sharepoint_setup.msi**
 
-| 2. Cliquez sur _informations complémentaires_ | 3. Cliquez sur _Exécuter quand même_ |
-| :-------------------------------------------: | :----------------------------------: |
-|          ![Protection][installen-03]          |      ![Continuer][installen-04]      |
+| 2. Cliquez sur *informations complémentaires*|3. Cliquez sur *Exécuter quand même*|
+|:-------------:|:-------------:|
+|![Protection][installen-03]|![Continuer][installen-04]|
 
-| 4. Cliquez sur _Suivant_ |               5. Cliquez sur _Suivant_               |
-| :----------------------: | :--------------------------------------------------: |
-| ![Welcome][installen-05] | ![Selection du dossier de destination][installen-06] |
+| 4. Cliquez sur *Suivant*|5. Cliquez sur *Suivant*|
+|:-------------:|:-------------:|
+|![Welcome][installen-05]|![Selection du dossier de destination][installen-06]|
 
-|   6. Cliquez sur _Suivant_    |    7. Cliquez sur _Fermer_    |
-| :---------------------------: | :---------------------------: |
-| ![Confirmation][installen-07] | ![Finalisation][installen-08] |
+| 6. Cliquez sur *Suivant*|7. Cliquez sur *Fermer*|
+|:-------------:|:-------------:|
+|![Confirmation][installen-07]|![Finalisation][installen-08]|
 
-|        8. Pour terminer        |
-| :----------------------------: |
-| ![Pour Terminer][installen-09] |
+| 8. Pour terminer |
+|:-------------:|
+|![Pour Terminer][installen-09]|
+
 
 <!-- ************************** -->
-<!-- ***** Pictures List ***** -->
+<!-- ***** Pictures List ***** --> 
 <!-- ************************** -->
 
 [installen-03]: /kizeo-forms-documentations/img/sp/fr/installfr-01.png

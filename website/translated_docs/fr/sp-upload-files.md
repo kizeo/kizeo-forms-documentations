@@ -23,7 +23,6 @@ sidebar_label: Upload files to document library
 2. Récupération de l'identifiant de la bibliothèque de documents SharePoint (<a href="https://kizeo.github.io/kizeo-forms-documentations/docs/fr/sp-update-list" target="_blank">utilisez la même méthode que pour récupérer l'ID de la liste SharePoint)
 
 ### Export standard
-
 3. 4, 5, 6, 7 : Vous pouvez utiliser les balises KizeoForms pour définir les chemins des fichiers à stocker. Vous devez ensuite cocher la case "Actif".
 
 ### Exports personnalisés

@@ -28,7 +28,7 @@ sidebar_label: Update external list kizeoForms
 Pour construire la structure des éléments de votre liste externe, utilisez les noms des colonnes en les sélectionnant dans la liste, séparés par les caractères "\\" et "|" pour les hiérarchies et les références.
 
 <!-- ************************** -->
-<!-- ***** Pictures List ****** -->
+<!-- ***** Pictures List ****** --> 
 <!-- ************************** -->
 
 [upkflist-01]: /kizeo-forms-documentations/img/sp/en/update-kf-list-01.png
