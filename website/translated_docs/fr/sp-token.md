@@ -1,4 +1,6 @@
-<meta name="robots" content="noindex">
+<head>
+    <meta name="robots" content="noindex">
+</head>
 ---
 id: sp-token
 title: Token SharePoint
@@ -14,8 +16,7 @@ Veillez à conserver toutes les informations que vous serez invité à créer.
 ### Étape 1 : Enregistrer l'application dans SharePoint
 
 Vérifiez que vous êtes déjà connecté à SharePoint, puis allez sur :
-<span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appregnew.aspx</span> en remplaçant *your_sharepoint_domain* avec le domaine de votre compte SharePoint et *your_site* avec le nom de votre site).
-
+<span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/\_layouts/15/appregnew.aspx</span> en remplaçant _your_sharepoint_domain_ avec le domaine de votre compte SharePoint et _your_site_ avec le nom de votre site).
 
 ![appregnew.aspx][token-01]
 
@@ -26,7 +27,7 @@ Vérifiez que vous êtes déjà connecté à SharePoint, puis allez sur :
 5. Remplissez https://www.kizeoforms.com/
 6. Cliquez sur "Créer" et assurez-vous que vous avez bien copié le numéro d'identification et la clé secrète du client (la clé secrète du client ne vous sera plus jamais communiquée).
 
-Ensuite, allez sur <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appinv.aspx</span>
+Ensuite, allez sur <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/\_layouts/15/appinv.aspx</span>
 
 ![Warning][token-02]
 
@@ -43,9 +44,9 @@ Ensuite, allez sur <span style="color:#ABD33D">https://your_sharepoint_domain/si
 
 Jusqu'à présent, vous avez eu :
 
-- l'Id client
-- La clé secrète
-- l'URL de votre site SharePoint
+-   l'Id client
+-   La clé secrète
+-   l'URL de votre site SharePoint
 
 Vous êtes maintenant en possession de tous les identifiants demandés dans l'assistant du connecteur SharePoint.
 
@@ -105,7 +106,7 @@ Dans la sous-section "Autorisations de site"...
 
 ![Create][token-15]
 
-Enregistrez les modifications en cliquant sur "Créer" et revenez ensuite à la page contenant la liste des groupes. 
+Enregistrez les modifications en cliquant sur "Créer" et revenez ensuite à la page contenant la liste des groupes.
 
 #### 3) Accorder les autorisations créées
 
@@ -140,9 +141,8 @@ Rafraîchissez la page de la liste de votre groupe.
 
 Les nouvelles règles que nous avons définies sont maintenant présentes dans les niveaux d'autorisation.
 
-
 <!-- ************************** -->
-<!-- ***** Pictures List ****** --> 
+<!-- ***** Pictures List ****** -->
 <!-- ************************** -->
 
 [token-01]: /kizeo-forms-documentations/img/sp/fr/tokenfr-sp-01.png

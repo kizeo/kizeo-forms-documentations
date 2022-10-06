@@ -1,4 +1,6 @@
-<meta name="robots" content="noindex">
+<head>
+    <meta name="robots" content="noindex">
+</head>
 ---
 id: sp-update-list
 title: Transfer kizeoForms data to a SharePoint list
@@ -23,14 +25,14 @@ sidebar_label: SharePoint List
 
     . Pour trouver l'identifiant de la liste SharePoint, vous devez aller à SharePoint -> Contenu du site. Cliquez sur les trois petits points pour faire apparaître le menu déroulant, puis sélectionnez "Paramètres"..
 
-    ![Retrieving the ID of SharePoint list][list-03]  
+    ![Retrieving the ID of SharePoint list][list-03]
 
     . Vous pouvez récupérer l'identifiant de la liste dans la barre d'adresse après "listedit.aspx?List=".
 
-    ![SharePoint List ID][list-04]  
+    ![SharePoint List ID][list-04]
 
 3. Cliquez sur le menu déroulant
-    La liste dans le menu déroulant, correspond aux noms des colonnes de la liste SharePoint.
+   La liste dans le menu déroulant, correspond aux noms des colonnes de la liste SharePoint.
 
     ![SharePoint List combo][list-06]
 
@@ -52,10 +54,10 @@ sidebar_label: SharePoint List
 7. Modifie la ligne sélectionnée avec les nouveaux paramètres saisis.
 8. Supprimer la ligne sélectionnée
 9. Valider les paramètres
-    
-    >Note :
-    >Si vous souhaitez récupérer des éléments d'un tableau KizeoForms dans une liste SharePoint, vous devez mettre un champ de calcul avec un "Numéro Unique" et définir une colonne au statut "Unique" dans la liste SharePoint. 
-    >Cela évite de créer un grand nombre de doublons lors de la modification des données.
+
+    > Note :
+    > Si vous souhaitez récupérer des éléments d'un tableau KizeoForms dans une liste SharePoint, vous devez mettre un champ de calcul avec un "Numéro Unique" et définir une colonne au statut "Unique" dans la liste SharePoint.
+    > Cela évite de créer un grand nombre de doublons lors de la modification des données.
 
 <!-- ************************** -->
 <!-- ***** Pictures List ****** -->

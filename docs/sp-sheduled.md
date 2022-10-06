@@ -1,11 +1,13 @@
-<meta name="robots" content="noindex">
+<head>
+    <meta name="robots" content="noindex">
+</head>
 ---
 id: sp-scheduled
 title: Scheduled upload from Kizeo Forms to SharePoint
 sidebar_label: Scheduled upload from Kizeo Forms to SharePoint
 ---
 
-##  Update Kizeo Forms lists from SharePoint lists
+## Update Kizeo Forms lists from SharePoint lists
 
 ![Step 5][scheduled-01]
 

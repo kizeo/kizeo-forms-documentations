@@ -1,4 +1,6 @@
-<meta name="robots" content="noindex">
+<head>
+    <meta name="robots" content="noindex">
+</head>
 ---
 id: sharepoint
 title: Premiers pas
@@ -10,10 +12,10 @@ sidebar_label: Introduction
 Le connecteur SharePoint est une application console qui permet de synchroniser les données entre kizeo
 Forms et SharePoint sur 4 niveaux :
 
-- [Données kizeo Forms vers une liste SharePoint](sp-update-list.md),
-- [Données kizeo Forms vers la Bibliothèque SharePoint](sp-upload-files.md),
-- [Listes SharePoint vers des listes Externes](sp-update-kf-list.md),
-- [Données kizeo Forms vers la Bibliothèque SharePoint (Exports périodiques)](sp-sheduled.md).
+-   [Données kizeo Forms vers une liste SharePoint](sp-update-list.md),
+-   [Données kizeo Forms vers la Bibliothèque SharePoint](sp-upload-files.md),
+-   [Listes SharePoint vers des listes Externes](sp-update-kf-list.md),
+-   [Données kizeo Forms vers la Bibliothèque SharePoint (Exports périodiques)](sp-sheduled.md).
 
 Le connecteur « SharePoint » comporte un fichier d’entrée qui accepte toutes les configurations nécessaires
 pour la synchronisation entre Kizeo Forms et SharePoint, ce fichier peut être modifié manuellement mais pour

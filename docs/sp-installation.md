@@ -1,4 +1,6 @@
-<meta name="robots" content="noindex">
+<head>
+    <meta name="robots" content="noindex">
+</head>
 ---
 id: sp-install
 title: Installation
@@ -9,21 +11,21 @@ sidebar_label: Installation
 
 1. Start **sharepoint_setup.msi**
 
-| 2. Click on *more info*|3. Click on *Run anyway*|
-|:-------------:|:-------------:|
-|![Warning][installen-03]|![Warning][installen-04]|
+| 2. Click on _more info_  | 3. Click on _Run anyway_ |
+| :----------------------: | :----------------------: |
+| ![Warning][installen-03] | ![Warning][installen-04] |
 
-| 4. Click on *Next*|5. Click on *Next*|
-|:-------------:|:-------------:|
-|![Warning][installen-05]|![Warning][installen-06]|
+|    4. Click on _Next_    |    5. Click on _Next_    |
+| :----------------------: | :----------------------: |
+| ![Warning][installen-05] | ![Warning][installen-06] |
 
-| 6. Click on *Next*|7. Click on *Close*|
-|:-------------:|:-------------:|
-|![Warning][installen-07]|![Warning][installen-08]|
+|    6. Click on _Next_    |   7. Click on _Close_    |
+| :----------------------: | :----------------------: |
+| ![Warning][installen-07] | ![Warning][installen-08] |
 
-| 8. Finish |
-|:-------------:|
-|![Warning][installen-09]|
+|        8. Finish         |
+| :----------------------: |
+| ![Warning][installen-09] |
 
 <!-- ************************** -->
 <!-- ***** Pictures List ***** -->

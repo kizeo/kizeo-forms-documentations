@@ -1,4 +1,6 @@
-<meta name="robots" content="noindex">
+<head>
+    <meta name="robots" content="noindex">
+</head>
 ---
 id: sp-token
 title: SharePoint Token
@@ -14,7 +16,7 @@ Be careful to keep all the information that you will be asked to create.
 ### Step 1: Save the application to SharePoint
 
 Make sure you are already logged in to SharePoint, then go to :
-<span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appregnew.aspx</span>  
+<span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/\_layouts/15/appregnew.aspx</span>  
 (replace your_sharepoint_domain with the domain of your SharePoint site and your_site with the name of your site).
 
 ![Warning][token-01]
@@ -26,7 +28,7 @@ Make sure you are already logged in to SharePoint, then go to :
 5. Fill in with https://www.kizeoforms.com/
 6. Then click on "Create" and make sure you have copied the client id and client secret key (the client secret key will never be communicated to you again).
 
-Then go to <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/_layouts/15/appinv.aspx</span>
+Then go to <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your_site/\_layouts/15/appinv.aspx</span>
 
 ![Warning][token-02]
 
@@ -43,9 +45,9 @@ Then go to <span style="color:#ABD33D">https://your_sharepoint_domain/sites/your
 
 So far, you've had:
 
-- the client id
-- the secret id
-- the SharePoint URL
+-   the client id
+-   the secret id
+-   the SharePoint URL
 
 You are now in possession of all the identifiers requested in the Wizard of the SharePoint Connector.
 
@@ -65,7 +67,7 @@ On the menu that appears, select "Site Permissions".
 ![Permission management][token-23]
 
 Please change the permissions so that Members and Owners of the site can have
-total control. 
+total control.
 
 #### 2) Create a connector-specific authorization group
 
@@ -138,7 +140,7 @@ Refresh your group list page.
 
 ![alt][token-22]
 
-The new rules that we have defined are indeed present in the authorization levels. 
+The new rules that we have defined are indeed present in the authorization levels.
 
 <!-- ************************** -->
 <!-- ***** Pictures List ****** -->
