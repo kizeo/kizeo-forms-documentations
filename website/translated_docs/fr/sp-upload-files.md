@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-upload-files
 title: Upload files to SharePoint document library from Kizeo Forms
 sidebar_label: Upload files to document library
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 ## Écran de configuration des données Kizeo pour la bibliothèque SharePoint
 

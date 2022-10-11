@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-connection
 title: Connection
 sidebar_label: Connection
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 First launch the SharePoint connector Wizard.
 

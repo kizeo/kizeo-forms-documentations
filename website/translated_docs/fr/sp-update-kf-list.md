@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-update-kf-list
 title: Update an external kizeoforms list
 sidebar_label: Update external list kizeoForms
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 ## Mise à jour des listes Externes Kizeo Forms à partir des listes SharePoint
 

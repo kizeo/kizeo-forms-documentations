@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-install
 title: Installation
 sidebar_label: Installation
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 ## Installation
 

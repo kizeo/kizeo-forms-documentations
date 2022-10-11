@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sharepoint
 title: Premiers pas
 sidebar_label: Introduction
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 ## Le connecteur SharePoint
 

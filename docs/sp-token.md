@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-token
 title: SharePoint Token
 sidebar_label: SharePoint Token
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 ## Get SharePoint Token
 

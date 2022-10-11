@@ -1,11 +1,12 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-connection
 title: Connexion
 sidebar_label: Connexion
 ---
+
+<head>
+    <meta name="robots" content="noindex">
+</head>
 
 Lancez d'abord l'assistant de connexion SharePoint.
 
