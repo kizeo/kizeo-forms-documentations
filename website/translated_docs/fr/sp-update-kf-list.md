@@ -1,6 +1,3 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-update-kf-list
 title: Update an external kizeoforms list

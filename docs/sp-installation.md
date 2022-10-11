@@ -1,6 +1,3 @@
-<head>
-    <meta name="robots" content="noindex">
-</head>
 ---
 id: sp-install
 title: Installation
