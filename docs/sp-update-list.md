@@ -4,6 +4,10 @@ title: Transfer kizeoForms data to a SharePoint list
 sidebar_label: SharePoint List
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 ## Transfer kizeoForms data to a SharePoint list
 
 ![Step 2][list-01]

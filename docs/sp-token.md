@@ -4,6 +4,10 @@ title: SharePoint Token
 sidebar_label: SharePoint Token
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 ## Get SharePoint Token
 
 In the first step of SharePoint Connector configuration, you will be asked for login information.

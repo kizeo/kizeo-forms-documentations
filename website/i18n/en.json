@@ -117,7 +117,6 @@
     },
     "links": {
       "Kizeo Connector": "Kizeo Connector",
-      "SharePoint": "SharePoint",
       "API Rest V3": "API Rest V3",
       "Deep linking": "Deep linking"
     },
@@ -146,7 +145,6 @@
     "Kizeo Forms Documentations|no description given": "Kizeo Forms Documentations",
     "Advanced features for developers|no description given": "Advanced features for developers",
     "Kizeo Connector|no description given": "Kizeo Connector",
-    "SharePoint Connector|no description given": "SharePoint Connector",
     "Rest V3|no description given": "Rest V3",
     "Deep linking|no description given": "Deep linking",
     "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.|no description given": "In order to give our customers an **intermediate solution**, we developed a **JAVA connector**. Once this connector has been configured and installed on one of your server, as soon as a new data input is done on Kizeo Forms, you can **automatically recover** the corresponding **media** and **PDFs** on your server. You can even automatically **recover** and **insert** the **data** into your **database**.",

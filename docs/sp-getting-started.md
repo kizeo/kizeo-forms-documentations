@@ -4,6 +4,10 @@ title: Getting started
 sidebar_label: Introduce
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 ## The SharePoint Connector
 
 The SharePoint connector is a console application that allows you to synchronize data between Kizeo

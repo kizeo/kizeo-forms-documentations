@@ -4,6 +4,10 @@ title: Connection
 sidebar_label: Connection
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 First launch the SharePoint connector Wizard.
 
 ## Step 1: main connection setting

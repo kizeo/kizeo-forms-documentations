@@ -4,6 +4,10 @@ title: Premiers pas
 sidebar_label: Introduction
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 ## Le connecteur SharePoint
 
 Le connecteur SharePoint est une application console qui permet de synchroniser les données entre kizeo

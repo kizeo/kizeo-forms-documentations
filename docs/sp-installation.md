@@ -4,6 +4,10 @@ title: Installation
 sidebar_label: Installation
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 ## Installation
 
 1. Start **sharepoint_setup.msi**

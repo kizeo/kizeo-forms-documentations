@@ -4,6 +4,10 @@ title: Connexion
 sidebar_label: Connexion
 ---
 
+<head>
+    <meta name="robots" content="noindex">
+</head>
+
 Lancez d'abord l'assistant de connexion SharePoint.
 
 ## Étape 1 : Paramétrage de la connexion principale
