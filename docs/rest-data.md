@@ -6,113 +6,11 @@ sidebar_label: Operations on data
 
 ## Operations on forms data
 
-### 1 - Get list of all data of a form
+### 1 - Read new data by action of a form
 
 ---
 
-There are two functions to get simply all data of a form.
-With the first one, you will get only unread data of a form. To use it you have to send a `GET` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/data`.  
-The second one gives you all data of a form, even read data, and is a `GET` request that you send to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/all`.
-
-For these two functions, if they correctly worked, you will receive a response like following:
-
-```json
-[
-  {
-    "id": "dataId1",
-    "record_number": "integer",
-    "form_id": "integer",
-    "user_id": "integer",
-    "create_time": "date",
-    "answer_time": "date",
-    "direction": "data_state"
-  },
-    {
-    "id": "dataId2",
-    "record_number": "integer",
-    "form_id": "integer",
-    "user_id": "integer",
-    "create_time": "date",
-    "answer_time": "date",
-    "direction": "data_state"
-  },
-  ...
-]
-```
-
-The different values of _data_state_ are:
-
--   Pushed: pushed data is awaiting reception on the recipient's mobile (orange plane)
--   Retrieved: pushed data has been received on the recipient's mobile (red arrow)
--   Finished: data has been saved (green or black check)
-
-### 2 - Read new data of a form
-
----
-
-You also have a function that allows you to read the content of all unread data of a given form.  
-You have to send a `GET` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/readnew`.
-
-If it worked, you will have a response like:
-
-```json
-[
-  {
-      "id": "integer",
-      "record_number": "integer",
-      "form_id": "integer",
-      "user_id": "integer",
-      "create_time": "string",
-      "update_time": "string",
-      "update_user_id": "integer",
-      "update_answer_time": "string",
-      "start_time": "string",
-      "end_time": "string",
-      "direction": "string",
-      "recipient_id": "integer",
-      "history": "string",
-      "form_unique_id": "integer",
-      "origin_answer": "string",
-      "answer_time": "string",
-      "user_name": "string",
-      "last_name": "string",
-      "first_name": "string",
-      "phone": "string",
-      "email": "string",
-      "login": "string",
-      "update_user_name": "string",
-      "recipient_name": "string",
-      "fields": {
-        "field_Id": {
-          "value": "string",
-          "type": "text",
-          "subtype": "text",
-          "hidden": "false",
-          "time": {
-            "string": "string"
-          }
-        },
-        "..."
-      }
-  },
-  ...
-]
-```
-
-After you read that data, you could want them to disappear from unread data list. To do this, you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasread`.  
-Don't forget to add the id of data you want to mark as read in the request's body, the same way as following:
-
-```json
-{
-    "data_ids": ["dataId1", "dataId2", "dataId3", "dataId4"]
-}
-```
-
-### 3 - Read new data by action of a form
-
----
-
-This function has the same behavior as the _readnew_ function. The main difference is that you can mark the data read for a given action. Thus giving the possibility of reading the same data for several different actions.
+Mark the data read for a given action. Thus giving the possibility of reading the same data for several different actions.
 You have to send a `GET` request to: `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
 
 If it worked, you will have a response like:
@@ -183,7 +81,7 @@ Don't forget to add the id of the data you want to mark as read in the request's
 }
 ```
 
-### 4 - Advanced research in form data
+### 2 - Advanced research in form data
 
 ---
 
@@ -224,7 +122,7 @@ To define precisely your research, you have to add in your request's body the fo
 -   `field` : The root of each field's markers. Sample: `_update_time` (update time of your entry) or `_user_id` (the ID of the user sending the entry). You can also search over a specific field in the form (`customer` for instance, or `contract_number`) using the identifier of the field (from the help menu of each form on the form edition page).
 -   `type` : The components/filters' types are: `simple` (searching on a field outside of a table), `global` (searching over the whole entry), `AND` and `OR` (for complex conditions use the attributes `components` as shown above).
 
-### 5 - Push a data
+### 3 - Push a data
 
 ---
 
