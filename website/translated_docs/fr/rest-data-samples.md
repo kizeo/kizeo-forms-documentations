@@ -11,6 +11,47 @@ sidebar_label: Samples
 
 #### [Si cURL n'est pas déjà préinstallé, voici un lien qui pourrait vous aider à l'installer.](rest-curl-install.md)
 
+#### Voici un exemple permettant de faire une recherche avancée dans les données d'un formulaire
+
+```php
+
+<?php
+
+$formId;
+// Initialisation de la requête
+$curl = curl_init();
+
+// Définition des paramètres et entêtes de la requête
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://www.kizeoforms.com/rest/v3/forms/' . $formId . '/data/advanced",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  // Définition de la donnée dans le corps de la requête
+  CURLOPT_POSTFIELDS => "{\n  \"global_filters\": \"\",\n  \"filters\": [\n    {\n      \"field\": \"field_name\",\n      \"operator\": \"comparison_operator\",\n      \"type\": \"simple\",\n      \"val\": \"compare_value\"\n    }\n  ],\n  \"order\": [\n    {\n      \"col\": \"order_data\",\n      \"type\": \"col_type\"\n    }\n  ]\n}",
+  CURLOPT_HTTPHEADER => array(
+    "Authorization: YOUR_TOKEN",
+    "cache-control: no-cache",
+    "content-type: application/json"
+  ),
+));
+
+// Envoi de la requête et affichage de la réponse
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+
 #### Voici un exemple permettant de transférer des données (PUSH)
 
 ```php
