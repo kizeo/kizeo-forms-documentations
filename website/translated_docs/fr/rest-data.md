@@ -4,117 +4,11 @@ title: Data
 sidebar_label: Operations on data
 ---
 
-## 1 - Récupérer la liste de toutes les données d'un formulaire
+## 1 - Lire les nouvelles données d'un formulaire pour une action
 
 ---
 
-Il existe deux fonctions permettant de récupérer simplement les données d'un formulaire.
-La première permet de n'afficher que les données non lues du formulaire, et consiste en une requête en `GET` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data`.  
-La deuxième permet en revanche d'afficher toutes les données du formulaire, et consiste en une requête en `GET` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/all`.
-
-Dans ces deux fonctions, si la requête est lancée avec succès, vous recevrez une réponse sous le format suivant :
-
-```json
-
-[
-  {
-    "id": "dataId1",
-    "record_number": "integer",
-    "form_id": "integer",
-    "user_id": "integer",
-    "create_time": "date",
-    "answer_time": "date",
-    "direction": "data_state"
-  },
-    {
-    "id": "dataId2",
-    "record_number": "integer",
-    "form_id": "integer",
-    "user_id": "integer",
-    "create_time": "date",
-    "answer_time": "date",
-    "direction": "data_state"
-  },
-  ...
-]
-
-```
-
-Les différentes valeurs de _data_state_ sont les suivantes:
-
--   Poussée: les données poussées sont en attente de réception sur le mobile du destinataire (avion orange)
--   Récupérée: les données transmises ont été reçues sur le mobile du destinataire (flèche rouge)
--   Terminée: les données ont été enregistrées (coche verte ou noire)
-
-## 2 - Lire les nouvelles données d'un formulaire
-
----
-
-Vous avez aussi à disposition une fonction permettant de lire le contenu de toutes les données non lues d'un formulaire.  
-Il s'agit d'envoyer une requête en `GET` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/readnew`.
-
-Si tout s'est bien passé, vous recevrez une réponse du type :
-
-```json
-[
-  {
-      "id": "integer",
-      "record_number": "integer",
-      "form_id": "integer",
-      "user_id": "integer",
-      "create_time": "string",
-      "update_time": "string",
-      "update_user_id": "integer",
-      "update_answer_time": "string",
-      "start_time": "string",
-      "end_time": "string",
-      "direction": "string",
-      "recipient_id": "integer",
-      "history": "string",
-      "form_unique_id": "integer",
-      "origin_answer": "string",
-      "answer_time": "string",
-      "user_name": "string",
-      "last_name": "string",
-      "first_name": "string",
-      "phone": "string",
-      "email": "string",
-      "login": "string",
-      "update_user_name": "string",
-      "recipient_name": "string",
-      "fields": {
-        "field_Id": {
-          "value": "string",
-          "type": "text",
-          "subtype": "text",
-          "hidden": "false",
-          "time": {
-            "string": "string"
-          }
-        },
-        "..."
-      }
-  },
- ...
-]
-```
-
-Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme "nouvelles".
-Pour cela, il faut utiliser une requête en `POST` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasread`.
-
-Vous devrez cependant ajouter, dans le corps de la requête, les identifiants des données que vous souhaitez marquer comme "lues", de la façon suivante :
-
-```json
-{
-    "data_ids": ["dataId1", "dataId2", "dataId3", "dataId4"]
-}
-```
-
-## 3 - Lire les nouvelles données d'un formulaire pour une action
-
----
-
-Cette fonction a le même comportement que la fonction *readnew*. La principale différence est que vous pouvez marquer les données lues pour une action donnée. Cela donne donc la possibilité de lire les mêmes données pour plusieurs actions différentes.
+Marquer les données lues pour une action donnée. Cela donne donc la possibilité de lire les mêmes données pour plusieurs actions différentes.
 Il s'agit d'envoyer une requête en `GET` à l'URL : `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
 
 Si tout s'est bien passé, vous recevrez une réponse du type :
@@ -186,7 +80,7 @@ Vous devrez cependant ajouter, dans le corps de la requête, les identifiants de
 }
 ```
 
-## 4 - Recherche avancée dans les données d'un formulaire
+## 2 - Recherche avancée dans les données d'un formulaire
 
 ---
 
@@ -228,7 +122,7 @@ Afin de définir les filtres que vous voulez utiliser pour rechercher précisém
 -   `field` : Correspond à la racine de la balise de chaque champ. Exemple : `_update_time` (date de mise-à-jour) et `_user_id` (id de l'utilisateur ayant saisi la donnée). Vous pouvez également rechercher sur des champs du formulaire définis par vous-même (`client` par exemple, ou bien `numero_de_contrat`).
 -   `type` : Les différents types sont : `simple` (on recherche sur un champ hors d'un tableau), `global` (on recherche dans l'ensemble de la donnée), `AND` et `OR` (permet de faire des conditions multiples dans l'attribut `components` comme présenté ci-dessus).
 
-## 5 - Enregistrer une donnée sans enregistrer le formulaire complet
+## 3 - Enregistrer une donnée sans enregistrer le formulaire complet
 
 ---
 
