@@ -67,96 +67,9 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Data</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="operations-on-forms-data"></a><a href="#operations-on-forms-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operations on forms data</h2>
-<h3><a class="anchor" aria-hidden="true" id="1---get-list-of-all-data-of-a-form"></a><a href="#1---get-list-of-all-data-of-a-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 - Get list of all data of a form</h3>
+<h3><a class="anchor" aria-hidden="true" id="1---read-new-data-by-action-of-a-form"></a><a href="#1---read-new-data-by-action-of-a-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 - Read new data by action of a form</h3>
 <hr>
-<p>There are two functions to get simply all data of a form.
-With the first one, you will get only unread data of a form. To use it you have to send a <code>GET</code> request to: <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data</code>.<br>
-The second one gives you all data of a form, even read data, and is a <code>GET</code> request that you send to: <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data/all</code>.</p>
-<p>For these two functions, if they correctly worked, you will receive a response like following:</p>
-<pre><code class="hljs css language-json">[
-  {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"dataId1"</span>,
-    <span class="hljs-attr">"record_number"</span>: <span class="hljs-string">"integer"</span>,
-    <span class="hljs-attr">"form_id"</span>: <span class="hljs-string">"integer"</span>,
-    <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"integer"</span>,
-    <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"date"</span>,
-    <span class="hljs-attr">"answer_time"</span>: <span class="hljs-string">"date"</span>,
-    <span class="hljs-attr">"direction"</span>: <span class="hljs-string">"data_state"</span>
-  },
-    {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"dataId2"</span>,
-    <span class="hljs-attr">"record_number"</span>: <span class="hljs-string">"integer"</span>,
-    <span class="hljs-attr">"form_id"</span>: <span class="hljs-string">"integer"</span>,
-    <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"integer"</span>,
-    <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"date"</span>,
-    <span class="hljs-attr">"answer_time"</span>: <span class="hljs-string">"date"</span>,
-    <span class="hljs-attr">"direction"</span>: <span class="hljs-string">"data_state"</span>
-  },
-  ...
-]
-</code></pre>
-<p>The different values of <em>data_state</em> are:</p>
-<ul>
-<li>Pushed: pushed data is awaiting reception on the recipient's mobile (orange plane)</li>
-<li>Retrieved: pushed data has been received on the recipient's mobile (red arrow)</li>
-<li>Finished: data has been saved (green or black check)</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="2---read-new-data-of-a-form"></a><a href="#2---read-new-data-of-a-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 - Read new data of a form</h3>
-<hr>
-<p>You also have a function that allows you to read the content of all unread data of a given form.<br>
-You have to send a <code>GET</code> request to: <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data/readnew</code>.</p>
-<p>If it worked, you will have a response like:</p>
-<pre><code class="hljs css language-json">[
-  {
-      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"record_number"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"form_id"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"update_time"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"update_user_id"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"update_answer_time"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"start_time"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"end_time"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"direction"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"recipient_id"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"history"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"form_unique_id"</span>: <span class="hljs-string">"integer"</span>,
-      <span class="hljs-attr">"origin_answer"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"answer_time"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"user_name"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"phone"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"email"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"login"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"update_user_name"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"recipient_name"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"fields"</span>: {
-        <span class="hljs-attr">"field_Id"</span>: {
-          <span class="hljs-attr">"value"</span>: <span class="hljs-string">"string"</span>,
-          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"text"</span>,
-          <span class="hljs-attr">"subtype"</span>: <span class="hljs-string">"text"</span>,
-          <span class="hljs-attr">"hidden"</span>: <span class="hljs-string">"false"</span>,
-          <span class="hljs-attr">"time"</span>: {
-            <span class="hljs-attr">"string"</span>: <span class="hljs-string">"string"</span>
-          }
-        },
-        <span class="hljs-attr">"..."</span>
-      }
-  },
-  ...
-]
-</code></pre>
-<p>After you read that data, you could want them to disappear from unread data list. To do this, you have to send a <code>POST</code> request to: <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/markasread</code>.<br>
-Don't forget to add the id of data you want to mark as read in the request's body, the same way as following:</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"data_ids"</span>: [<span class="hljs-string">"dataId1"</span>, <span class="hljs-string">"dataId2"</span>, <span class="hljs-string">"dataId3"</span>, <span class="hljs-string">"dataId4"</span>]
-}
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="3---read-new-data-by-action-of-a-form"></a><a href="#3---read-new-data-by-action-of-a-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 - Read new data by action of a form</h3>
-<hr>
-<p>This function has the same behavior as the <em>readnew</em> function. The main difference is that you can mark the data read for a given action. Thus giving the possibility of reading the same data for several different actions.
+<p>Mark the data read for a given action. Thus giving the possibility of reading the same data for several different actions.
 You have to send a <code>GET</code> request to: <code>https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated</code></p>
 <p>If it worked, you will have a response like:</p>
 <pre><code class="hljs css language-json">
@@ -219,7 +132,7 @@ Don't forget to add the id of the data you want to mark as read in the request's
     <span class="hljs-attr">"data_ids"</span>: [<span class="hljs-string">"dataId1"</span>, <span class="hljs-string">"dataId2"</span>, <span class="hljs-string">"dataId3"</span>, <span class="hljs-string">"dataId4"</span>]
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="4---advanced-research-in-form-data"></a><a href="#4---advanced-research-in-form-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4 - Advanced research in form data</h3>
+<h3><a class="anchor" aria-hidden="true" id="2---advanced-research-in-form-data"></a><a href="#2---advanced-research-in-form-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 - Advanced research in form data</h3>
 <hr>
 <p>To go further in your researches of datas, you have a function of advanced research.
 To use it, you will send a <code>POST</code>request to: <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/data/advanced</code>.</p>
@@ -255,7 +168,7 @@ To use it, you will send a <code>POST</code>request to: <code>https://www.kizeof
 <li><code>field</code> : The root of each field's markers. Sample: <code>_update_time</code> (update time of your entry) or <code>_user_id</code> (the ID of the user sending the entry). You can also search over a specific field in the form (<code>customer</code> for instance, or <code>contract_number</code>) using the identifier of the field (from the help menu of each form on the form edition page).</li>
 <li><code>type</code> : The components/filters' types are: <code>simple</code> (searching on a field outside of a table), <code>global</code> (searching over the whole entry), <code>AND</code> and <code>OR</code> (for complex conditions use the attributes <code>components</code> as shown above).</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="5---push-a-data"></a><a href="#5---push-a-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5 - Push a data</h3>
+<h3><a class="anchor" aria-hidden="true" id="3---push-a-data"></a><a href="#3---push-a-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 - Push a data</h3>
 <hr>
 <p>You also have the possibility to send data without saving the form, in case you have to add other data later. It is called a <strong>&quot;push&quot;</strong>.
 To do that operation, you have to send a <code>POST</code> request to: <code>https://www.kizeoforms.com/rest/v3/forms/{formId}/push</code> replacing {formId} by the id of the form.</p>
@@ -281,4 +194,4 @@ To do that operation, you have to send a <code>POST</code> request to: <code>htt
     }
 }
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/en/users-samples"><span class="arrow-prev">← </span><span>Samples</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/en/data-samples"><span>Samples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#operations-on-forms-data">Operations on forms data</a><ul class="toc-headings"><li><a href="#1---get-list-of-all-data-of-a-form">1 - Get list of all data of a form</a></li><li><a href="#2---read-new-data-of-a-form">2 - Read new data of a form</a></li><li><a href="#3---read-new-data-by-action-of-a-form">3 - Read new data by action of a form</a></li><li><a href="#4---advanced-research-in-form-data">4 - Advanced research in form data</a></li><li><a href="#5---push-a-data">5 - Push a data</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/en/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/en/restv3">API (Web Service REST)</a><a href="/kizeo-forms-documentations/docs/en/deep-linking">Deep linking</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2022 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/kizeo-forms-documentations/docs/en/users-samples"><span class="arrow-prev">← </span><span>Samples</span></a><a class="docs-next button" href="/kizeo-forms-documentations/docs/en/data-samples"><span>Samples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#operations-on-forms-data">Operations on forms data</a><ul class="toc-headings"><li><a href="#1---read-new-data-by-action-of-a-form">1 - Read new data by action of a form</a></li><li><a href="#2---advanced-research-in-form-data">2 - Advanced research in form data</a></li><li><a href="#3---push-a-data">3 - Push a data</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kizeo-forms-documentations/" class="nav-home"><img src="/kizeo-forms-documentations/img/kizeo-couleurs.png" alt="Kizeo Forms Documentations"/></a><div><h5>Docs</h5><a href="/kizeo-forms-documentations/docs/en/installation.html">Kizeo Connector</a><a href="/kizeo-forms-documentations/docs/en/restv3">API (Web Service REST)</a><a href="/kizeo-forms-documentations/docs/en/deep-linking">Deep linking</a></div><div><a href="https://www.kizeoforms.com">Kizeo Forms</a><a href="https://github.com/kizeo">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/kizeo" class="twitter-follow-button">Follow @kizeo</a></div></div></section><section class="copyright">Copyright © 2023 Kizeo</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
