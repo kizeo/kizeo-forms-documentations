@@ -109,7 +109,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/kizeo-white.png',
   footerIcon: 'img/kizeo-couleurs.png',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   /* Colors for website */
   colors: {
