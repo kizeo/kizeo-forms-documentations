@@ -109,12 +109,12 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/kizeo-white.png',
   footerIcon: 'img/kizeo-couleurs.png',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#a1c639',
-    secondaryColor: '#617723',
+    primaryColor: '#55c96b',
+    secondaryColor: '#2c8c3e',
   },
 
   // editUrl: 'https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/',
