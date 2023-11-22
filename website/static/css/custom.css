@@ -22,7 +22,7 @@
 }
 
 .postHeaderTitle {
-    border-bottom: 1px solid #a1c639;
+    border-bottom: 1px solid #55c96b;
     padding-bottom: 20px !important;
 }
 
@@ -39,7 +39,7 @@ h2 {
 }
 
 .darkBackground {
-    background: #a1c6393d !important;
+    background: #55c96b3d !important;
     color: black !important;
 }
 

@@ -113,8 +113,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#a1c639',
-    secondaryColor: '#617723',
+    primaryColor: '#55c96b',
+    secondaryColor: '#2c8c3e',
   },
 
   // editUrl: 'https://github.com/kizeo/kizeo-forms-documentations/edit/master/docs/',
