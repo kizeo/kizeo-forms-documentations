@@ -13,8 +13,6 @@ Deep links provide a clear and simple way to redirect users to specific screen o
 
 `kizeoforms://--/login` redirects to the login screen.
 
-`kizeoforms://--/login/{code}` redirects to the login screen with a pre-filled company code. `{code}` must be replaced by the company code.
-
 `kizeoforms://--/favorites` redirects to the favorite forms.
 
 `kizeoforms://--/settings` redirects to the application settings.
