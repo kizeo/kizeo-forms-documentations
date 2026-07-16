@@ -23,7 +23,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://www.kizeoforms.com/rest/v3/forms/' . $formId . '/data/advanced",
+  CURLOPT_URL => "https://forms.kizeo.com/rest/v3/forms/' . $formId . '/data/advanced",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -64,7 +64,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://www.kizeoforms.com/rest/v3/forms/' . $formId . '/data/push",
+  CURLOPT_URL => "https://forms.kizeo.com/rest/v3/forms/' . $formId . '/data/push",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -110,7 +110,7 @@ MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"global_filters\": \"\",\r\n  \"filters\": [\r\n    {\r\n      \"field\": \"field_name\",\r\n      \"operator\": \"comparison_operator\",\r\n      \"type\": \"simple\",\r\n      \"val\": \"compare_value\"\r\n    }\r\n  ],\r\n  \"order\": [\r\n    {\r\n      \"col\": \"order_data\", \r\n      \"type\": \"col_type\"\r\n    }\r\n  ]\r\n}");
 
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/".formId."/data/advanced")
+  .url("https://forms.kizeo.com/rest/v3/forms/".formId."/data/advanced")
   .post(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -135,7 +135,7 @@ MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"recipient_user_id\": \"integer\",\r\n  \"fields\": {\r\n    \"field_id\": {\r\n      \"value\": \"string\"\r\n    }\r\n  }\r\n}");
 
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/".formId."/push")
+  .url("https://forms.kizeo.com/rest/v3/forms/".formId."/push")
   .post(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -160,7 +160,7 @@ var formId;
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/" . formId . "/data/advanced",
+  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId . "/data/advanced",
   "method": "POST",
   "headers": {
     "content-type": "application/json",
@@ -188,7 +188,7 @@ var formId;
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/" . formId . "/push",
+  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId . "/push",
   "method": "POST",
   "headers": {
     "content-type": "application/json",

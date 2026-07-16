@@ -22,7 +22,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/lists',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/lists',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -62,7 +62,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/lists/' . $listId,
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/lists/' . $listId,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -102,7 +102,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/lists/' . $listId,
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/lists/' . $listId,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -145,7 +145,7 @@ OkHttpClient client = new OkHttpClient();
 
 // Definition of request's headers
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/lists")
+  .url("https://forms.kizeo.com/rest/v3/lists")
   .get()
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -167,7 +167,7 @@ OkHttpClient client = new OkHttpClient();
 
 // Definition of request's headers
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/lists/" . listId)
+  .url("https://forms.kizeo.com/rest/v3/lists/" . listId)
   .get()
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -191,7 +191,7 @@ OkHttpClient client = new OkHttpClient();
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"items\": [\r\n    \"item1\", \"item2\", \"item3\"\r\n  ]\r\n}");
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/lists/" . listId)
+  .url("https://forms.kizeo.com/rest/v3/lists/" . listId)
   .put(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -214,7 +214,7 @@ Response response = client.newCall(request).execute();
 var settings = {
     async: true,
     crossDomain: true,
-    url: 'https://www.kizeoforms.com/rest/v3/lists',
+    url: 'https://forms.kizeo.com/rest/v3/lists',
     method: 'GET',
     headers: {
         'content-type': 'application/json',
@@ -237,7 +237,7 @@ var listId
 var settings = {
     async: true,
     crossDomain: true,
-    url: 'https://www.kizeoforms.com/rest/v3/lists/'.listId,
+    url: 'https://forms.kizeo.com/rest/v3/lists/'.listId,
     method: 'GET',
     headers: {
         'content-type': 'application/json',
@@ -260,7 +260,7 @@ var listId
 var settings = {
     async: true,
     crossDomain: true,
-    url: 'https://www.kizeoforms.com/rest/v3/lists/'.listId,
+    url: 'https://forms.kizeo.com/rest/v3/lists/'.listId,
     method: 'PUT',
     headers: {
         'content-type': 'application/json',

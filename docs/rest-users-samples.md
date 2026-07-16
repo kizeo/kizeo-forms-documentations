@@ -22,7 +22,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/users/',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/users/',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -62,7 +62,7 @@ $curl = curl_init();
 
 // Definition of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/users',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/users',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -104,7 +104,7 @@ $curl = curl_init();
 
 // Defintion of request's headers
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/users/' . $userId,
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/users/' . $userId,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -148,7 +148,7 @@ OkHttpClient client = new OkHttpClient();
 
 // Definition of request's headers
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/users")
+  .url("https://forms.kizeo.com/rest/v3/users")
   .get()
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -172,7 +172,7 @@ RequestBody body = RequestBody.create(mediaType, "{\r\n  \"login\": \"string\",\
 
 // Definition of request's headers
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/users")
+  .url("https://forms.kizeo.com/rest/v3/users")
   .post(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -197,7 +197,7 @@ MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\n  \"login\":\"string\",\n  \"admin\": boolean,\n  \"form_user\": boolean\n}");
 // Definition of request's headers
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/users/" . userId)
+  .url("https://forms.kizeo.com/rest/v3/users/" . userId)
   .put(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -220,7 +220,7 @@ Response response = client.newCall(request).execute();
 var settings = {
     async: true,
     crossDomain: true,
-    url: 'https://www.kizeoforms.com/rest/v3/users',
+    url: 'https://forms.kizeo.com/rest/v3/users',
     method: 'GET',
     headers: {
         'content-type': 'application/json',
@@ -242,7 +242,7 @@ $.ajax(settings).done(function(response) {
 var settings = {
     async: true,
     crossDomain: true,
-    url: 'https://www.kizeoforms.com/rest/v3/users',
+    url: 'https://forms.kizeo.com/rest/v3/users',
     method: 'POST',
     headers: {
         'content-type': 'application/json',
@@ -269,7 +269,7 @@ var userId
 var settings = {
     async: true,
     crossDomain: true,
-    url: 'https://www.kizeoforms.com/rest/v3/users/'.userId,
+    url: 'https://forms.kizeo.com/rest/v3/users/'.userId,
     method: 'PUT',
     headers: {
         'content-type': 'application/json',

@@ -7,7 +7,7 @@ sidebar_label: Configuration
 In order to set up the connector, you need to write a *JSON* file. This file contains sensitive information such as the login information to Kizeo Forms and your database. You can show sample settings using the links above.
 ***
 ## Authentication `auth`
-The first part of the set up deals with Kizeo IDs. A good practive is to use a **dedicated admin account** for the connector. The three IDs required are the same as those used in order to log in to your back-office (`www.kizeoforms.com`).
+The first part of the set up deals with Kizeo IDs. A good practive is to use a **dedicated admin account** for the connector. The three IDs required are the same as those used in order to log in to your back-office (`forms.kizeo.com`).
 The config must look like this :
 
 ```javascript
@@ -40,7 +40,7 @@ You need to provide some global settings :
    "autoCreate" : false,
    "loop" : true,
    "protocol": "https",
-   "server": "www.kizeoforms.com",
+   "server": "forms.kizeo.com",
    "restRoot": "rest/v3",
    // Please do not touch the others options if Kizeo did not tell you to do so.
    // ...
@@ -70,7 +70,7 @@ The driver used depending on your DBMS.
 The settings for each fields to export (See `FIELD` for more details).
 
 #### `form_id` (`string`) :
-Form ID, can be obtain using the [Web Service RESTfull](http://www.kizeoforms.com/rest/v3)
+Form ID, can be obtain using the [Web Service RESTfull](http://forms.kizeo.com/rest/v3)
 
 #### `medias_path` (`string`) *optional*:
 Path of the directory where you want to save medias (*optional*).

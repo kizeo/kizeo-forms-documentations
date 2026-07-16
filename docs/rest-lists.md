@@ -13,7 +13,7 @@ The token of authorization allows you also to make operations on external lists 
 ---
 
 The first operation is used to get the list of all external lists on which you have any rights.
-To do it, you have to send a `GET` request to : `https://www.kizeoforms.com/rest/v3/lists`.
+To do it, you have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/lists`.
 
 In case of success of the request, you will have a response to following JSON format :
 
@@ -42,7 +42,7 @@ In case of success of the request, you will have a response to following JSON fo
 ---
 
 The previous command gives you the **id** of all external lists you can see. Now you will be able to ask all details of a list.  
-If you want the details of an external list, you will have to send a `GET` request to : `https://www.kizeoforms.com/rest/v3/lists/{listId}` where listId is the id of the list you want to see.
+If you want the details of an external list, you will have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/lists/{listId}` where listId is the id of the list you want to see.
 
 If it correctly worked, you will have a response to that JSON format :
 
@@ -64,7 +64,7 @@ If it correctly worked, you will have a response to that JSON format :
 ---
 
 Now you can see all details of a list, you may want to change its "items" array, that means you will change values of the list.
-To make that operation, you will have to send a `PUT` request to : `https://www.kizeoforms.com/rest/v3/lists/{listId}`.
+To make that operation, you will have to send a `PUT` request to : `https://forms.kizeo.com/rest/v3/lists/{listId}`.
 
 Warning : This function **delete all values in "items" array**, then put the new values in it.
 

@@ -22,7 +22,7 @@ $curl = curl_init();
 
 // Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/forms/' . $formId . '/exports',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId . '/exports',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -63,7 +63,7 @@ $curl = curl_init();
 
 // Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/forms/' . $formId . '/data/multiple/' . $format,
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId . '/data/multiple/' . $format,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -106,7 +106,7 @@ $curl = curl_init();
 
 // Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/forms/' . $formId . '/multiple_data/exports/' . $exportId . '/pdf',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId . '/multiple_data/exports/' . $exportId . '/pdf',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -154,7 +154,7 @@ OkHttpClient client = new OkHttpClient();
 
 // Définition des paramètres et des entêtes de la requête
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/" . formId . "/exports")
+  .url("https://forms.kizeo.com/rest/v3/forms/" . formId . "/exports")
   .get()
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -180,7 +180,7 @@ MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"data_ids\": [\r\n    \"dataId1\"\r\n  ]\r\n}");
 // Définition des paramètres et des entêtes de la requête
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/" . formId . "/data/multiple/" . format)
+  .url("https://forms.kizeo.com/rest/v3/forms/" . formId . "/data/multiple/" . format)
   .post(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -206,7 +206,7 @@ MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"data_ids\": [\r\n    \"dataId1\"\r\n  ]\r\n}");
 // Définition des entêtes de la requête
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/" . formId . "/multiple_data/exports/" . exportId . "/pdf")
+  .url("https://forms.kizeo.com/rest/v3/forms/" . formId . "/multiple_data/exports/" . exportId . "/pdf")
   .post(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -231,7 +231,7 @@ string formId;
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/" . formId . "/exports",
+  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId . "/exports",
   "method": "GET",
   // Définition des entêtes de la requête
   "headers": {
@@ -258,7 +258,7 @@ string format;
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/" . formId . "/data/multiple/" . format,
+  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId . "/data/multiple/" . format,
   "method": "POST",
   "headers": {
     "content-type": "application/json",
@@ -287,7 +287,7 @@ string exportId;
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/" . formId . "/multiple_data/exports/" . exportId . "/pdf",
+  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId . "/multiple_data/exports/" . exportId . "/pdf",
   "method": "POST",
   "headers": {
     "content-type": "application/json",

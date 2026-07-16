@@ -13,7 +13,7 @@ title: Microsoft SQL Server
       "user": "user_login"
    },
    "protocol": "https",
-   "server": "www.kizeoforms.com",
+   "server": "forms.kizeo.com",
    "restRoot": "rest/v3",
    "autoCreate" : false,
    "loop" : true,

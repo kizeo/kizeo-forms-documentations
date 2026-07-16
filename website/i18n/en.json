@@ -81,38 +81,6 @@
       "users": {
         "title": "Users",
         "sidebar_label": "Operations on users"
-      },
-      "sp-connection": {
-        "title": "Connection",
-        "sidebar_label": "Connection"
-      },
-      "sharepoint": {
-        "title": "Getting started",
-        "sidebar_label": "Introduce"
-      },
-      "sp-install": {
-        "title": "Installation",
-        "sidebar_label": "Installation"
-      },
-      "sp-scheduled": {
-        "title": "Scheduled upload from Kizeo Forms to SharePoint",
-        "sidebar_label": "Scheduled upload from Kizeo Forms to SharePoint"
-      },
-      "sp-token": {
-        "title": "SharePoint Token",
-        "sidebar_label": "SharePoint Token"
-      },
-      "sp-update-kf-list": {
-        "title": "Update an external kizeoforms list",
-        "sidebar_label": "Update external list kizeoForms"
-      },
-      "sp-update-list": {
-        "title": "Transfer kizeoForms data to a SharePoint list",
-        "sidebar_label": "SharePoint List"
-      },
-      "sp-upload-files": {
-        "title": "Upload files to SharePoint document library from Kizeo Forms",
-        "sidebar_label": "Upload files to document library"
       }
     },
     "links": {
@@ -125,14 +93,6 @@
       "Settings": "Settings",
       "Settings wizard": "Settings wizard",
       "Samples": "Samples",
-      "Getting Started": "Getting Started",
-      "Installation": "Installation",
-      "Token SharePoint": "Token SharePoint",
-      "Connection": "Connection",
-      "Update a sharepoint list": "Update a sharepoint list",
-      "Document library": "Document library",
-      "External list": "External list",
-      "Sheduled": "Sheduled",
       "Forms": "Forms",
       "Lists": "Lists",
       "Users": "Users",

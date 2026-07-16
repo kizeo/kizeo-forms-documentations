@@ -19,7 +19,7 @@ Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter a
     "your_email": "youremail@example.com",
     "email_report_error": "youremail@domain.com",
     "debug": true,
-    "kizeo_addr": "https://www.kizeoforms.com/",
+    "kizeo_addr": "https://forms.kizeo.com/",
     "tmp_dir": "/tmp/",
     "log_dir": "/log/",
     "export_dir": "/export/",
@@ -148,8 +148,8 @@ abstract class Main
     */
     private static function checkSettings() {
         if (!isset(static::$settings['kizeo_addr'])) {
-            static::$settings['kizeo_addr'] = "https://www.kizeoforms.com/";
-            static::addHistory('Missing kizeo_addr in config, use https://www.kizeoforms.com/ as default');
+            static::$settings['kizeo_addr'] = "https://forms.kizeo.com/";
+            static::addHistory('Missing kizeo_addr in config, use https://forms.kizeo.com/ as default');
         }
         if (!isset(static::$settings['debug'])) {
             static::$settings['debug'] = false;
@@ -354,7 +354,7 @@ Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter a
     "your_email": "youremail@example.com",
     "email_report_error": "youremail@domain.com",
     "debug": true,
-    "kizeo_addr": "https://www.kizeoforms.com/",
+    "kizeo_addr": "https://forms.kizeo.com/",
     "tmp_dir": "/tmp/",
     "log_dir": "/log/",
     "export_dir": "/export/",
@@ -481,8 +481,8 @@ abstract class Main
     */
     private static function checkSettings() {
         if (!isset(static::$settings['kizeo_addr'])) {
-            static::$settings['kizeo_addr'] = "https://www.kizeoforms.com/";
-            static::addHistory('Missing kizeo_addr in config, use https://www.kizeoforms.com/ as default');
+            static::$settings['kizeo_addr'] = "https://forms.kizeo.com/";
+            static::addHistory('Missing kizeo_addr in config, use https://forms.kizeo.com/ as default');
         }
         if (!isset(static::$settings['debug'])) {
             static::$settings['debug'] = false;

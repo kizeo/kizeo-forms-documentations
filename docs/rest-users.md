@@ -11,7 +11,7 @@ sidebar_label: Operations on users
 ---
 
 You have many functions available to allow operations on users. First of them simply gives you the list of all users of your company.
-To do this, you have to send a `GET` request to : `https://www.kizeoforms.com/rest/v3/users`.
+To do this, you have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/users`.
 
 If it correctly worked, you will have a response like following :
 
@@ -78,7 +78,7 @@ If it correctly worked, you will have a response like following :
 
 ---
 
-You also have the possibility to create a new user by throwing a `POST` request to : `https://www.kizeoforms.com/rest/v3/users`.
+You also have the possibility to create a new user by throwing a `POST` request to : `https://forms.kizeo.com/rest/v3/users`.
 You have to add informations to the following format in request's body :
 
 ```json
@@ -121,7 +121,7 @@ If the request was correctly sent you will get a response as following :
 When you get the list of all users, the first data you receive for each of them is his ID (userID).
 With this ID you will be able to modify the informations of each user.
 
-To update a user, you have to send a `PUT` to : `https://www.kizeoforms.com/rest/v3/users/{userID}`.
+To update a user, you have to send a `PUT` to : `https://forms.kizeo.com/rest/v3/users/{userID}`.
 
 You also have to put in the request's body the following informations, that are all optionals but login that is required.
 
