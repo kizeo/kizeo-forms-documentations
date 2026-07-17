@@ -218,21 +218,21 @@ Response response = client.newCall(request).execute();
 ```javascript
 // Initialisation of the request
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/users',
-    method: 'GET',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/users",
+  method: "GET",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+};
 
 // Send request and show response
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 #### The following example shows how to add a user
@@ -240,51 +240,50 @@ $.ajax(settings).done(function(response) {
 ```javascript
 // Initialisation of the request
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/users',
-    method: 'POST',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-    // Parameters in request's body
-    processData: false,
-    data:
-        '{\r\n  "login": "string",\r\n  "password": "string",\r\n  "first_name": "string",\r\n  "last_name": "string",\r\n  "main_group_id": -1,\r\n  "admin": boolean,\r\n  "leader_group": boolean,\r\n  "form_user": boolean\r\n}',
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/users",
+  method: "POST",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+  // Parameters in request's body
+  processData: false,
+  data: '{\r\n  "login": "string",\r\n  "password": "string",\r\n  "first_name": "string",\r\n  "last_name": "string",\r\n  "main_group_id": -1,\r\n  "admin": boolean,\r\n  "leader_group": boolean,\r\n  "form_user": boolean\r\n}',
+};
 
 // Send request and show response
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 #### This example gives you a way to update a user
 
 ```javascript
-var userId
+var userId;
 // Initialisation of the request
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/users/'.userId,
-    method: 'PUT',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-    // Parameters in request's body
-    processData: false,
-    data: '{\n  "login":"string",\n  "admin": boolean,\n  "form_user": boolean \n}',
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/users/".userId,
+  method: "PUT",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+  // Parameters in request's body
+  processData: false,
+  data: '{\n  "login":"string",\n  "admin": boolean,\n  "form_user": boolean \n}',
+};
 
 // Send request and show response
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

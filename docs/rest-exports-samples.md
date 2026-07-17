@@ -217,7 +217,7 @@ Response response = client.newCall(request).execute();
 
 <!--JavaScript-->
 
-###  You will find here __Javascript__ samples.
+### You will find here **Javascript** samples.
 
 #### Here is an example of a HTTP request to get the list of all exports available :
 

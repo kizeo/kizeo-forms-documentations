@@ -144,44 +144,44 @@ Response response = client.newCall(request).execute();
 ```javascript
 // Definition of request's parameters
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/forms/',
-    method: 'GET',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/forms/",
+  method: "GET",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+};
 
 // Send request and show response
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 #### The following example shows how to get details of a chosen form
 
 ```javascript
-var formId
+var formId;
 // Definition of request's parameters
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/forms/'.formID,
-    method: 'GET',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/forms/".formID,
+  method: "GET",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+};
 
 // Send request and show response
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

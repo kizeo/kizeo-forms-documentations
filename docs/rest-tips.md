@@ -16,15 +16,15 @@ You will find here a group of functions that allow you to connect to the server,
 
 ```json
 {
-    "your_email": "youremail@example.com",
-    "email_report_error": "youremail@domain.com",
-    "debug": true,
-    "kizeo_addr": "https://forms.kizeo.com/",
-    "tmp_dir": "/tmp/",
-    "log_dir": "/log/",
-    "export_dir": "/export/",
-    "rest_link": "rest/v3/",
-    "token": "YOUR_TOKEN"
+  "your_email": "youremail@example.com",
+  "email_report_error": "youremail@domain.com",
+  "debug": true,
+  "kizeo_addr": "https://forms.kizeo.com/",
+  "tmp_dir": "/tmp/",
+  "log_dir": "/log/",
+  "export_dir": "/export/",
+  "rest_link": "rest/v3/",
+  "token": "YOUR_TOKEN"
 }
 ```
 
@@ -340,27 +340,25 @@ abstract class Main
 
 ## Second example : a program that tells you every modification made today
 
-You will find here a group of functions that allow you to connect to the server, get a token and get the list of all modifications done today.  
+You will find here a group of functions that allow you to connect to the server, get a token and get the list of all modifications done today.
 
 #### First, the configuration file, to put in the same directory than PHP files
 
-
 #### `config.json`
+
 ```json
-
 {
-    "your_email": "youremail@example.com",
-    "email_report_error": "youremail@domain.com",
-    "debug": true,
-    "kizeo_addr": "https://forms.kizeo.com/",
-    "tmp_dir": "/tmp/",
-    "log_dir": "/log/",
-    "export_dir": "/export/",
-    "rest_link": "rest/v3/",
-    "token": "YOUR_TOKEN"
+  "your_email": "youremail@example.com",
+  "email_report_error": "youremail@domain.com",
+  "debug": true,
+  "kizeo_addr": "https://forms.kizeo.com/",
+  "tmp_dir": "/tmp/",
+  "log_dir": "/log/",
+  "export_dir": "/export/",
+  "rest_link": "rest/v3/",
+  "token": "YOUR_TOKEN"
 }
-
-```  
+```
 
 #### File that simply launches the program
 
@@ -381,12 +379,11 @@ if (KizeoForms::generateSettings()) {
     print_r(KizeoForms::getReport());
 }
 
-```  
-
+```
 
 #### In this file you have the functions to get lists, forms and data modified today
 
-#### `Main.class.php`  
+#### `Main.class.php`
 
 ```php
 
@@ -399,13 +396,13 @@ namespace KizeoWS;
 abstract class Main
 {
     // Array of configuration settings
-    private static $settings; 
+    private static $settings;
     private static $reportingArray = array(
         'history' => array(),
         'issues' => array(),
         'done' => array(),
     );
-    private static $token = false;              
+    private static $token = false;
     private static $tempToDelete = array();
 
 
@@ -518,7 +515,7 @@ abstract class Main
         }
     }
 
-    
+
     public static function mainProcess() {
         static::addHistory('--- Main process started ---', true);
 
@@ -553,14 +550,14 @@ abstract class Main
     }
 
 
-    /** 
+    /**
     *  Functions doing the recap of the day
     **/
 
 
     // Function that extracts forms modified today
     private static function getTodayUpdatedFormsandData(){
-        
+
         $today = date_create();
         date_time_set($today, 00, 00, 00);
 
@@ -624,7 +621,7 @@ abstract class Main
             for ($i = 0 ; $i < $nbNewDatas ; $i++){
                 $nbNew = count($todayDatas[$i]['data']);
                 for ($j = 0 ; $j < $nbNew ; $j++){
-                    static::addHistory('Donnée d\'id : ' . $todayDatas[$i]['data'][$j]['_id'] . ' sur formulaire d\'id : ' 
+                    static::addHistory('Donnée d\'id : ' . $todayDatas[$i]['data'][$j]['_id'] . ' sur formulaire d\'id : '
                         . $todayDatas[$i]['data'][$j]['_form_id'] . ' par le user n° ' . $todayDatas[$i]['data'][$j]['_user_id'] . '. ' );
                 }
             }
@@ -634,7 +631,7 @@ abstract class Main
 
     // Function that extracts lists modified today
     private static function getTodayUpdatedLists(){
-        
+
         $today = date_create();
         date_time_set($today, 00, 00, 00);
 
@@ -643,7 +640,7 @@ abstract class Main
 
         // Filter list to keep only those modified today
         $todayLists = array();
-    
+
         foreach($lists['lists'] as $l){
             $listDate = date_create_from_format('Y-m-d H:i:s', $l['update_time']);
             if ( $listDate > $today){
@@ -722,4 +719,4 @@ abstract class Main
     }
 }
 
-``` 
+```

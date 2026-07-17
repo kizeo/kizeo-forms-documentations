@@ -40,9 +40,10 @@ En cas de réussite de la requête HTTP, vous obtiendrez une réponse sous le fo
 ```
 
 ### 2 - Récupérer les détails d'une liste externe
-***
 
-La commande précédente vous donnant les __id__ de toutes les listes que vous pouvez voir, vous pouvez maintenant demander tous les détails concernant une seule liste.
+---
+
+La commande précédente vous donnant les **id** de toutes les listes que vous pouvez voir, vous pouvez maintenant demander tous les détails concernant une seule liste.
 Pour faire cette opération, il faut envoyer une requête en `GET` à l'URL suivante : `https://forms.kizeo.com/rest/v3/lists/{listId}` où listId est l'identifiant de la liste dont on veut voir les détails.
 
 Si la requête a été effectuée correctement, vous devriez recevoir une réponse sous le format suivant :

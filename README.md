@@ -19,36 +19,34 @@ Il est bilingue : **anglais** (par défaut) et **français**.
 ## Structure du projet
 
 ```
-kizeo-forms-documentations/
+kizeo-forms-documentations/         # Site Docusaurus (racine du projet)
 ├── docs/                      # Contenu de la documentation (Markdown, en anglais = langue source)
-├── website/                   # Site Docusaurus
-│   ├── docusaurus.config.js   # Configuration du site (navbar, footer, i18n, thème…)
-│   ├── sidebars.js            # Arborescence des menus de la doc
-│   ├── src/
-│   │   ├── css/custom.css     # Styles globaux (couleurs de marque Kizeo)
-│   │   └── pages/index.js     # Page d'accueil
-│   ├── static/                # Fichiers statiques (images, favicon…)
-│   ├── i18n/                  # Traductions
-│   │   ├── en/                # Chaînes UI source (généré)
-│   │   └── fr/                # Traductions françaises
-│   │       ├── code.json                                   # Chaînes de la page d'accueil
-│   │       ├── docusaurus-theme-classic/                   # navbar / footer
-│   │       └── docusaurus-plugin-content-docs/current/     # Docs traduites en français
-│   └── package.json
+├── i18n/                      # Traductions
+│   ├── en/                    # Chaînes UI source (généré)
+│   └── fr/                    # Traductions françaises
+│       ├── docusaurus-theme-classic/                   # navbar / footer
+│       ├── docusaurus-plugin-content-docs/current/     # Docs traduites en français
+│       └── code.json                                   # Chaînes de la page d'accueil
+├── src/
+│   ├── css/custom.css         # Styles globaux (couleurs de marque Kizeo)
+│   └── pages/index.js         # Page d'accueil
+├── static/                    # Fichiers statiques (images, favicon…)
 ├── crowdin.yaml               # Configuration de synchronisation des traductions (Crowdin)
+├── docker-compose.yml
 ├── Dockerfile
-└── docker-compose.yml
+├── docusaurus.config.js       # Configuration du site (navbar, footer, i18n, thème…)
+├── package.json
+└── sidebars.js                # Arborescence des menus de la doc
 ```
 
-> ℹ️ Les fichiers Markdown sources vivent à la racine dans `docs/` (langue anglaise).
-> `website/docusaurus.config.js` les référence via `path: '../docs'`.
+> ℹ️ Les fichiers Markdown sources vivent dans `docs/` (langue anglaise).
+> `docusaurus.config.js` les référence via `path: 'docs'`.
 
 ---
 
 ## Installation
 
 ```bash
-cd website
 npm install
 ```
 
@@ -59,8 +57,6 @@ npm install
 Docusaurus ne sert **qu'une seule langue à la fois** en mode développement.
 
 ```bash
-cd website
-
 # Version anglaise (par défaut) → http://localhost:3000/kizeo-forms-documentations/
 npm start
 
@@ -78,12 +74,11 @@ Le serveur se recharge automatiquement à chaque modification.
 ## Build de production
 
 ```bash
-cd website
-npm run build     # génère le site statique dans website/build/ (toutes les langues)
+npm run build     # génère le site statique dans build/ (toutes les langues)
 npm run serve     # sert le build localement pour vérification
 ```
 
-Le contenu généré dans `website/build/` est un site statique prêt à être hébergé.
+Le contenu généré dans `build/` est un site statique prêt à être hébergé.
 
 ---
 
@@ -102,7 +97,7 @@ Le contenu généré dans `website/build/` est un site statique prêt à être h
    Contenu de la page…
    ```
 
-3. Référencez l'`id` dans `website/sidebars.js` pour faire apparaître la page dans le menu.
+3. Référencez l'`id` dans `sidebars.js` pour faire apparaître la page dans le menu.
 
 > ⚠️ **MDX 3** : le contenu est compilé en MDX. Tout `<tag>` HTML hors bloc de code doit être
 > valide (balises fermées, `<meta />` auto-fermantes, `style={{…}}` au lieu de `style="…"`),
@@ -113,23 +108,22 @@ Le contenu généré dans `website/build/` est un site statique prêt à être h
 
 ## Traductions (i18n)
 
-Langues configurées dans `website/docusaurus.config.js` (`en`, `fr`).
+Langues configurées dans `docusaurus.config.js` (`en`, `fr`).
 
 ### Régénérer les fichiers de chaînes à traduire
 
 ```bash
-cd website
 npm run write-translations -- --locale fr
 ```
 
-Cela met à jour les fichiers JSON dans `website/i18n/fr/` (navbar, footer, `code.json`).
+Cela met à jour les fichiers JSON dans `i18n/fr/` (navbar, footer, `code.json`).
 
 ### Traduire les pages de documentation
 
 Copiez/traduisez le fichier depuis `docs/` vers :
 
 ```
-website/i18n/fr/docusaurus-plugin-content-docs/current/<même-nom-de-fichier>.md
+i18n/fr/docusaurus-plugin-content-docs/current/<même-nom-de-fichier>.md
 ```
 
 ### Crowdin
@@ -145,8 +139,6 @@ et `CROWDIN_DOCUSAURUS_API_KEY`).
 Le site est publié sur la branche `gh-pages` du dépôt `kizeo/kizeo-forms-documentations`.
 
 ```bash
-cd website
-
 # Avec un token GitHub (CI) :
 GIT_USER=<utilisateur-github> npm run deploy
 
@@ -154,9 +146,9 @@ GIT_USER=<utilisateur-github> npm run deploy
 USE_SSH=true npm run deploy
 ```
 
-La commande build le site puis pousse le contenu de `website/build/` sur `gh-pages`.
+La commande build le site puis pousse le contenu de `build/` sur `gh-pages`.
 Les paramètres de publication (`url`, `baseUrl`, `organizationName`, `projectName`) sont
-définis dans `website/docusaurus.config.js`.
+définis dans `docusaurus.config.js`.
 
 ---
 
@@ -172,14 +164,14 @@ Le site est alors accessible sur `http://localhost:3000/kizeo-forms-documentatio
 
 ---
 
-## Scripts npm (`website/`)
+## Scripts npm
 
-| Script                       | Description                                  |
-| ---------------------------- | -------------------------------------------- |
-| `npm start`                  | Serveur de dev (anglais)                     |
-| `npm run start:fr`           | Serveur de dev (français)                    |
-| `npm run build`              | Build de production (toutes les langues)     |
-| `npm run serve`              | Sert le build de production localement       |
-| `npm run write-translations` | Génère/actualise les fichiers de traduction  |
-| `npm run deploy`             | Déploie sur GitHub Pages                      |
-| `npm run clear`              | Nettoie le cache Docusaurus                   |
+| Script                       | Description                                 |
+| ---------------------------- | ------------------------------------------- |
+| `npm start`                  | Serveur de dev (anglais)                    |
+| `npm run start:fr`           | Serveur de dev (français)                   |
+| `npm run build`              | Build de production (toutes les langues)    |
+| `npm run serve`              | Sert le build de production localement      |
+| `npm run write-translations` | Génère/actualise les fichiers de traduction |
+| `npm run deploy`             | Déploie sur GitHub Pages                    |
+| `npm run clear`              | Nettoie le cache Docusaurus                 |

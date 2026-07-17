@@ -1,11 +1,10 @@
 FROM node:20
 
-WORKDIR /app/website
+WORKDIR /app
 
 EXPOSE 3000
 
-COPY ./docs /app/docs
-COPY ./website /app/website
+COPY . /app
 RUN npm install
 
 CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "1000"]

@@ -4,12 +4,12 @@
 node_modules
 
 # Docusaurus 3 build artifacts
-website/build/
-website/.docusaurus/
-website/.cache-loader/
+build/
+.docusaurus/
+.cache-loader/
 
 # Lockfiles / local
-website/yarn.lock
+yarn.lock
 
 # Misc
 *.log

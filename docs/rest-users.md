@@ -83,21 +83,21 @@ You have to add informations to the following format in request's body :
 
 ```json
 {
-    "login": "string",
-    "password": "string",
-    "first_name": "string",
-    "last_name": "string",
-    "phone": "string",
-    "email": "string",
-    "admin": "boolean",
-    "form_user": "boolean",
-    "allow_form_menu": "boolean",
-    "allow_externallist_menu": "boolean",
-    "allow_user_menu": "boolean",
-    "allow_application_menu": "boolean",
-    "allow_export_menu": "boolean",
-    "allow_data_menu": "boolean",
-    "allow_account_menu": "boolean"
+  "login": "string",
+  "password": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "phone": "string",
+  "email": "string",
+  "admin": "boolean",
+  "form_user": "boolean",
+  "allow_form_menu": "boolean",
+  "allow_externallist_menu": "boolean",
+  "allow_user_menu": "boolean",
+  "allow_application_menu": "boolean",
+  "allow_export_menu": "boolean",
+  "allow_data_menu": "boolean",
+  "allow_account_menu": "boolean"
 }
 ```
 
@@ -105,12 +105,12 @@ If the request was correctly sent you will get a response as following :
 
 ```json
 {
-    "status": "ok",
-    "message": "Created",
-    "data": {
-        // Id created for the user
-        "id": "userID"
-    }
+  "status": "ok",
+  "message": "Created",
+  "data": {
+    // Id created for the user
+    "id": "userID"
+  }
 }
 ```
 
@@ -127,21 +127,21 @@ You also have to put in the request's body the following informations, that are 
 
 ```json
 {
-    "login": "string", // Required attribute
-    "password": "string",
-    "first_name": "string",
-    "last_name": "string",
-    "phone": "string",
-    "email": "string",
-    "admin": "boolean",
-    "form_user": "boolean",
-    "allow_form_menu": "boolean",
-    "allow_externallist_menu": "boolean",
-    "allow_user_menu": "boolean",
-    "allow_application_menu": "boolean",
-    "allow_export_menu": "boolean",
-    "allow_data_menu": "boolean",
-    "allow_account_menu": "boolean"
+  "login": "string", // Required attribute
+  "password": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "phone": "string",
+  "email": "string",
+  "admin": "boolean",
+  "form_user": "boolean",
+  "allow_form_menu": "boolean",
+  "allow_externallist_menu": "boolean",
+  "allow_user_menu": "boolean",
+  "allow_application_menu": "boolean",
+  "allow_export_menu": "boolean",
+  "allow_data_menu": "boolean",
+  "allow_account_menu": "boolean"
 }
 ```
 
@@ -149,7 +149,7 @@ In case of success, you will receive a response to the following format :
 
 ```json
 {
-    "status": "ok",
-    "message": "Updated"
+  "status": "ok",
+  "message": "Updated"
 }
 ```
