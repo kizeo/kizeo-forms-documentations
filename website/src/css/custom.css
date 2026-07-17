@@ -1,0 +1,31 @@
+/**
+ * Kizeo Forms documentation — global styles
+ * Infima theme variables: https://docusaurus.io/docs/styling-layout
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --ifm-font-family-base: "Lexend Deca", Verdana, sans-serif;
+  --ifm-code-font-size: 95%;
+
+  --ifm-color-primary: #55c96b;
+  --ifm-color-primary-dark: #3fc258;
+  --ifm-color-primary-darker: #3bb852;
+  --ifm-color-primary-darkest: #309844;
+  --ifm-color-primary-light: #6bd07e;
+  --ifm-color-primary-lighter: #76d387;
+  --ifm-color-primary-lightest: #96dea4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #55c96b;
+  --ifm-color-primary-dark: #3fc258;
+  --ifm-color-primary-darker: #3bb852;
+  --ifm-color-primary-darkest: #309844;
+  --ifm-color-primary-light: #6bd07e;
+  --ifm-color-primary-lighter: #76d387;
+  --ifm-color-primary-lightest: #96dea4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

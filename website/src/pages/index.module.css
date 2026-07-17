@@ -1,0 +1,90 @@
+.homeContainer {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--docusaurus-highlighted-code-line-bg);
+}
+
+.homeWrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.projectTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.projectTitle small {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.promoSection {
+  margin-top: 1.5rem;
+}
+
+.pluginRowBlock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.block {
+  padding: 3rem 1rem;
+}
+
+.darkBackground {
+  background: #55c96b3d;
+}
+
+.blockRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blockRow.reverse {
+  flex-direction: row-reverse;
+}
+
+.blockImage {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.blockImage img {
+  max-width: 100%;
+  max-height: 280px;
+}
+
+.blockContent {
+  flex: 1 1 400px;
+  text-align: justify;
+}
+
+.showcaseSection {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.logos img {
+  max-height: 100px;
+  width: auto;
+}
