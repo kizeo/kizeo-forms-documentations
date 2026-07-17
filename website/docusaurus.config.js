@@ -71,12 +71,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       image: "img/kizeo-couleurs.png",
       navbar: {
         title: "Kizeo Forms Documentations",
         logo: {
           alt: "Kizeo Forms",
           src: "img/kizeo-white.png",
+          srcDark: "img/kizeo-black.png",
         },
         items: [
           {

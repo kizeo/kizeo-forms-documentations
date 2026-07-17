@@ -8,7 +8,10 @@
 :root {
   --ifm-font-family-base: "Lexend Deca", Verdana, sans-serif;
   --ifm-code-font-size: 95%;
+  --ifm-navbar-background-color: #55c96b;
 
+  --ifm-navbar-link-color: #fff;
+  --ifm-navbar-link-hover-color: #fff;
   --ifm-color-primary: #55c96b;
   --ifm-color-primary-dark: #3fc258;
   --ifm-color-primary-darker: #3bb852;
@@ -20,6 +23,8 @@
 }
 
 [data-theme="dark"] {
+  --ifm-navbar-link-color: #000;
+  --ifm-navbar-link-hover-color: #000;
   --ifm-color-primary: #55c96b;
   --ifm-color-primary-dark: #3fc258;
   --ifm-color-primary-darker: #3bb852;
