@@ -62,12 +62,13 @@ If it worked, you will have a response like:
 
 ```
 
--   `:action`: name of action. String type.
--   `:limit`: maximum number of data read.
--   `?includeupdated`: Include data marked as read but which has been modified since (optional).
+- `:action`: name of action. String type.
+- `:limit`: maximum number of data read.
+- `?includeupdated`: Include data marked as read but which has been modified since (optional).
 
-This function has a format option. Either ***simple*** or ***basic.*** With ***simple*** the query returns only the first level of the data (the tables are not returned). With ***basic***, the data is returned in full (the tables are included).
+This function has a format option. Either **_simple_** or **_basic._** With **_simple_** the query returns only the first level of the data (the tables are not returned). With **_basic_**, the data is returned in full (the tables are included).
 To retrieve the whole data, you have to build the query as follows:
+
 ```php
 /rest/v3/forms/{{formId}}/data/unread/:action/100?includeupdated&format=basic
 ```
@@ -77,7 +78,7 @@ Don't forget to add the id of the data you want to mark as read in the request's
 
 ```json
 {
-    "data_ids": ["dataId1", "dataId2", "dataId3", "dataId4"]
+  "data_ids": ["dataId1", "dataId2", "dataId3", "dataId4"]
 }
 ```
 
@@ -92,53 +93,53 @@ To define precisely your research, you have to add in your request's body the fo
 
 ```json
 {
-    "global_filters": "string", // A string to search in data
-    "filters": [
+  "global_filters": "string", // A string to search in data
+  "filters": [
+    {
+      "type": "OR", // An `OR inclusive` group of conditions
+      "components": [
+        // The group's conditions
         {
-            "type": "OR", // An `OR inclusive` group of conditions
-            "components": [
-                // The group's conditions
-                {
-                    "field": "string", // Field that will be filtered
-                    "operator": "string", // Comparison operator
-                    "type": "simple",
-                    "val": "string" // Reference value for the research
-                }
-                // ...
-            ]
+          "field": "string", // Field that will be filtered
+          "operator": "string", // Comparison operator
+          "type": "simple",
+          "val": "string" // Reference value for the research
         }
-    ],
-    "order": [
-        {
-            "col": "string", // Data on which data will be ordered
-            "type": "string" // Col Type
-        }
-    ]
+        // ...
+      ]
+    }
+  ],
+  "order": [
+    {
+      "col": "string", // Data on which data will be ordered
+      "type": "string" // Col Type
+    }
+  ]
 }
 ```
 
--   `format` : You can either use the format `basic` (with all the details about each entry) or `simple` (less exhaustive, but much more time efficient if you want to retrieve IDs only).
--   `operator` : The different operators available are: `=`, `>`, `>=`, `<`, `<=`, `!=`, `like`, `notlike` (caution, it is case sensitive).
--   `field` : The root of each field's markers. Sample: `_update_time` (update time of your entry) or `_user_id` (the ID of the user sending the entry). You can also search over a specific field in the form (`customer` for instance, or `contract_number`) using the identifier of the field (from the help menu of each form on the form edition page).
--   `type` : The components/filters' types are: `simple` (searching on a field outside of a table), `global` (searching over the whole entry), `AND` and `OR` (for complex conditions use the attributes `components` as shown above).
+- `format` : You can either use the format `basic` (with all the details about each entry) or `simple` (less exhaustive, but much more time efficient if you want to retrieve IDs only).
+- `operator` : The different operators available are: `=`, `>`, `>=`, `<`, `<=`, `!=`, `like`, `notlike` (caution, it is case sensitive).
+- `field` : The root of each field's markers. Sample: `_update_time` (update time of your entry) or `_user_id` (the ID of the user sending the entry). You can also search over a specific field in the form (`customer` for instance, or `contract_number`) using the identifier of the field (from the help menu of each form on the form edition page).
+- `type` : The components/filters' types are: `simple` (searching on a field outside of a table), `global` (searching over the whole entry), `AND` and `OR` (for complex conditions use the attributes `components` as shown above).
 
 ### 3 - Push a data
 
 ---
 
 You also have the possibility to send data without saving the form, in case you have to add other data later. It is called a **"push"**.
-To do that operation, you have to send a `POST` request to: `https://forms.kizeo.com/rest/v3/forms/{formId}/push` replacing {formId} by the id of the form.
+To do that operation, you have to send a `POST` request to: `https://forms.kizeo.com/rest/v3/forms/{formId}/push` replacing `{formId}` by the id of the form.
 
 Don't forget to add data in the request's body as following:
 
 ```json
 {
-    "recipient_user_id": "integer",
-    "fields": {
-        "field_id": {
-            "value": "string"
-        }
+  "recipient_user_id": "integer",
+  "fields": {
+    "field_id": {
+      "value": "string"
     }
+  }
 }
 ```
 
@@ -146,13 +147,13 @@ To use the planning option:
 
 ```json
 {
-    "recipient_user_id": "integer",
-    "planningStart": "YYYY-MM-DD HH:MM",
-    "planningEnd": "YYYY-MM-DD HH:MM",
-    "fields": {
-        "field_id": {
-            "value": "string"
-        }
+  "recipient_user_id": "integer",
+  "planningStart": "YYYY-MM-DD HH:MM",
+  "planningEnd": "YYYY-MM-DD HH:MM",
+  "fields": {
+    "field_id": {
+      "value": "string"
     }
+  }
 }
 ```
