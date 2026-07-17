@@ -81,21 +81,21 @@ Vous devrez ajouter dans le corps de la requête les informations sous le format
 
 ```json
 {
-    "login": "string",
-    "password": "string",
-    "first_name": "string",
-    "last_name": "string",
-    "phone": "string",
-    "email": "string",
-    "admin": "boolean",
-    "form_user": "boolean",
-    "allow_form_menu": "boolean",
-    "allow_externallist_menu": "boolean",
-    "allow_user_menu": "boolean",
-    "allow_application_menu": "boolean",
-    "allow_export_menu": "boolean",
-    "allow_data_menu": "boolean",
-    "allow_account_menu": "boolean"
+  "login": "string",
+  "password": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "phone": "string",
+  "email": "string",
+  "admin": "boolean",
+  "form_user": "boolean",
+  "allow_form_menu": "boolean",
+  "allow_externallist_menu": "boolean",
+  "allow_user_menu": "boolean",
+  "allow_application_menu": "boolean",
+  "allow_export_menu": "boolean",
+  "allow_data_menu": "boolean",
+  "allow_account_menu": "boolean"
 }
 ```
 
@@ -103,12 +103,12 @@ Si la requête que vous avez envoyé a fonctionné, vous obtiendrez la réponse 
 
 ```json
 {
-    "status": "ok",
-    "message": "Created",
-    "data": {
-        // Identifiant créé pour l'utilisateur
-        "id": "userID"
-    }
+  "status": "ok",
+  "message": "Created",
+  "data": {
+    // Identifiant créé pour l'utilisateur
+    "id": "userID"
+  }
 }
 ```
 
@@ -125,21 +125,21 @@ Vous devrez remplir le corps de la requête avec les informations suivantes, don
 
 ```json
 {
-    "login": "string", // Attribut obligatoire
-    "password": "string",
-    "first_name": "string",
-    "last_name": "string",
-    "phone": "string",
-    "email": "string",
-    "admin": "boolean",
-    "form_user": "boolean",
-    "allow_form_menu": "boolean",
-    "allow_externallist_menu": "boolean",
-    "allow_user_menu": "boolean",
-    "allow_application_menu": "boolean",
-    "allow_export_menu": "boolean",
-    "allow_data_menu": "boolean",
-    "allow_account_menu": "boolean"
+  "login": "string", // Attribut obligatoire
+  "password": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "phone": "string",
+  "email": "string",
+  "admin": "boolean",
+  "form_user": "boolean",
+  "allow_form_menu": "boolean",
+  "allow_externallist_menu": "boolean",
+  "allow_user_menu": "boolean",
+  "allow_application_menu": "boolean",
+  "allow_export_menu": "boolean",
+  "allow_data_menu": "boolean",
+  "allow_account_menu": "boolean"
 }
 ```
 
@@ -147,7 +147,7 @@ En cas de succès, vous recevrez une réponse sous le format suivant :
 
 ```json
 {
-    "status": "ok",
-    "message": "Updated"
+  "status": "ok",
+  "message": "Updated"
 }
 ```

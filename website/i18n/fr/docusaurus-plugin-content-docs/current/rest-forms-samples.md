@@ -7,7 +7,8 @@ sidebar_label: Samples
 <!--DOCUSAURUS_CODE_TABS-->
 <!--PHP-->
 
-### Vous trouverez ici des exemples de code en __PHP__.
+### Vous trouverez ici des exemples de code en **PHP**.
+
 #### [Si cURL n'est pas déjà préinstallé, voici un lien qui pourrait vous aider à l'installer.](rest-curl-install.md)
 
 #### Voici un exemple de requête HTTP en PHP pour obtenir la liste de tous les formulaires :
@@ -19,7 +20,7 @@ sidebar_label: Samples
 // Initialisation de la requête
 $curl = curl_init();
 
-// Définition des entêtes et paramètres 
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/',
   CURLOPT_RETURNTRANSFER => true,
@@ -49,9 +50,7 @@ if ($err) {
 
 ```
 
-
 #### L'exemple suivant montre comment obtenir les informations détaillées d'un formulaire à partir de son iD :
-
 
 ```php
 
@@ -61,7 +60,7 @@ $formId;
 // Initialisation de la requête
 $curl = curl_init();
 
-// Définition des entêtes et paramètres 
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId,
   CURLOPT_RETURNTRANSFER => true,
@@ -93,15 +92,15 @@ if ($err) {
 
 <!--Java-->
 
-### Vous trouverez ici des exemples de code en __Java__.
-
+### Vous trouverez ici des exemples de code en **Java**.
 
 #### Voici un exemple de requête HTTP en Java pour obtenir la liste de tous les formulaires :
+
 ```java
 
 OkHttpClient client = new OkHttpClient();
 
-// Définition des paramètres de la requête 
+// Définition des paramètres de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/")
   .get()
@@ -115,7 +114,6 @@ Response response = client.newCall(request).execute();
 
 ```
 
-
 #### L'exemple suivant montre comment obtenir les informations détaillées d'un formulaire à partir de son iD :
 
 ```java
@@ -123,7 +121,7 @@ Response response = client.newCall(request).execute();
 string formId;
 OkHttpClient client = new OkHttpClient();
 
-// Définition des paramètres de la requête 
+// Définition des paramètres de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/" . formId)
   .get()
@@ -139,56 +137,50 @@ Response response = client.newCall(request).execute();
 
 <!--JavaScript-->
 
-### Vous trouverez ici des exemples de code en __Javascript__.
-
+### Vous trouverez ici des exemples de code en **Javascript**.
 
 #### Voici un exemple de requête HTTP en Javascript pour obtenir la liste de tous les formulaires :
 
 ```javascript
-
 // Définition des paramètres de la requête HTTP
 var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://forms.kizeo.com/rest/v3/forms/",
-  "method": "GET",
-  "headers": {
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/forms/",
+  method: "GET",
+  headers: {
     "content-type": "application/json",
-    "Authorization": "YOUR_TOKEN",
+    Authorization: "YOUR_TOKEN",
     "cache-control": "no-cache",
-  }
-}
+  },
+};
 
 // Envoi de la requête et affichage en console de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
-
 ```
-
 
 #### L'exemple suivant montre comment obtenir les informations détaillées d'un formulaire à partir de son iD :
 
 ```javascript
-
 var formId;
 // Définition des paramètres de la requête HTTP
 var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId,
-  "method": "GET",
-  "headers": {
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/forms/".formId,
+  method: "GET",
+  headers: {
     "content-type": "application/json",
-    "Authorization": "YOUR_TOKEN",
+    Authorization: "YOUR_TOKEN",
     "cache-control": "no-cache",
-  }
-}
+  },
+};
 
 // Envoi de la requête et affichage en console de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
-
 });
 ```
 

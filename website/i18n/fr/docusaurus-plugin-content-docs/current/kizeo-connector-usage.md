@@ -14,8 +14,10 @@ Exemple de ligne de commande pour exécuter le programme :
 Dans un usage pratique, il est intéressant de créer un petit script qui permettra notamment d'effectuer des logs et qui s'assurera de l'unicité du lancement du connecteur.
 
 ## Windows
+
 Sur Windows, il est recommendé d'écrire un fichier `.bat` qui permettra d'exécuter le connecteur.
 Voici un exemple de fichier `.bat`.
+
 ```dos
 @echo off
 :Start
@@ -27,8 +29,11 @@ java -jar "%JARFILE%" "%CONFIG%"
 ping -n 10 localhost
 goto Start
 ```
+
 ## Linux
+
 Sur Linux, il est recommandé d'utiliser un script `bash` lié à une crontab.
+
 ```bash
 #!/bin/bash
 # launch.sh
@@ -45,7 +50,9 @@ do
 done
 exit 0
 ```
+
 Qui exécute ce script :
+
 ```bash
 #!/bin/bash
 # kizeo_connector.sh
@@ -53,7 +60,9 @@ SCRIPT=$(readlink -f "$0")
 localPATH=$(dirname "$SCRIPT")
 java -jar $localPATH/kizeo_connector.jar $localPATH/config.json >> $localPATH/kizeo_connector.log
 ```
+
 Avec une crontab :
+
 ```bash
 */10 * * * * /var/kizeo_connector/exec.sh
 ```

@@ -16,15 +16,15 @@ Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter a
 
 ```json
 {
-    "your_email": "youremail@example.com",
-    "email_report_error": "youremail@domain.com",
-    "debug": true,
-    "kizeo_addr": "https://forms.kizeo.com/",
-    "tmp_dir": "/tmp/",
-    "log_dir": "/log/",
-    "export_dir": "/export/",
-    "rest_link": "rest/v3/",
-    "token": "YOUR_TOKEN"
+  "your_email": "youremail@example.com",
+  "email_report_error": "youremail@domain.com",
+  "debug": true,
+  "kizeo_addr": "https://forms.kizeo.com/",
+  "tmp_dir": "/tmp/",
+  "log_dir": "/log/",
+  "export_dir": "/export/",
+  "rest_link": "rest/v3/",
+  "token": "YOUR_TOKEN"
 }
 ```
 
@@ -351,15 +351,15 @@ Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter a
 
 ```json
 {
-    "your_email": "youremail@example.com",
-    "email_report_error": "youremail@domain.com",
-    "debug": true,
-    "kizeo_addr": "https://forms.kizeo.com/",
-    "tmp_dir": "/tmp/",
-    "log_dir": "/log/",
-    "export_dir": "/export/",
-    "rest_link": "rest/v3/",
-    "token": "YOUR_TOKEN"
+  "your_email": "youremail@example.com",
+  "email_report_error": "youremail@domain.com",
+  "debug": true,
+  "kizeo_addr": "https://forms.kizeo.com/",
+  "tmp_dir": "/tmp/",
+  "log_dir": "/log/",
+  "export_dir": "/export/",
+  "rest_link": "rest/v3/",
+  "token": "YOUR_TOKEN"
 }
 ```
 

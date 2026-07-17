@@ -15,7 +15,7 @@ Maintenant que vous savez vous identifier pour récupérer un _token_, vous alle
 Pour utiliser ce token, n'oubliez pas de le préciser dans tous vos entêtes de requêtes, de la façon suivante :
 
 ```javascript
-Authorization: YOUR_TOKEN // YOUR_TOKEN est à remplacer par le token obtenu par la fonction login
+Authorization: YOUR_TOKEN; // YOUR_TOKEN est à remplacer par le token obtenu par la fonction login
 ```
 
 Pour ce faire, vous avez à disposition la fonction `GET /forms`, qui ne demande pas d'autre paramètre que le _token_ obtenu précédemment pour vous identifier.  
@@ -25,17 +25,17 @@ Si tout se passe bien, vous devriez avoir une réponse sous la forme :
 
 ```json
 [
-    {
-        // Premier formulaire
-        "id_1": "integer",
-        "name_1": "string"
-    },
-    {
-        // Deuxième formulaire
-        "id_2": "integer",
-        "name_2": "string"
-    }
-    // ...
+  {
+    // Premier formulaire
+    "id_1": "integer",
+    "name_1": "string"
+  },
+  {
+    // Deuxième formulaire
+    "id_2": "integer",
+    "name_2": "string"
+  }
+  // ...
 ]
 ```
 

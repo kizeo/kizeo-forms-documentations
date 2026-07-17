@@ -29,13 +29,13 @@ Si cela n'a pas déjà été fait précédemment, vous aurez besoin, pour faire 
 
 #### Si vous ne savez pas comment modifier cette variable, voici comment procéder (sous Windows 10) :
 
--   Ouvrir un explorateur de fichiers
--   Clic droit sur **Ce PC** puis clic gauche sur **Propriétés**
--   Cliquer sur **Paramètres Système Avancés**
--   Dans l'onglet **Paramètres système avancés**, cliquer sur **Variables d'environnement**
--   Sélectionner la variable nommée **Path** puis cliquer sur **Modifier**
--   Entrer le **chemin du dossier de PHP** puis cliquer sur **Ok**
--   Cliquer sur **Appliquer**
+- Ouvrir un explorateur de fichiers
+- Clic droit sur **Ce PC** puis clic gauche sur **Propriétés**
+- Cliquer sur **Paramètres Système Avancés**
+- Dans l'onglet **Paramètres système avancés**, cliquer sur **Variables d'environnement**
+- Sélectionner la variable nommée **Path** puis cliquer sur **Modifier**
+- Entrer le **chemin du dossier de PHP** puis cliquer sur **Ok**
+- Cliquer sur **Appliquer**
 
 ## Dernière étape : Relancer le service Apache
 

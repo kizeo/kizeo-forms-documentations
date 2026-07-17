@@ -216,70 +216,70 @@ Response response = client.newCall(request).execute();
 ```javascript
 // Définition des paramètres et des entêtes de la requête
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/lists',
-    method: 'GET',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/lists",
+  method: "GET",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+};
 
 // Envoi de la requête et affichage de la réponse
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 #### L'exemple suivant montre comment récupérer tous les détails d'une liste externe
 
 ```javascript
-var listId
+var listId;
 // Définition des paramètres et des entêtes de la requête avec l'identifiant de la liste dans l'URL
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/lists/'.listId,
-    method: 'GET',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/lists/".listId,
+  method: "GET",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+};
 
 // Envoi de la requête et affichage de la réponse
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 #### Voici un exemple de comment mettre à jour une liste externe
 
 ```javascript
-var listId
+var listId;
 // Définition des paramètres et des entêtes de la requête avec l'identifiant de la liste dans l'URL
 var settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://forms.kizeo.com/rest/v3/lists/'.listId,
-    method: 'PUT',
-    headers: {
-        'content-type': 'application/json',
-        Authorization: 'YOUR_TOKEN',
-        'cache-control': 'no-cache',
-    },
-    // Ajout des données dans le corps de la requête
-    processData: false,
-    data: '{\r\n  "items": [\r\n    "test1", "test2", "test3"\r\n  ]\r\n}',
-}
+  async: true,
+  crossDomain: true,
+  url: "https://forms.kizeo.com/rest/v3/lists/".listId,
+  method: "PUT",
+  headers: {
+    "content-type": "application/json",
+    Authorization: "YOUR_TOKEN",
+    "cache-control": "no-cache",
+  },
+  // Ajout des données dans le corps de la requête
+  processData: false,
+  data: '{\r\n  "items": [\r\n    "test1", "test2", "test3"\r\n  ]\r\n}',
+};
 
 // Envoi de la requête et affichage de la réponse
-$.ajax(settings).done(function(response) {
-    console.log(response)
-})
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
