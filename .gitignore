@@ -1,12 +1,19 @@
 .DS_Store
 
+# Dependencies
 node_modules
 
-lib/core/metadata.js
-lib/core/MetadataBlog.js
-
-# website/translated_docs
+# Docusaurus 3 build artifacts
 website/build/
+website/.docusaurus/
+website/.cache-loader/
+
+# Lockfiles / local
 website/yarn.lock
-website/node_modules
-# websitge/i18n/*
+
+# Misc
+*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -1,10 +1,11 @@
-FROM node:10
+FROM node:20
 
 WORKDIR /app/website
 
-EXPOSE 3000 35729
+EXPOSE 3000
+
 COPY ./docs /app/docs
 COPY ./website /app/website
-RUN yarn install
+RUN npm install
 
-CMD ["yarn", "start"]
+CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "1000"]
