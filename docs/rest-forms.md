@@ -18,7 +18,7 @@ Authorization: YOUR_TOKEN
 ```
 
 To get the list of all forms, you have to send a `GET` request that does not need any other parameter than your token of authorization.
-You will send your request to the following URL : `https://www.kizeoforms.com/rest/v3/forms`.  
+You will send your request to the following URL : `https://forms.kizeo.com/rest/v3/forms`.  
 
 If it correctly worked, you will receive a response like :   
 
@@ -40,7 +40,7 @@ If it correctly worked, you will receive a response like :
 ### 2 - How to get details of a form
 ***
 The previous function allows you to get the ids of all the form you have access to. With these ids you will be able to select a form among the others to get its details.
-To use this function you have to send a `GET` request to : `https://www.kizeoforms.com/rest/v3/forms/{formId}` where *formId* is the id of the form you have selected.  
+To use this function you have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/forms/{formId}` where *formId* is the id of the form you have selected.  
 
 This function should send a response as following : 
 

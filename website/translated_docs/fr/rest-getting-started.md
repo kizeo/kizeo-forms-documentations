@@ -23,8 +23,8 @@ Tout d'abord, avant d'utiliser notre Web Service, vous devez être conscient que
 
 Ensuite, voici les différents liens qui vous seront utiles afin de développer votre application avec le Web Service de Kizeo Forms :
 
-+ **Documentation Swagger :** [https://www.kizeoforms.com/rest/v3/doc](https://www.kizeoforms.com/rest/v3/doc) (Cette présentation des fonctions permet de tester facilement les fonctionnalités du Web Service)
-+ **Racine du Web Service :** `https://www.kizeoforms.com/rest/v3/` (par exemple, pour appeler la fonction `forms`, il faudra faire appel à `https://www.kizeoforms.com/rest/v3/forms`)
++ **Documentation Swagger :** [https://forms.kizeo.com/rest/v3/doc](https://forms.kizeo.com/rest/v3/doc) (Cette présentation des fonctions permet de tester facilement les fonctionnalités du Web Service)
++ **Racine du Web Service :** `https://forms.kizeo.com/rest/v3/` (par exemple, pour appeler la fonction `forms`, il faudra faire appel à `https://forms.kizeo.com/rest/v3/forms`)
 
 ### Récupération du Token
 

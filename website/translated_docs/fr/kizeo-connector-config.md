@@ -7,7 +7,7 @@ sidebar_label: Configuration
 Afin de configurer le connecteur de base de données, vous devez saisir un fichier *JSON*, ce fichier est potentiellement sensible puisqu’il contient l’ensemble des informations nécessaires à la connexion au back office KizeoForms, mais également à votre base de données. Vous pouvez visualiser des exemples de fichiers de configuration en cliquant sur les liens ci-dessus.
 ***
 ## Authentification `auth`
-La première partie `auth` de la configuration concerne les identifiants Kizeo. Une bonne pratique consiste à **attribuer un compte administrateur** spécifiquement au connecteur de base de données. Il s'agit des trois identifiants nécessaires à la connexion sur le back office `www.kizeoforms.com`.
+La première partie `auth` de la configuration concerne les identifiants Kizeo. Une bonne pratique consiste à **attribuer un compte administrateur** spécifiquement au connecteur de base de données. Il s'agit des trois identifiants nécessaires à la connexion sur le back office `forms.kizeo.com`.
 Ainsi, la configuration doit ressembler à ceci :
 
 ```javascript
@@ -40,7 +40,7 @@ Ce connecteur possède un ensemble de propriétés générales à renseigner :
    "autoCreate" : false,
    "loop" : true,
    "protocol": "https",
-   "server": "www.kizeoforms.com",
+   "server": "forms.kizeo.com",
    "restRoot": "rest/v3",
    //...
 }
@@ -70,7 +70,7 @@ Type de driver utilisé en fonction du système de gestion des bases de données
 Liste des champs à exporter (voir `FIELD` pour plus de détails).
 
 #### `form_id` (`string`) :
-Identifiant du formulaire, peut être récupéré à partir du [Web Service REST](http://www.kizeoforms.com/rest/v3)
+Identifiant du formulaire, peut être récupéré à partir du [Web Service REST](http://forms.kizeo.com/rest/v3)
 
 #### `medias_path` (`string`) *optionnel*:
 Chemin d'accès au répertoire où vous souhaitez sauvegarder les médias récupérés (*optionnel*).

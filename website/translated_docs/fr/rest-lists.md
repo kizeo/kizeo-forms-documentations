@@ -12,7 +12,7 @@ Le token d'identification permet aussi de réaliser des opérations sur les list
 ***
 
 La première opération consiste à récupérer une liste de toutes les listes externes sur lesquelles vous avez des droits.
-Cette opération consiste à envoyer une requête en `GET` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/lists`.
+Cette opération consiste à envoyer une requête en `GET` à l'URL suivante : `https://forms.kizeo.com/rest/v3/lists`.
 
 En cas de réussite de la requête HTTP, vous obtiendrez une réponse sous le format suivant :
 
@@ -44,7 +44,7 @@ En cas de réussite de la requête HTTP, vous obtiendrez une réponse sous le fo
 ***
 
 La commande précédente vous donnant les __id__ de toutes les listes que vous pouvez voir, vous pouvez maintenant demander tous les détails concernant une seule liste.
-Pour faire cette opération, il faut envoyer une requête en `GET` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/lists/{listId}` où listId est l'identifiant de la liste dont on veut voir les détails.
+Pour faire cette opération, il faut envoyer une requête en `GET` à l'URL suivante : `https://forms.kizeo.com/rest/v3/lists/{listId}` où listId est l'identifiant de la liste dont on veut voir les détails.
 
 Si la requête a été effectuée correctement, vous devriez recevoir une réponse sous le format suivant : 
 
@@ -73,7 +73,7 @@ Si la requête a été effectuée correctement, vous devriez recevoir une répon
 ***
 
 Maintenant que vous avez toutes les informations détaillées de votre liste, vous allez pouvoir mettre à jour le tableau "items" de cette liste.
-Cette action est possible par l'envoi d'une requête en `PUT` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/lists/{listId}`.
+Cette action est possible par l'envoi d'une requête en `PUT` à l'URL suivante : `https://forms.kizeo.com/rest/v3/lists/{listId}`.
 
 Cependant attention, cette commande __efface toutes les valeurs__ dans le tableau "items" avant d'y insérer les nouvelles valeurs que vous lui donnez.
 

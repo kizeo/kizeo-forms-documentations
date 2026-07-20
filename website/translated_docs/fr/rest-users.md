@@ -9,7 +9,7 @@ sidebar_label: Operations on users
 ---
 
 Vous avez aussi à disposition de nombreuses fonctions permettant des opérations sur les utilisateurs. La première d'entre elles permet simplement de récupérer la liste de tous les utilisateurs de votre entreprise.
-Elle consiste en une requête HTTP en `GET` à envoyer à l'URL suivante : `https://www.kizeoforms.com/rest/v3/users`.
+Elle consiste en une requête HTTP en `GET` à envoyer à l'URL suivante : `https://forms.kizeo.com/rest/v3/users`.
 
 Si la requête a fonctionné, vous devriez obtenir un résultat comme suit :
 
@@ -76,7 +76,7 @@ Si la requête a fonctionné, vous devriez obtenir un résultat comme suit :
 
 ---
 
-Vous avez aussi la possibilité de créer un utilisateur en passant par une requête de type `POST` à l'URL : `https://www.kizeoforms.com/rest/v3/users`.
+Vous avez aussi la possibilité de créer un utilisateur en passant par une requête de type `POST` à l'URL : `https://forms.kizeo.com/rest/v3/users`.
 Vous devrez ajouter dans le corps de la requête les informations sous le format suivant :
 
 ```json
@@ -119,7 +119,7 @@ Si la requête que vous avez envoyé a fonctionné, vous obtiendrez la réponse 
 En récupérant la liste de tous les utilisateurs, la première donnée que vous obtiendrez pour chacun d'entre eux est son identifiant (userID).
 A partir de cet identifiant, vous pouvez modifier les informations relatives à un utilisateur.
 
-Pour modifier les données d'un utilisateur, vous devrez envoyer une requête de type `PUT` à l'URL : `https://www.kizeoforms.com/rest/v3/users/{userID}`.
+Pour modifier les données d'un utilisateur, vous devrez envoyer une requête de type `PUT` à l'URL : `https://forms.kizeo.com/rest/v3/users/{userID}`.
 
 Vous devrez remplir le corps de la requête avec les informations suivantes, dont tous les attributs hors le login sont optionnels, vous n'aurez qu'à préciser les attributs que vous voulez modifier.
 

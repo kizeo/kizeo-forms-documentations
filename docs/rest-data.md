@@ -72,7 +72,7 @@ To retrieve the whole data, you have to build the query as follows:
 /rest/v3/forms/{{formId}}/data/unread/:action/100?includeupdated&format=basic
 ```
 
-After you read that data if you want it to disappear from the unread data list you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
+After you read that data if you want it to disappear from the unread data list you have to send a `POST` request to: `https://forms.kizeo.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
 Don't forget to add the id of the data you want to mark as read in the request's body:
 
 ```json
@@ -86,7 +86,7 @@ Don't forget to add the id of the data you want to mark as read in the request's
 ---
 
 To go further in your researches of datas, you have a function of advanced research.
-To use it, you will send a `POST`request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/advanced`.
+To use it, you will send a `POST`request to: `https://forms.kizeo.com/rest/v3/forms/{formId}/data/advanced`.
 
 To define precisely your research, you have to add in your request's body the following filters in **JSON** format.
 
@@ -127,7 +127,7 @@ To define precisely your research, you have to add in your request's body the fo
 ---
 
 You also have the possibility to send data without saving the form, in case you have to add other data later. It is called a **"push"**.
-To do that operation, you have to send a `POST` request to: `https://www.kizeoforms.com/rest/v3/forms/{formId}/push` replacing {formId} by the id of the form.
+To do that operation, you have to send a `POST` request to: `https://forms.kizeo.com/rest/v3/forms/{formId}/push` replacing {formId} by the id of the form.
 
 Don't forget to add data in the request's body as following:
 

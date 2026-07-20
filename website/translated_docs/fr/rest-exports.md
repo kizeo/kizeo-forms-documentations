@@ -9,7 +9,7 @@ sidebar_label: Operations on exports
 De nombreuses fonctions sont disponibles pour vous permettre d'exporter vos données dans plusieurs formats définis.
 La première de ces fonctions est logiquement celle qui permet de récupérer la liste des exports disponibles.  
 
-Pour faire cette opération, il suffit d'envoyer une requête en `GET` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/exports`.
+Pour faire cette opération, il suffit d'envoyer une requête en `GET` à l'URL suivante : `https://forms.kizeo.com/rest/v3/forms/{formId}/exports`.
 
 Si la requête ne contient pas d'erreur, vous devez recevoir une réponse sous la forme : 
 
@@ -62,7 +62,7 @@ Si la requête ne contient pas d'erreur, vous devez recevoir une réponse sous l
 ## 2 - Récupérer les données d'un formulaire au format CSV et Excel liste
 ***
 Parmi les fonctions d'export disponibles, il existe une fonction qui permet de récupérer les données d'un formulaire au format CSV, et son équivalente permettant de récupérer les données au format Excel liste.
-Ces deux fonctions consistent à envoyer une requête en `POST`, à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/multiple/{format}`, en remplaçant **{format}** par __csv__ si vous voulez vos données au format CSV, ou par __excel__ si vous voulez vos données au format Excel.
+Ces deux fonctions consistent à envoyer une requête en `POST`, à l'URL suivante : `https://forms.kizeo.com/rest/v3/forms/{formId}/data/multiple/{format}`, en remplaçant **{format}** par __csv__ si vous voulez vos données au format CSV, ou par __excel__ si vous voulez vos données au format Excel.
 
 Dans le corps de la requête il faudra préciser l'identifiant de chacune des données que vous souhaitez exporter au format **JSON** suivant :
 
@@ -85,7 +85,7 @@ Si la requête est effectuée correctement, vous recevrez vos données au format
 ***
 En plus de pouvoir exporter les données au format CSV et Excel liste, vous pouvez aussi choisir d'exporter une ou plusieurs données de votre formulaire vers un export choisi parmi les exports disponibles (cf. 1) au format PDF standard.  
 
-Pour ce faire, vous devrez envoyer une requête en `POST` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/multiple_data/exports/{exportId}/pdf` où **{formId}** est à remplacer par l'identifiant du formulaire contenant la donnée, et **{exportId}** par l'identifiant de l'export choisi.
+Pour ce faire, vous devrez envoyer une requête en `POST` à l'URL suivante : `https://forms.kizeo.com/rest/v3/forms/{formId}/multiple_data/exports/{exportId}/pdf` où **{formId}** est à remplacer par l'identifiant du formulaire contenant la donnée, et **{exportId}** par l'identifiant de l'export choisi.
 
 Vous devrez préciser dans le corps de la requête les identifiants des données que vous voulez exporter, au format __JSON__ suivant :
 
@@ -109,7 +109,7 @@ Si la requête aboutit, une fenêtre s'ouvrira pour vous permettre d'enregistrer
 ***
 Il existe enfin deux fonctions permettant d'exporter les données d'un formulaire dans des formats CSV et Excel personnalisés.
 Ces deux fonctions se comportent comme les fonctions présentées en 2, à la différence qu'elles renvoient les informations sous des formats personnalisés.  
-Elles consistent toutes deux à envoyer une requête en `POST` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/multiple/{format}_custom` en remplaçant __{formId}__ par l'identifiant du formulaire où se trouvent les données à exporter, et __{format}__ par **csv** ou par **excel** selon le format que vous désirez.    
+Elles consistent toutes deux à envoyer une requête en `POST` à l'URL suivante : `https://forms.kizeo.com/rest/v3/forms/{formId}/data/multiple/{format}_custom` en remplaçant __{formId}__ par l'identifiant du formulaire où se trouvent les données à exporter, et __{format}__ par **csv** ou par **excel** selon le format que vous désirez.    
 
 
 N'oubliez pas, comme pour les fonctions précédentes, de préciser dans le corps de la requête les identifiants des données au format JSON suivant : 

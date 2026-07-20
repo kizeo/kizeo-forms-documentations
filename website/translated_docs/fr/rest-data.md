@@ -71,7 +71,7 @@ Pour récupérer l'intégralité de la donnée, il faut donc construire la requ�
 ```
 
 Après avoir lu les données, vous pourrez choisir de marquer ces données comme lues pour qu'elles ne soient plus affichées comme "nouvelles".
-Pour cela, il faut utiliser une requête en `POST` à l'URL : `https://www.kizeoforms.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
+Pour cela, il faut utiliser une requête en `POST` à l'URL : `https://forms.kizeo.com/rest/v3/forms/{formId}/markasreadbyaction/:action`.  
 Vous devrez cependant ajouter, dans le corps de la requête, les identifiants des données que vous souhaitez marquer comme "lues", de la façon suivante :
 
 ```json
@@ -85,7 +85,7 @@ Vous devrez cependant ajouter, dans le corps de la requête, les identifiants de
 ---
 
 Pour approfondir les recherches dans les données d'un formulaire, il existe une fonction de recherche avancée.
-Pour utiliser cette dernière, vous devez envoyer une requête en `POST` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/data/advanced`.
+Pour utiliser cette dernière, vous devez envoyer une requête en `POST` à l'URL suivante : `https://forms.kizeo.com/rest/v3/forms/{formId}/data/advanced`.
 
 Afin de définir les filtres que vous voulez utiliser pour rechercher précisément vos données, vous disposez des filtres au format suivant en **JSON**.
 
@@ -127,7 +127,7 @@ Afin de définir les filtres que vous voulez utiliser pour rechercher précisém
 ---
 
 Vous avez aussi la possibilité d'envoyer des données sans avoir besoin d'enregistrer le formulaire, au cas où vous avez besoin d'ajouter d'autres données plus tard. On appelle cet envoi de donnée un envoi par **"push"**.  
-Pour réaliser cette opération, il vous faut envoyer une requête en `POST` à l'URL suivante : `https://www.kizeoforms.com/rest/v3/forms/{formId}/push` en remplaçant {formId} par l'identifiant du formulaire.
+Pour réaliser cette opération, il vous faut envoyer une requête en `POST` à l'URL suivante : `https://forms.kizeo.com/rest/v3/forms/{formId}/push` en remplaçant {formId} par l'identifiant du formulaire.
 
 Il vous faudra aussi ajouter dans le corps de la requête les données à transmettre de la façon qui suit :
 

@@ -21,7 +21,7 @@ $curl = curl_init();
 
 // Définition des entêtes et paramètres 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/forms/',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -63,7 +63,7 @@ $curl = curl_init();
 
 // Définition des entêtes et paramètres 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://www.kizeoforms.com/rest/v3/forms/' . $formId,
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -103,7 +103,7 @@ OkHttpClient client = new OkHttpClient();
 
 // Définition des paramètres de la requête 
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/")
+  .url("https://forms.kizeo.com/rest/v3/forms/")
   .get()
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -125,7 +125,7 @@ OkHttpClient client = new OkHttpClient();
 
 // Définition des paramètres de la requête 
 Request request = new Request.Builder()
-  .url("https://www.kizeoforms.com/rest/v3/forms/" . formId)
+  .url("https://forms.kizeo.com/rest/v3/forms/" . formId)
   .get()
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
@@ -150,7 +150,7 @@ Response response = client.newCall(request).execute();
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/",
+  "url": "https://forms.kizeo.com/rest/v3/forms/",
   "method": "GET",
   "headers": {
     "content-type": "application/json",
@@ -176,7 +176,7 @@ var formId;
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://www.kizeoforms.com/rest/v3/forms/" . formId,
+  "url": "https://forms.kizeo.com/rest/v3/forms/" . formId,
   "method": "GET",
   "headers": {
     "content-type": "application/json",

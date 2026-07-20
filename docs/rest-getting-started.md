@@ -27,8 +27,8 @@ At Kizeo, thanks to our developpers, we can strongly advise you to use the follo
 
 Here is what you will need to start the development of your application using the Web Service of Kizeo Forms :
 
--   **Swagger Doc :** [https://www.kizeoforms.com/rest/v3/doc](https://www.kizeoforms.com/rest/v3/doc) (This doc shows off all different functions available wit our Web Service)
--   **Web Service root address :** `https://www.kizeoforms.com/rest/v3/` (for instance, to use the `forms` function, you must call `https://www.kizeoforms.com/rest/v3/forms`)
+-   **Swagger Doc :** [https://forms.kizeo.com/rest/v3/doc](https://forms.kizeo.com/rest/v3/doc) (This doc shows off all different functions available wit our Web Service)
+-   **Web Service root address :** `https://forms.kizeo.com/rest/v3/` (for instance, to use the `forms` function, you must call `https://forms.kizeo.com/rest/v3/forms`)
 
 ## Retrieving the Token
 

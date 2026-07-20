@@ -21,32 +21,6 @@
       "howtouse"
     ]
   },
-  "SharePoint Connector": {
-    "Getting Started": [
-      "sharepoint"
-    ],
-    "Installation": [
-      "sp-install"
-    ],
-    "Token SharePoint": [
-      "sp-token"
-    ],
-    "Connection": [
-      "sp-connection"
-    ],
-    "Update a sharepoint list": [
-      "sp-update-list"
-    ],
-    "Document library": [
-      "sp-upload-files"
-    ],
-    "External list": [
-      "sp-update-kf-list"
-    ],
-    "Sheduled": [
-      "sp-scheduled"
-    ]
-  },
   "Web Service": {
     "Getting started": [
       "restv3",
