@@ -11,7 +11,7 @@ sidebar_label: Operations on data
 ---
 
 Mark the data read for a given action. Thus giving the possibility of reading the same data for several different actions.
-You have to send a `GET` request to: `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
+You have to send a `GET` request to: `https://forms.kizeo.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
 
 If it worked, you will have a response like:
 

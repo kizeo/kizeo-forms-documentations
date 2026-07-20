@@ -9,7 +9,7 @@ sidebar_label: Operations on data
 ---
 
 Marquer les données lues pour une action donnée. Cela donne donc la possibilité de lire les mêmes données pour plusieurs actions différentes.
-Il s'agit d'envoyer une requête en `GET` à l'URL : `https://kizeoforms.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
+Il s'agit d'envoyer une requête en `GET` à l'URL : `https://forms.kizeo.com/rest/v3/forms/{{formId}}/data/unread/:action/:limit?includeupdated`
 
 Si tout s'est bien passé, vous recevrez une réponse du type :
 
