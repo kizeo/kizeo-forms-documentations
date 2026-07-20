@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# Pre-commit hook : lance oxlint --fix (lint:fix) et oxfmt (format)
+# sur les fichiers stagés, puis les ré-ajoute au commit.
+#
+# Activation (une fois par clone) :
+#   git config core.hooksPath .githooks
+#
+set -eu
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+# Fichiers stagés (Added/Copied/Modified/Renamed).
+STAGED="$(git diff --cached --name-only --diff-filter=ACMR || true)"
+
+# oxlint ne traite que le JS/TS ; oxfmt formate aussi le Markdown.
+JS_FILES="$(printf '%s\n' "$STAGED" | grep -E '\.(js|jsx|ts|tsx|mjs|cjs)$' || true)"
+FMT_FILES="$(printf '%s\n' "$STAGED" | grep -E '\.(md|js|jsx|ts|tsx|mjs|cjs)$' || true)"
+
+if [ -z "$FMT_FILES" ]; then
+  exit 0
+fi
+
+cd "$ROOT"
+
+# lint:fix sur les fichiers JS/TS uniquement.
+if [ -n "$JS_FILES" ]; then
+  printf '%s\n' "$JS_FILES" | xargs npx oxlint --fix
+fi
+
+# format sur tous les fichiers pris en charge (Markdown inclus).
+printf '%s\n' "$FMT_FILES" | xargs npx oxfmt
+
+# Ré-ajoute les fichiers éventuellement corrigés au commit.
+printf '%s\n' "$FMT_FILES" | xargs git add
+
+exit 0

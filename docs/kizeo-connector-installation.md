@@ -18,11 +18,10 @@ The connector must be able to reach the database, please check that the local ma
 
 The connector must be able to connect to Kizeo Forms, and especially to our <a href="https://forms.kizeo.com/rest/v3/doc/" target="_blank">Web Service RESTful</a>.
 
-***
+---
 
 ## Download
 
 You can download the connector :
 
--   <a href="https://github.com/kizeo/Kizeo-Connector/releases/latest" target="_blank">Available on GitHub</a>
-
+- <a href="https://github.com/kizeo/Kizeo-Connector/releases/latest" target="_blank">Available on GitHub</a>

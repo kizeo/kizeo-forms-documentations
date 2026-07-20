@@ -7,42 +7,45 @@ sidebar_label: Operations on forms
 ## Operations on forms
 
 ### 1 - Get list of all forms
-***
+
+---
+
 Now that you know how to identify and get a token, you will be able to use it to get the list of all the forms that you have access to.  
-To use this token, don't forget to give it in all of your request's headers as the following way : 
+To use this token, don't forget to give it in all of your request's headers as the following way :
 
 ```javascript
-
-Authorization: YOUR_TOKEN 
-
+Authorization: YOUR_TOKEN;
 ```
 
 To get the list of all forms, you have to send a `GET` request that does not need any other parameter than your token of authorization.
-You will send your request to the following URL : `https://forms.kizeo.com/rest/v3/forms`.  
+You will send your request to the following URL : `https://forms.kizeo.com/rest/v3/forms`.
 
-If it correctly worked, you will receive a response like :   
+If it correctly worked, you will receive a response like :
 
 ```json
 [
-  { // First form
+  {
+    // First form
     "id_1": "integer",
     "name_1": "string"
   },
-  { // Second form
+  {
+    // Second form
     "id_2": "integer",
     "name_2": "string"
-  },
+  }
   // ...
 ]
-```   
-
+```
 
 ### 2 - How to get details of a form
-***
-The previous function allows you to get the ids of all the form you have access to. With these ids you will be able to select a form among the others to get its details.
-To use this function you have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/forms/{formId}` where *formId* is the id of the form you have selected.  
 
-This function should send a response as following : 
+---
+
+The previous function allows you to get the ids of all the form you have access to. With these ids you will be able to select a form among the others to get its details.
+To use this function you have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/forms/{formId}` where _formId_ is the id of the form you have selected.
+
+This function should send a response as following :
 
 ```json
 {
@@ -51,7 +54,7 @@ This function should send a response as following :
   "form": {
     "id": "form_id",
     "name": "form_name",
-    
+
     "fields": {
       "field_name": {
         "caption": "string",
@@ -79,7 +82,7 @@ This function should send a response as following :
         "color": ""
       },
     },
-    
+
     "exports": [
       {
         "form_id": "form_id",
@@ -116,7 +119,7 @@ This function should send a response as following :
         "id": "int"
       }
     ],
-    
+
     "options": {
       "checkbox_output_false_value": "Non",
       "checkbox_output_true_value": "Oui",
@@ -152,7 +155,7 @@ This function should send a response as following :
       "tagnfc_before_save": boolean,
       "tagnfc_content": ""
     },
-   
+
     "currentUserRights": {
       "new": boolean,
       "save": boolean,

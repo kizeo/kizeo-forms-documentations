@@ -4,16 +4,14 @@ title: Users
 sidebar_label: Operations on users
 ---
 
-## Operations on users
-
-### 1 - Get list of users
+## 1 - Récupérer la liste des utilisateurs
 
 ---
 
-You have many functions available to allow operations on users. First of them simply gives you the list of all users of your company.
-To do this, you have to send a `GET` request to : `https://forms.kizeo.com/rest/v3/users`.
+Vous avez aussi à disposition de nombreuses fonctions permettant des opérations sur les utilisateurs. La première d'entre elles permet simplement de récupérer la liste de tous les utilisateurs de votre entreprise.
+Elle consiste en une requête HTTP en `GET` à envoyer à l'URL suivante : `https://forms.kizeo.com/rest/v3/users`.
 
-If it correctly worked, you will have a response like following :
+Si la requête a fonctionné, vous devriez obtenir un résultat comme suit :
 
 ```json
 
@@ -74,12 +72,12 @@ If it correctly worked, you will have a response like following :
 
 ```
 
-### 2 - Add a user
+## 2 - Ajouter un utilisateur
 
 ---
 
-You also have the possibility to create a new user by throwing a `POST` request to : `https://forms.kizeo.com/rest/v3/users`.
-You have to add informations to the following format in request's body :
+Vous avez aussi la possibilité de créer un utilisateur en passant par une requête de type `POST` à l'URL : `https://forms.kizeo.com/rest/v3/users`.
+Vous devrez ajouter dans le corps de la requête les informations sous le format suivant :
 
 ```json
 {
@@ -101,33 +99,33 @@ You have to add informations to the following format in request's body :
 }
 ```
 
-If the request was correctly sent you will get a response as following :
+Si la requête que vous avez envoyé a fonctionné, vous obtiendrez la réponse suivante :
 
 ```json
 {
   "status": "ok",
   "message": "Created",
   "data": {
-    // Id created for the user
+    // Identifiant créé pour l'utilisateur
     "id": "userID"
   }
 }
 ```
 
-### 3 - Update a user
+## 3 - Modifier les informations d'un utilisateur
 
 ---
 
-When you get the list of all users, the first data you receive for each of them is his ID (userID).
-With this ID you will be able to modify the informations of each user.
+En récupérant la liste de tous les utilisateurs, la première donnée que vous obtiendrez pour chacun d'entre eux est son identifiant (userID).
+A partir de cet identifiant, vous pouvez modifier les informations relatives à un utilisateur.
 
-To update a user, you have to send a `PUT` to : `https://forms.kizeo.com/rest/v3/users/{userID}`.
+Pour modifier les données d'un utilisateur, vous devrez envoyer une requête de type `PUT` à l'URL : `https://forms.kizeo.com/rest/v3/users/{userID}`.
 
-You also have to put in the request's body the following informations, that are all optionals but login that is required.
+Vous devrez remplir le corps de la requête avec les informations suivantes, dont tous les attributs hors le login sont optionnels, vous n'aurez qu'à préciser les attributs que vous voulez modifier.
 
 ```json
 {
-  "login": "string", // Required attribute
+  "login": "string", // Attribut obligatoire
   "password": "string",
   "first_name": "string",
   "last_name": "string",
@@ -145,7 +143,7 @@ You also have to put in the request's body the following informations, that are 
 }
 ```
 
-In case of success, you will receive a response to the following format :
+En cas de succès, vous recevrez une réponse sous le format suivant :
 
 ```json
 {

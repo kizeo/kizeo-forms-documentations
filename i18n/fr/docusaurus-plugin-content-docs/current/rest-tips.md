@@ -4,13 +4,13 @@ title: Tips
 sidebar_label: Tips
 ---
 
-Here you will find concrete examples of utilisation in PHP to make currently used functions.
+Ici vous trouverez des exemples concrets d'utilisation en PHP pour établir des fonctions couramment utilisées.
 
-## First example : a program that sends an e-mail to a list of users
+## Premier exemple : une fonction permettant d'envoyer un e-mail à une liste d'utilisateurs
 
-You will find here a group of functions that allow you to connect to the server, get a token and send a mail to all of your users.
+Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter au serveur, d'obtenir votre token d'identification à partir de vos identifiants, et d'envoyer un mail à chacun de vos utilisateurs.
 
-#### First, the configuration file, to put in the same directory than PHP files
+#### Premièrement, le fichier de configuration à intégrer dans le même dossier que les fichiers PHP
 
 #### `config.json`
 
@@ -28,7 +28,7 @@ You will find here a group of functions that allow you to connect to the server,
 }
 ```
 
-#### File that simply launches the program
+#### Ensuite, voilà le fichier qui lance simplement le programme
 
 #### `main.php`
 
@@ -49,7 +49,7 @@ if (KizeoForms::generateSettings()) {
 
 ```
 
-#### In this file you have the functions to get your users and send them a mail
+#### Enfin, dans ce fichier sont définies les fonctions de cet exemple de mailer
 
 #### `Main.class.php`
 
@@ -63,20 +63,20 @@ namespace KizeoWS;
 
 abstract class Main
 {
-    // Array of configuration settings
+    // Tableau représentant les paramètres de configuration
     private static $settings;
     private static $reportingArray = array(
         'history' => array(),
         'issues' => array(),
         'done' => array(),
     );
-    private static $token = false;
+    private static $token = false;              // Variable stockant le token d'identification
     private static $tempToDelete = array();
-    private static $usersList = array();        // Keep in memory users list
-    private static $userMails = array();        // Keep in memory users mail list
+    private static $usersList = array();        // Variable stockant la liste des utilisateurs
+    private static $userMails = array();        // Variable stockant la liste des adresses mail des utilisateurs
 
 
-
+    // Fonction d'écritures des tableaux du suivi du programme
     private static function addHistory($string, $alwaysDisplay = false) {
         if (!isset(static::$settings['debug']) || static::$settings['debug'] || $alwaysDisplay) {
             echo $string . "\n";
@@ -97,7 +97,7 @@ abstract class Main
         static::$tempToDelete[] = $path;
     }
 
-    // Function that read the configuration file and fill the settings array
+    // Fonction d'ouverture du fichier de configuration et de stockage dans le tableau de paramètres
     public static function generateSettings() {
         $file_content = file_get_contents(__DIR__ . '/config.json');
         static::addHistory('Opening config file');
@@ -130,7 +130,7 @@ abstract class Main
         }
     }
 
-    // Function giving path to log/export/temp directories
+    // Fonctions donnant les chemins vers les fichiers de log/export/temporaire
     private static function getTempDir() {
         return __DIR__ . '/' . static::$settings['tmp_dir'];
     }
@@ -144,7 +144,7 @@ abstract class Main
         return static::$reportingArray;
     }
     /**
-    * Function to check if settings are correctly filled
+    * Fonction permettant de vérifier si les configurations sont correctes et correctement chargées
     */
     private static function checkSettings() {
         if (!isset(static::$settings['kizeo_addr'])) {
@@ -186,6 +186,9 @@ abstract class Main
         }
     }
 
+    /**
+    * Processus principal utilisant les fonctions pour réaliser le résultat voulu
+    */
     public static function mainProcess() {
         static::addHistory('--- Main process started ---', true);
 
@@ -212,7 +215,7 @@ abstract class Main
     }
 
     /**
-    * Function that gets token
+    * Fonction effectuant le login et stockant le token
     */
     private static function doLogin()
     {
@@ -226,7 +229,7 @@ abstract class Main
         }
     }
 
-    // Function that get all users list
+    // Fonction permettant la récupération de la liste des utilisateurs
     private static function getUsersList() {
         if (static::$token != false) {
             $usersListData = static::callApi('GET', static::getApiRoot() . 'users', array());
@@ -243,7 +246,7 @@ abstract class Main
     }
 
 
-    // Function to keep mail addresses
+    // Fonction pour extraire les adresses emails des utilisateurs à partir de la liste
 
     private static function getMails() {
         foreach(static::$usersList['users'] as $user){
@@ -256,7 +259,7 @@ abstract class Main
         return true;
     }
 
-    // Function that sends the email to all users
+    // Fonction d'envoi de mail collectif
     private static function sendMails() {
         $subject = 'Subject of your mail';
         $message = 'Enter your message here';
@@ -276,7 +279,7 @@ abstract class Main
 
 
     /**
-    * Utilities
+    * Fonctions utiles pour encapsuler les requêtes HTTP
     */
     private static function getApiRoot() {
         return static::$settings['kizeo_addr'] . static::$settings['rest_link'];
@@ -338,11 +341,11 @@ abstract class Main
 
 ```
 
-## Second example : a program that tells you every modification made today
+## Deuxième exemple : une fonction permettant de voir quels formulaires, listes et données ont été modifiés
 
-You will find here a group of functions that allow you to connect to the server, get a token and get the list of all modifications done today.
+Ici, vous trouverez un ensemble de fonctions vous permettant de vous connecter au serveur, d'obtenir votre token d'identification à partir de vos identifiants, et d'obtenir le nombre et la liste des formulaires, données et listes qui ont été modifiés.
 
-#### First, the configuration file, to put in the same directory than PHP files
+#### Premièrement, le fichier de configuration à intégrer dans le même dossier que les fichiers PHP
 
 #### `config.json`
 
@@ -360,7 +363,7 @@ You will find here a group of functions that allow you to connect to the server,
 }
 ```
 
-#### File that simply launches the program
+#### Ensuite, voilà le fichier qui lance simplement le programme
 
 #### `main.php`
 
@@ -381,7 +384,7 @@ if (KizeoForms::generateSettings()) {
 
 ```
 
-#### In this file you have the functions to get lists, forms and data modified today
+#### Enfin, dans ce fichier sont définies les fonctions de cet exemple de récapitulatif de journée
 
 #### `Main.class.php`
 
@@ -395,17 +398,18 @@ namespace KizeoWS;
 
 abstract class Main
 {
-    // Array of configuration settings
+    // Tableau représentant les paramètres de configuration
     private static $settings;
     private static $reportingArray = array(
         'history' => array(),
         'issues' => array(),
         'done' => array(),
     );
-    private static $token = false;
+    private static $token = false;              // Variable stockant le token d'identification
     private static $tempToDelete = array();
 
 
+    // Fonction d'écritures des tableaux du suivi du programme
     private static function addHistory($string, $alwaysDisplay = false) {
         if (!isset(static::$settings['debug']) || static::$settings['debug'] || $alwaysDisplay) {
             echo $string . "\n";
@@ -426,7 +430,7 @@ abstract class Main
         static::$tempToDelete[] = $path;
     }
 
-    // Function that read configuration file and constructs the settings array
+    // Fonction d'ouverture du fichier de configuration et de stockage dans le tableau de paramètres
     public static function generateSettings() {
         $file_content = file_get_contents(__DIR__ . '/config.json');
         static::addHistory('Opening config file');
@@ -459,7 +463,7 @@ abstract class Main
         }
     }
 
-    // Functions giving paths of log/export/temp directories
+    // Fonctions donnant les chemins vers les fichiers de log/export/temporaire
     private static function getTempDir() {
         return __DIR__ . '/' . static::$settings['tmp_dir'];
     }
@@ -473,7 +477,7 @@ abstract class Main
         return static::$reportingArray;
     }
     /**
-    * Function verifying the definition of settings
+    * Fonction permettant de vérifier si les configurations sont correctes et correctement chargées
     */
     private static function checkSettings() {
         if (!isset(static::$settings['kizeo_addr'])) {
@@ -515,7 +519,9 @@ abstract class Main
         }
     }
 
-
+    /**
+    * Processus principal utilisant les fonctions pour réaliser le résultat voulu
+    */
     public static function mainProcess() {
         static::addHistory('--- Main process started ---', true);
 
@@ -535,7 +541,7 @@ abstract class Main
     }
 
     /**
-    * Function that gets token
+    * Fonction effectuant le login et stockant le token
     */
     private static function doLogin()
     {
@@ -549,22 +555,21 @@ abstract class Main
         }
     }
 
-
     /**
-    *  Functions doing the recap of the day
+    *  Fonctions liées au récapitulatif de la journée
     **/
 
 
-    // Function that extracts forms modified today
+    // Fonction d'extraction et d'affichage des formulaires modifiés aujourd'hui
     private static function getTodayUpdatedFormsandData(){
-
+        // Définition d'une date de comparaison à aujourd'hui minuit pour sélectionner les formulaires modifiés aujourd'hui
         $today = date_create();
         date_time_set($today, 00, 00, 00);
 
-        // Get all the forms
+        // Récupération de tous les formulaires
         $forms = static::callApi('GET', static::getApiRoot() . 'forms', array());
 
-        // Keep forms modified today
+        // Tri des formulaires pour garder ceux qui ont été modifiés aujourd'hui
         $todayForms = array();
 
         foreach($forms['forms'] as $f){
@@ -577,10 +582,10 @@ abstract class Main
 
 
         $todayDatas = array();
-        // Get data modified today
+        // Récupération des données récentes pour les formulaires
         foreach($forms['forms'] as $TF){
             $requestBody = array();
-            // Definition of advanced filter
+            // Définition des filtres avancés à utiliser
             $requestBody['data'] = '{
   "global_filters": "",
   "filters": [
@@ -598,7 +603,7 @@ abstract class Main
     }
   ]
 }';
-            // Get filtered data to keep only those modified today
+            // Appel du tri avancé sur les données pour obtenir celles postérieures à aujourd'hui minuit
             $datas = static::callApi('POST', static::getApiRoot() . 'forms/' . $TF['id'] . '/data/advanced', $requestBody);
             if (isset($datas['status']) && $datas['status'] != 'ok'){
                 echo($datas['message']);
@@ -607,7 +612,7 @@ abstract class Main
                 $todayDatas[] = $datas;
             }
         }
-        // Show forms
+        // Affichage des formulaires récemment modifiés s'il y en a
         if (count($todayForms) > 0 ){
             foreach($todayForms as $TF){
                 static::addHistory('Formulaire d\'id : ' . $TF['0'] . ' et de nom : ' . $TF['1']);
@@ -616,7 +621,7 @@ abstract class Main
         static::addHistory('');
         static::addHistory('Il y a '. $nbNewDatas = count($todayDatas) . ' données créées ou modifiées aujourd\'hui');
 
-        // Show data
+        // Affichage des données récemment créées s'il y en a
         if ($nbNewDatas > 0){
             for ($i = 0 ; $i < $nbNewDatas ; $i++){
                 $nbNew = count($todayDatas[$i]['data']);
@@ -629,16 +634,16 @@ abstract class Main
         }
     }
 
-    // Function that extracts lists modified today
+    // Fonction d'extraction et d'affichage des listes modifiées aujourd'hui
     private static function getTodayUpdatedLists(){
-
+        // Définition d'une date de comparaison à aujourd'hui minuit pour sélectionner les listes modifiées aujourd'hui
         $today = date_create();
         date_time_set($today, 00, 00, 00);
 
-        // Get all the lists
+        // Récupération de toutes les listes
         $lists = static::callApi('GET', static::getApiRoot() . 'lists', array());
 
-        // Filter list to keep only those modified today
+        // Tri des listes pour garder celles qui ont été modifiées aujourd'hui
         $todayLists = array();
 
         foreach($lists['lists'] as $l){
@@ -659,7 +664,7 @@ abstract class Main
 
 
     /**
-    * Utilities
+    * Fonctions utiles pour encapsuler les requêtes HTTP
     */
     private static function getApiRoot() {
         return static::$settings['kizeo_addr'] . static::$settings['rest_link'];

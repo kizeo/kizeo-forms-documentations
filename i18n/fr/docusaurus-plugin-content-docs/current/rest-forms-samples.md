@@ -7,20 +7,20 @@ sidebar_label: Samples
 <!--DOCUSAURUS_CODE_TABS-->
 <!--PHP-->
 
-### You'll find here **PHP** code samples.
+### Vous trouverez ici des exemples de code en **PHP**.
 
-#### [If cURL doesn't actually work in your environment, this could help you to install it.](rest-curl-install.md)
+#### [Si cURL n'est pas déjà préinstallé, voici un lien qui pourrait vous aider à l'installer.](rest-curl-install.md)
 
-#### Here is an example of a HTTP request to get the list of all forms :
+#### Voici un exemple de requête HTTP en PHP pour obtenir la liste de tous les formulaires :
 
 ```php
 
 <?php
 
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of the Headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/',
   CURLOPT_RETURNTRANSFER => true,
@@ -36,7 +36,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -50,17 +50,17 @@ if ($err) {
 
 ```
 
-#### The following example shows how to get details of a chosen form
+#### L'exemple suivant montre comment obtenir les informations détaillées d'un formulaire à partir de son iD :
 
 ```php
 
 <?php
 
 $formId;
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of the Headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId,
   CURLOPT_RETURNTRANSFER => true,
@@ -76,7 +76,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -92,15 +92,15 @@ if ($err) {
 
 <!--Java-->
 
-### You'll find here **Java** code samples.
+### Vous trouverez ici des exemples de code en **Java**.
 
-#### Here is an example of a HTTP request to get the list of all forms :
+#### Voici un exemple de requête HTTP en Java pour obtenir la liste de tous les formulaires :
 
 ```java
 
 OkHttpClient client = new OkHttpClient();
 
-// Definition of request's parameters
+// Définition des paramètres de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/")
   .get()
@@ -109,19 +109,19 @@ Request request = new Request.Builder()
   .addHeader("cache-control", "no-cache")
   .build();
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 Response response = client.newCall(request).execute();
 
 ```
 
-#### The following example shows how to get details of a chosen form
+#### L'exemple suivant montre comment obtenir les informations détaillées d'un formulaire à partir de son iD :
 
 ```java
 
 string formId;
 OkHttpClient client = new OkHttpClient();
 
-// Definition of request's parameters
+// Définition des paramètres de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/" . formId)
   .get()
@@ -130,19 +130,19 @@ Request request = new Request.Builder()
   .addHeader("cache-control", "no-cache")
   .build();
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 Response response = client.newCall(request).execute();
 
 ```
 
 <!--JavaScript-->
 
-### You'll find here **Javascript** code samples.
+### Vous trouverez ici des exemples de code en **Javascript**.
 
-#### Here is an example of a HTTP request to get the list of all forms :
+#### Voici un exemple de requête HTTP en Javascript pour obtenir la liste de tous les formulaires :
 
 ```javascript
-// Definition of request's parameters
+// Définition des paramètres de la requête HTTP
 var settings = {
   async: true,
   crossDomain: true,
@@ -155,21 +155,21 @@ var settings = {
   },
 };
 
-// Send request and show response
+// Envoi de la requête et affichage en console de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
 
-#### The following example shows how to get details of a chosen form
+#### L'exemple suivant montre comment obtenir les informations détaillées d'un formulaire à partir de son iD :
 
 ```javascript
 var formId;
-// Definition of request's parameters
+// Définition des paramètres de la requête HTTP
 var settings = {
   async: true,
   crossDomain: true,
-  url: "https://forms.kizeo.com/rest/v3/forms/".formID,
+  url: "https://forms.kizeo.com/rest/v3/forms/".formId,
   method: "GET",
   headers: {
     "content-type": "application/json",
@@ -178,7 +178,7 @@ var settings = {
   },
 };
 
-// Send request and show response
+// Envoi de la requête et affichage en console de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });

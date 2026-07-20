@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Kizeo Forms Documentations",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Kizeo Forms",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Kizeo Connector": {
+    "message": "Kizeo Connector",
+    "description": "Navbar item with label Kizeo Connector"
+  },
+  "item.label.API Rest V3": {
+    "message": "API Rest V3",
+    "description": "Navbar item with label API Rest V3"
+  },
+  "item.label.Deep linking": {
+    "message": "Deep linking",
+    "description": "Navbar item with label Deep linking"
+  }
+}

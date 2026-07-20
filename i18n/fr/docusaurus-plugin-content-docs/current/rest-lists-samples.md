@@ -1,28 +1,28 @@
 ---
-id: users-samples
-title: Users samples
+id: lists-samples
+title: Lists samples
 sidebar_label: Samples
 ---
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--PHP-->
 
-### You will find here **PHP** code samples.
+### Vous trouverez ici des exemples de code en **PHP**.
 
-#### [If cURL doesn't actually work in your environment, this could help you to install it.](rest-curl-install.md)
+#### [Si cURL n'est pas déjà préinstallé, voici un lien qui pourrait vous aider à l'installer.](rest-curl-install.md)
 
-#### Here is an example of HTTP Request to get the list of all users
+#### Voici un exemple de requête HTTP en PHP pour obtenir la liste de toutes les listes externes :
 
 ```php
 
 <?php
 
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of request's headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/users/',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/lists',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -36,7 +36,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -50,27 +50,25 @@ if ($err) {
 
 ```
 
-#### The following example shows how to add a user
+#### L'exemple suivant montre comment récupérer tous les détails d'une liste externe
 
 ```php
 
 <?php
 
 $listId;
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of request's headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/users',
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/lists/' . $listId,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  // Minimal informations to give
-  CURLOPT_POSTFIELDS =>  "{\n  \"login\": \"string\",\n  \"password\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"main_group_id\": -1,\n  \"admin\": boolean,\n  \"leader_group\": boolean,\n  \"form_user\": boolean\n}",
+  CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
     "Authorization: YOUR_TOKEN",
     "cache-control: no-cache",
@@ -78,7 +76,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -92,28 +90,27 @@ if ($err) {
 
 ```
 
-#### This example gives you a way to update a user
+#### Voici un exemple de comment mettre à jour une liste externe
 
 ```php
 
 <?php
 
-$userId;
-// Initialisation of the request
+$listId;
+// Initialisation de la requête
 $curl = curl_init();
 
-// Defintion of request's headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/users/' . $userId,
+  CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/lists/' . $listId,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  // Definition of parameters in request's body
-  // Login is a required field
-  CURLOPT_POSTFIELDS =>  "{\n  \"login\":\"string\",\n  \"admin\": false,\n  \"form_user\": false\n}",
+  // Ajout des paramètres dans le corps de la requête
+  CURLOPT_POSTFIELDS =>  "{\n  \"items\": [\n    \"item1\", \"item2\", \"item3\"\n  ]\n}",
   CURLOPT_HTTPHEADER => array(
     "Authorization: YOUR_TOKEN",
     "cache-control: no-cache",
@@ -121,7 +118,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -137,43 +134,21 @@ if ($err) {
 
 <!--Java-->
 
-### You will find here **Java** code samples.
+## Exemple de code Java (OK HTTP)
 
-#### Here is an example of HTTP Request to get the list of all users
+### Vous trouverez ici des exemples de code en **Java**.
+
+#### Voici un exemple de requête HTTP en Java pour obtenir la liste de toutes les listes externes :
 
 ```java
 
-// Initialisation of the request
+// Initialisation de la requête
 OkHttpClient client = new OkHttpClient();
 
-// Definition of request's headers
+// Définition des entêtes de la requête
 Request request = new Request.Builder()
-  .url("https://forms.kizeo.com/rest/v3/users")
+  .url("https://forms.kizeo.com/rest/v3/lists")
   .get()
-  .addHeader("content-type", "application/json")
-  .addHeader("Authorization", "YOUR_TOKEN")
-  .addHeader("cache-control", "no-cache")
-  .build();
-
-// Send request
-Response response = client.newCall(request).execute();
-```
-
-#### The following example shows how to add a user
-
-```java
-
-// Initialisation of the request
-OkHttpClient client = new OkHttpClient();
-
-// Parameters in the request's body
-MediaType mediaType = MediaType.parse("application/json");
-RequestBody body = RequestBody.create(mediaType, "{\r\n  \"login\": \"string\",\r\n  \"password\": \"string\",\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"main_group_id\": -1,\r\n  \"admin\": boolean,\r\n  \"leader_group\": boolean,\r\n  \"form_user\": boolean\r\n}");
-
-// Definition of request's headers
-Request request = new Request.Builder()
-  .url("https://forms.kizeo.com/rest/v3/users")
-  .post(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
   .addHeader("cache-control", "no-cache")
@@ -184,43 +159,66 @@ Response response = client.newCall(request).execute();
 
 ```
 
-#### This example gives you a way to update a user
+#### L'exemple suivant montre comment récupérer tous les détails d'une liste externe
 
 ```java
 
-string userId;
-// Initialisation of the request
+string listId;
+// Initialisation de la requête
 OkHttpClient client = new OkHttpClient();
 
-// Parameters in the request's body
-MediaType mediaType = MediaType.parse("application/json");
-RequestBody body = RequestBody.create(mediaType, "{\n  \"login\":\"string\",\n  \"admin\": boolean,\n  \"form_user\": boolean\n}");
-// Definition of request's headers
+// Définition des entêtes de la requête avec l'identifiant de la liste dans l'URL
 Request request = new Request.Builder()
-  .url("https://forms.kizeo.com/rest/v3/users/" . userId)
+  .url("https://forms.kizeo.com/rest/v3/lists/" . listId)
+  .get()
+  .addHeader("content-type", "application/json")
+  .addHeader("Authorization", "YOUR_TOKEN")
+  .addHeader("cache-control", "no-cache")
+  .build();
+
+// Envoi de la requête
+Response response = client.newCall(request).execute();
+
+```
+
+#### Voici un exemple de comment mettre à jour une liste externe
+
+```java
+
+string listId;
+// Initialisation de la requête
+OkHttpClient client = new OkHttpClient();
+
+// Définition des entêtes et du corps (body) de la requête avec l'identifiant de la liste dans l'URL
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, "{\r\n  \"items\": [\r\n    \"item1\", \"item2\", \"item3\"\r\n  ]\r\n}");
+Request request = new Request.Builder()
+  .url("https://forms.kizeo.com/rest/v3/lists/" . listId)
   .put(body)
   .addHeader("content-type", "application/json")
   .addHeader("Authorization", "YOUR_TOKEN")
   .addHeader("cache-control", "no-cache")
   .build();
 
-// Send request
+// Envoi de la requête
 Response response = client.newCall(request).execute();
 
 ```
 
 <!--JavaScript-->
 
-### You will find here **Javascript** code samples.
+## Exemple de code Javascript (jQuery Ajax)
 
-#### Here is an example of HTTP Request to get the list of all users
+### Vous trouverez ici des exemples de code en **Javascript**.
+
+#### Voici un exemple de requête HTTP en Javascript pour obtenir la liste de toutes les listes externes :
 
 ```javascript
-// Initialisation of the request
+// Définition des paramètres et des entêtes de la requête
 var settings = {
   async: true,
   crossDomain: true,
-  url: "https://forms.kizeo.com/rest/v3/users",
+  url: "https://forms.kizeo.com/rest/v3/lists",
   method: "GET",
   headers: {
     "content-type": "application/json",
@@ -229,58 +227,56 @@ var settings = {
   },
 };
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
 
-#### The following example shows how to add a user
+#### L'exemple suivant montre comment récupérer tous les détails d'une liste externe
 
 ```javascript
-// Initialisation of the request
+var listId;
+// Définition des paramètres et des entêtes de la requête avec l'identifiant de la liste dans l'URL
 var settings = {
   async: true,
   crossDomain: true,
-  url: "https://forms.kizeo.com/rest/v3/users",
-  method: "POST",
+  url: "https://forms.kizeo.com/rest/v3/lists/".listId,
+  method: "GET",
   headers: {
     "content-type": "application/json",
     Authorization: "YOUR_TOKEN",
     "cache-control": "no-cache",
   },
-  // Parameters in request's body
-  processData: false,
-  data: '{\r\n  "login": "string",\r\n  "password": "string",\r\n  "first_name": "string",\r\n  "last_name": "string",\r\n  "main_group_id": -1,\r\n  "admin": boolean,\r\n  "leader_group": boolean,\r\n  "form_user": boolean\r\n}',
 };
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
 
-#### This example gives you a way to update a user
+#### Voici un exemple de comment mettre à jour une liste externe
 
 ```javascript
-var userId;
-// Initialisation of the request
+var listId;
+// Définition des paramètres et des entêtes de la requête avec l'identifiant de la liste dans l'URL
 var settings = {
   async: true,
   crossDomain: true,
-  url: "https://forms.kizeo.com/rest/v3/users/".userId,
+  url: "https://forms.kizeo.com/rest/v3/lists/".listId,
   method: "PUT",
   headers: {
     "content-type": "application/json",
     Authorization: "YOUR_TOKEN",
     "cache-control": "no-cache",
   },
-  // Parameters in request's body
+  // Ajout des données dans le corps de la requête
   processData: false,
-  data: '{\n  "login":"string",\n  "admin": boolean,\n  "form_user": boolean \n}',
+  data: '{\r\n  "items": [\r\n    "test1", "test2", "test3"\r\n  ]\r\n}',
 };
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });

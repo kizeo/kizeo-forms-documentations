@@ -1,0 +1,98 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Kizeo Connector": {
+    "message": "Kizeo Connector",
+    "description": "The label for category 'Kizeo Connector' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.connector-getting-started": {
+    "message": "Getting started",
+    "description": "The label for category 'Getting started' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Settings": {
+    "message": "Settings",
+    "description": "The label for category 'Settings' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Settings wizard": {
+    "message": "Settings wizard",
+    "description": "The label for category 'Settings wizard' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Samples": {
+    "message": "Samples",
+    "description": "The label for category 'Samples' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.SharePoint Connector": {
+    "message": "SharePoint Connector",
+    "description": "The label for category 'SharePoint Connector' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category 'Installation' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Token SharePoint": {
+    "message": "Token SharePoint",
+    "description": "The label for category 'Token SharePoint' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Connection": {
+    "message": "Connection",
+    "description": "The label for category 'Connection' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Update a sharepoint list": {
+    "message": "Update a sharepoint list",
+    "description": "The label for category 'Update a sharepoint list' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Document library": {
+    "message": "Document library",
+    "description": "The label for category 'Document library' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.External list": {
+    "message": "External list",
+    "description": "The label for category 'External list' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Sheduled": {
+    "message": "Sheduled",
+    "description": "The label for category 'Sheduled' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Web Service": {
+    "message": "Web Service",
+    "description": "The label for category 'Web Service' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.webservice-getting-started": {
+    "message": "Getting started",
+    "description": "The label for category 'Getting started' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Forms": {
+    "message": "Forms",
+    "description": "The label for category 'Forms' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Lists": {
+    "message": "Lists",
+    "description": "The label for category 'Lists' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Users": {
+    "message": "Users",
+    "description": "The label for category 'Users' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Data": {
+    "message": "Data",
+    "description": "The label for category 'Data' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Exports": {
+    "message": "Exports",
+    "description": "The label for category 'Exports' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Tips": {
+    "message": "Tips",
+    "description": "The label for category 'Tips' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Deep linking": {
+    "message": "Deep linking",
+    "description": "The label for category 'Deep linking' in sidebar 'docs'"
+  }
+}

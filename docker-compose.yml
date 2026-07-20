@@ -1,18 +1,15 @@
-version: "3"
-
 services:
   docusaurus:
+    image: kizeo-forms-documentations
     build: .
     ports:
       - 3000:3000
-      - 35729:35729
     volumes:
       - ./docs:/app/docs
-      - ./website/blog:/app/website/blog
-      - ./website/core:/app/website/core
-      - ./website/i18n:/app/website/i18n
-      - ./website/pages:/app/website/pages
-      - ./website/static:/app/website/static
-      - ./website/sidebars.json:/app/website/sidebars.json
-      - ./website/siteConfig.js:/app/website/siteConfig.js
-    working_dir: /app/website
+      - ./i18n:/app/i18n
+      - ./src:/app/src
+      - ./static:/app/static
+      - ./sidebars.js:/app/sidebars.js
+      - ./docusaurus.config.js:/app/docusaurus.config.js
+      - /app/node_modules
+    working_dir: /app

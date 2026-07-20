@@ -1,10 +1,10 @@
-FROM node:10
+FROM node:20-alpine
 
-WORKDIR /app/website
+WORKDIR /app
 
-EXPOSE 3000 35729
-COPY ./docs /app/docs
-COPY ./website /app/website
-RUN yarn install
+EXPOSE 3000
 
-CMD ["yarn", "start"]
+COPY . /app
+RUN npm install
+
+CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "1000"]

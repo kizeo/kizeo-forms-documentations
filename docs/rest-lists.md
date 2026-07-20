@@ -4,7 +4,7 @@ title: Lists
 sidebar_label: Operations on lists
 ---
 
-## Operations on list 
+## Operations on list
 
 The token of authorization allows you also to make operations on external lists you have access to.
 
@@ -19,21 +19,21 @@ In case of success of the request, you will have a response to following JSON fo
 
 ```json
 {
-    "status": "ok",
-    "lists": [
-        {
-            "id": "listId1",
-            "name": "listName1",
-            "class": "",
-            "update_time": null
-        },
-        {
-            "id": "listId2",
-            "name": "listName2",
-            "class": "",
-            "update_time": "date"
-        }
-    ]
+  "status": "ok",
+  "lists": [
+    {
+      "id": "listId1",
+      "name": "listName1",
+      "class": "",
+      "update_time": null
+    },
+    {
+      "id": "listId2",
+      "name": "listName2",
+      "class": "",
+      "update_time": "date"
+    }
+  ]
 }
 ```
 
@@ -48,14 +48,14 @@ If it correctly worked, you will have a response to that JSON format :
 
 ```json
 {
-    "status": "ok",
-    "list": {
-        "id": "listId",
-        "name": "listName1",
-        "class": "",
-        "update_time": null,
-        "items": ["key1:value1", "key2:value2", "key3:value3", "key4:value4", "key5:value5"]
-    }
+  "status": "ok",
+  "list": {
+    "id": "listId",
+    "name": "listName1",
+    "class": "",
+    "update_time": null,
+    "items": ["key1:value1", "key2:value2", "key3:value3", "key4:value4", "key5:value5"]
+  }
 }
 ```
 
@@ -72,7 +72,7 @@ You will have to add new values of the list in the request's body as following :
 
 ```json
 {
-    "items": ["string", "string", "string", "string", "string"]
+  "items": ["string", "string", "string", "string", "string"]
 }
 ```
 
@@ -80,7 +80,7 @@ If it correctly works, you will have a response like :
 
 ```json
 {
-    "status": "ok",
-    "message": "Updated"
+  "status": "ok",
+  "message": "Updated"
 }
 ```

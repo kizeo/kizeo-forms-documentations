@@ -7,21 +7,21 @@ sidebar_label: Samples
 <!--DOCUSAURUS_CODE_TABS-->
 <!--PHP-->
 
-### You will find here **PHP** samples.
+### Vous trouverez ici des exemples de code en **PHP**.
 
-#### [If cURL doesn't actually work in your environment, this could help you to install it.](rest-curl-install.md)
+#### [Si cURL n'est pas déjà préinstallé, voici un lien qui pourrait vous aider à l'installer.](rest-curl-install.md)
 
-#### Here is an example of a HTTP request to get the list of all exports available :
+#### Voici un exemple de requête HTTP en PHP pour obtenir la liste de tous les exports disponibles :
 
 ```php
 
 <?php
 
 $formId;
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of request's headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId . '/exports',
   CURLOPT_RETURNTRANSFER => true,
@@ -37,7 +37,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -51,7 +51,7 @@ if ($err) {
 
 ```
 
-#### Following example shows how to export data of a form to CSV or Excel :
+#### L'exemple suivant montre comment obtenir des données d'un formulaire au format CSV ou Excel :
 
 ```php
 
@@ -59,10 +59,10 @@ if ($err) {
 
 $formId;
 $format;
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of request's headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId . '/data/multiple/' . $format,
   CURLOPT_RETURNTRANSFER => true,
@@ -71,7 +71,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  // Parameters in request's body
+  // Ajout des paramètres dans le corps de la requête
   CURLOPT_POSTFIELDS => "{\n  \"data_ids\": [\n    \"dataId1\",\n    \"dataId2\",\n    \"dataId3\"\n  ]\n}",
   CURLOPT_HTTPHEADER => array(
     "Authorization: YOUR_TOKEN",
@@ -80,7 +80,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -94,7 +94,7 @@ if ($err) {
 
 ```
 
-#### Here is an example to export data to standard PDF :
+#### Voici un exemple de code pour exporter des données au format PDF standard :
 
 ```php
 
@@ -102,10 +102,10 @@ if ($err) {
 
 $formId;
 $exportId;
-// Initialisation of the request
+// Initialisation de la requête
 $curl = curl_init();
 
-// Definition of request's headers
+// Définition des entêtes et paramètres
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://forms.kizeo.com/rest/v3/forms/' . $formId . '/multiple_data/exports/' . $exportId . '/pdf',
   CURLOPT_RETURNTRANSFER => true,
@@ -114,7 +114,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  // Parameters in request's body
+  // Ajout des paramètres dans le corps de la requête
   CURLOPT_POSTFIELDS => "{\n  \"data_ids\": [\n    \"dataId1\",\n    \"dataId2\",\n    \"dataId3\"\n  ]\n}",
   CURLOPT_HTTPHEADER => array(
     "Authorization: YOUR_TOKEN",
@@ -123,7 +123,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -139,98 +139,102 @@ if ($err) {
 
 <!--Java-->
 
-### You will find here **Java** samples.
+## Exemple de code Java (OK HTTP)
 
-#### Here is an example of a HTTP request to get the list of all exports available :
+---
+
+### Vous trouverez ici des exemples de code en **Java**.
+
+#### Voici un exemple de requête HTTP en Java pour obtenir la liste de tous les exports disponibles :
 
 ```java
 
 string formId;
-// Initialisation of the request
+// Initialisation de la requête
 OkHttpClient client = new OkHttpClient();
 
-// Definition of the request's headers
+// Définition des paramètres et des entêtes de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/" . formId . "/exports")
   .get()
   .addHeader("content-type", "application/json")
-  .addHeader("authorization", "YOUR_TOKEN")
+  .addHeader("Authorization", "YOUR_TOKEN")
   .addHeader("cache-control", "no-cache")
   .build();
 
-// Send request
+// Envoi de la requête
 Response response = client.newCall(request).execute();
 
 ```
 
-#### Following example shows how to export data of a form to CSV or Excel :
+#### L'exemple suivant montre comment obtenir des données d'un formulaire au format CSV ou Excel :
 
 ```java
 
 string formId;
 string format;
-// Initialisation of the request
+// Initialisation de la requête
 OkHttpClient client = new OkHttpClient();
 
-// Parameters in request's body
+// Ajout des paramètres dans le corps de la requête
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"data_ids\": [\r\n    \"dataId1\"\r\n  ]\r\n}");
-// Definition of the request's headers
+// Définition des paramètres et des entêtes de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/" . formId . "/data/multiple/" . format)
   .post(body)
   .addHeader("content-type", "application/json")
-  .addHeader("authorization", "YOUR_TOKEN")
+  .addHeader("Authorization", "YOUR_TOKEN")
   .addHeader("cache-control", "no-cache")
   .build();
 
-// Send request
+// Envoi de la requête
 Response response = client.newCall(request).execute();
 
 ```
 
-#### Here is an example to export data to standard PDF :
+#### Voici un exemple de code pour exporter des données au format PDF standard :
 
 ```java
 
 string formId;
 string exportId;
-// Initialisation of the request
+// Initialisation de la requête
 OkHttpClient client = new OkHttpClient();
 
-// Parameters in request's body
+// Ajout des paramètres dans le corps de la requête
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\r\n  \"data_ids\": [\r\n    \"dataId1\"\r\n  ]\r\n}");
-// Definition of the request's headers
+// Définition des entêtes de la requête
 Request request = new Request.Builder()
   .url("https://forms.kizeo.com/rest/v3/forms/" . formId . "/multiple_data/exports/" . exportId . "/pdf")
   .post(body)
   .addHeader("content-type", "application/json")
-  .addHeader("authorization", "YOUR_TOKEN")
+  .addHeader("Authorization", "YOUR_TOKEN")
   .addHeader("cache-control", "no-cache")
   .build();
 
-// Send request
+// Envoi de la requête
 Response response = client.newCall(request).execute();
 
 ```
 
 <!--JavaScript-->
 
-### You will find here **Javascript** samples.
+### Vous trouverez ici des exemples de code en **Javascript**.
 
-#### Here is an example of a HTTP request to get the list of all exports available :
+#### Voici un exemple de requête HTTP en Javascript pour obtenir la liste de tous les exports disponibles :
 
 ```javascript
 
-var formId;
-// Initialisation of the request
+string formId;
+// Initialisation de la requête
 var settings = {
   "async": true,
   "crossDomain": true,
   "url": "https://forms.kizeo.com/rest/v3/forms/" . formId . "/exports",
   "method": "GET",
-  // Definition of request's headers
+  // Définition des entêtes de la requête
   "headers": {
     "content-type": "application/json",
     "Authorization": "YOUR_TOKEN",
@@ -238,20 +242,20 @@ var settings = {
   }
 }
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
 
 ```
 
-#### Following example shows how to export data of a form to CSV or Excel :
+#### L'exemple suivant montre comment obtenir des données d'un formulaire au format CSV ou Excel :
 
 ```javascript
 
-var formId;
-var format;
-// Initialisation and headers' definition
+string formId;
+string format;
+// Initialisation et définition des entêtes de la requête
 var settings = {
   "async": true,
   "crossDomain": true,
@@ -262,25 +266,25 @@ var settings = {
     "Authorization": "YOUR_TOKEN",
     "cache-control": "no-cache",
   },
-  // Parameters in request's body
+  // Ajout des paramètres dans le corps de la requête
   "processData": false,
   "data": "{\r\n  \"data_ids\": [\r\n    \"dataId1\"\r\n  ]\r\n}"
 }
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
 
 ```
 
-#### Here is an example to export data to standard PDF :
+#### Voici un exemple de code pour exporter des données au format PDF standard :
 
 ```javascript
 
-var formId;
-var exportId;
-// Initialisation and headers' definition
+string formId;
+string exportId;
+// Initialisation et définition des entêtes de la requête
 var settings = {
   "async": true,
   "crossDomain": true,
@@ -291,12 +295,12 @@ var settings = {
     "Authorization": "YOUR_TOKEN",
     "cache-control": "no-cache"
   },
-  // Parameters in request's body
+  // Ajout des paramètres dans le corps de la requête
   "processData": false,
   "data": "{\r\n  \"data_ids\": [\r\n    \"dataId1\"\r\n  ]\r\n}"
 }
 
-// Send request and show response
+// Envoi de la requête et affichage de la réponse
 $.ajax(settings).done(function (response) {
   console.log(response);
 });

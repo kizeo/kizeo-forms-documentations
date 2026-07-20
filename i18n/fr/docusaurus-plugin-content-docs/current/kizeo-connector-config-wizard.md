@@ -5,7 +5,7 @@ sidebar_label: Demo
 ---
 
 <p style={{fontSize: '11pt', fontStyle: 'italic'}}>
-    You need to be connected on <a href="https://forms.kizeo.com/">Kizeo Forms</a> to use the settings wizard
+    Vous devez être connecté sur <a href="https://forms.kizeo.com/">Kizeo Forms</a> pour utiliser l'assistant de configuration
 </p>
 <iframe id="wizard"  frameBorder="0" style={{width: '100%', height: '2000px'}}></iframe>
 <script>
