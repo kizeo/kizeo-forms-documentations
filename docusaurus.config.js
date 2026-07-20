@@ -118,7 +118,7 @@ const config = {
           {
             title: "More",
             items: [
-              { label: "Kizeo Forms", href: "https://www.kizeoforms.com" },
+              { label: "Kizeo Forms", href: "https://forms.kizeo.com" },
               { label: "GitHub", href: "https://github.com/kizeo" },
               { label: "Twitter", href: "https://twitter.com/kizeo" },
             ],
