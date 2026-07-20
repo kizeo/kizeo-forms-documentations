@@ -11,7 +11,7 @@ Il est bilingue : **anglais** (par défaut) et **français**.
 
 ## Prérequis
 
-- **Node.js ≥ 20**
+- **Node.js ≥ 24**
 - **npm** (fourni avec Node)
 
 ---
