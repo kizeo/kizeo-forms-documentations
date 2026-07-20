@@ -11,7 +11,7 @@ Il est bilingue : **anglais** (par défaut) et **français**.
 
 ## Prérequis
 
-- **Node.js ≥ 20**
+- **Node.js ≥ 24**
 - **npm** (fourni avec Node)
 
 ---
@@ -136,19 +136,12 @@ et `CROWDIN_DOCUSAURUS_API_KEY`).
 
 ## Déploiement (GitHub Pages)
 
-Le site est publié sur la branche `gh-pages` du dépôt `kizeo/kizeo-forms-documentations`.
+Le déploiement est **automatique** : à chaque merge sur la branche principale (`master`),
+la CI GitHub Actions build le site et le publie sur GitHub Pages. Il n'y a **aucune
+action manuelle** à effectuer.
 
-```bash
-# Avec un token GitHub (CI) :
-GIT_USER=<utilisateur-github> npm run deploy
-
-# En SSH :
-USE_SSH=true npm run deploy
-```
-
-La commande build le site puis pousse le contenu de `build/` sur `gh-pages`.
-Les paramètres de publication (`url`, `baseUrl`, `organizationName`, `projectName`) sont
-définis dans `docusaurus.config.js`.
+Le workflow est défini dans `.github/workflows/deploy.yml`. Les paramètres de publication
+(`url`, `baseUrl`, `organizationName`, `projectName`) sont définis dans `docusaurus.config.js`.
 
 ---
 
@@ -173,5 +166,4 @@ Le site est alors accessible sur `http://localhost:3000/kizeo-forms-documentatio
 | `npm run build`              | Build de production (toutes les langues)    |
 | `npm run serve`              | Sert le build de production localement      |
 | `npm run write-translations` | Génère/actualise les fichiers de traduction |
-| `npm run deploy`             | Déploie sur GitHub Pages                    |
 | `npm run clear`              | Nettoie le cache Docusaurus                 |
