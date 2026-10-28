@@ -23,14 +23,14 @@
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.1",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0"
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0"
   },
   "browserslist": {
     "production": [
